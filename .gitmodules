@@ -1,0 +1,6 @@
+[submodule "submodule/Odoo-Python-ERP-"]
+	path = submodule/Odoo-Python-ERP-
+	url = git@github.com:ScottAI/Odoo-Python-ERP-.git
+[submodule "submodule/stock-logistics-workflow"]
+	path = submodule/stock-logistics-workflow
+	url = git@github.com:OCA/stock-logistics-workflow.git

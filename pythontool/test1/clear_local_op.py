@@ -13,7 +13,7 @@ def clearOP(masterip):
         conn.commit()
         print(str(masterip) + ":num of rows deleted:" + str(cur.rowcount))
         conn.close()
-    except Exception, e:
+    except Exception as e:
         print(e)
     finally:
         if conn:
@@ -39,7 +39,7 @@ def showOP(masterip):
         rows = cur.fetchall()
         for r in rows:
             print(r)
-    except Exception, e:
+    except Exception as e:
         print(e)
     finally:
         if conn:
