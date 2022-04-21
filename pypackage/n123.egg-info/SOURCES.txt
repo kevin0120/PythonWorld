@@ -1,0 +1,6 @@
+n123.py
+setup.py
+n123.egg-info/PKG-INFO
+n123.egg-info/SOURCES.txt
+n123.egg-info/dependency_links.txt
+n123.egg-info/top_level.txt

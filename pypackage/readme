@@ -1,0 +1,19 @@
+A1. 只有被import得文件才会自动生成pyc，所以odoo得主程序文件不以py结尾方便删去其他py保留main文件
+A2. python2.7默认生成同名加c得pyc文件， python3.5默认生成f21.cpython-37.pyc文件中间有环境变量，在单独得__pycache__文件夹下
+A3. 不在生成pyc文在~/.bash_profile中添加：export PYTHONDONTWRITEBYTECODE=False  执行source ~/.bash_profile生效
+
+
+B1. pyinstaller   http://c.biancheng.net/view/2690.html    https://jingyan.baidu.com/article/fcb5aff769b4efedaa4a711c.html
+    pyinstaller -F n123.py 打包生成一个exe   linux下一样可以
+    pyinstaller -D n123.py 打包生成一个包含exe得文件夹  可以指定辅助文件datas=[('.\\styles', 'styles\\.'), ('settings.toml', '.'), ('.secrets.toml', '.')],
+    pyinstaller n123.spec 安装最近一次打包参数得方式打包
+    pyinstaller 打包一个可执行文件
+
+C1. setup   https://blog.csdn.net/lynn_kong/article/details/17540207
+    python setup.py sdist为模块创建一个源码包    python setup.py bdist_wheel 打包成.whl可以直接pip install 像airflow一样
+    python setup.py install 导入一个源码包
+    setup是打包一个安装文件
+
+
+
+
