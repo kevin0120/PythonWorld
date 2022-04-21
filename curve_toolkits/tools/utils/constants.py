@@ -1,0 +1,3 @@
+import os
+
+DEFAULT_TEMPLATE_CURVE_COUNT = int(os.environ.get('DEFAULT_TEMPLATE_CURVE_COUNT', '15'))

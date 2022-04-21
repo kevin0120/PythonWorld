@@ -1,0 +1,12 @@
+{% import 'macro' as macro %}
+<!DOCTYPE html>
+<html style="width:100%;height:100%;border: 0;margin: 0;padding: 0;">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ chart.page_title }}</title>
+    {{ macro.render_chart_dependencies(chart) }}
+</head>
+<body style="width:100%;height:100%;border: 0;margin: 0;padding: 0;">
+    {{ macro.render_chart_content(chart) }}
+</body>
+</html>

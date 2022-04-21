@@ -1,0 +1,117 @@
+.primaryButton {{
+  color: {QTMATERIAL_SECONDARYCOLOR};
+  text-transform: none;
+  background-color: {QTMATERIAL_PRIMARYCOLOR};
+}}
+
+.smallButton {{
+  height:10px;
+  padding: 0px;
+  margin: 0px;
+  /*width: 50px;*/
+}}
+
+QLineEdit {{
+  /*color: {QTMATERIAL_SECONDARYCOLOR};*/
+  /*text-transform: none;*/
+  /*background-color: {QTMATERIAL_PRIMARYCOLOR};*/
+  border-width: 1px;
+  border-radius: 3px;
+}}
+
+QLineEdit:disabled{{
+  border-width: 1px;
+  border-radius: 3px;
+  color: {QTMATERIAL_PRIMARYCOLOR};
+}}
+
+
+.bgLight {{
+  background-color: {QTMATERIAL_SECONDARYCOLOR};
+}}
+
+.resultButton{{
+  border-width: 1px;
+  border-radius: 3px;
+  color: {QTMATERIAL_SECONDARYCOLOR};
+}}
+
+.resultButton{{
+  border-width: 1px;
+  border-radius: 3px;
+  color: {QTMATERIAL_SECONDARYCOLOR};
+}}
+
+.resultButton:active{{
+  border-width: 1px;
+  border-radius: 3px;
+  color: {QTMATERIAL_SECONDARYCOLOR};
+}}
+
+.resultButtonSuccess{{
+  background-color: #66bb6a;
+  border-color: #66bb6a;
+}}
+
+.resultButtonSuccess:active{{
+  background-color: #66bb6a;
+  border-color: #66bb6a;
+}}
+
+.resultButtonFailed{{
+  background-color: #dc3545;
+  border-color: #dc3545;
+}}
+
+.resultButtonFailed:active{{
+  background-color: #dc3545;
+  border-color: #dc3545;
+}}
+
+QGroupBox{{
+  padding-left:2px;
+  padding-right:2px;
+  padding-bottom:2px;
+}}
+
+QGroupBox::title  {{
+    subcontrol-origin: margin;
+}}
+
+QHeaderView::section {{
+    padding:0px;
+}}
+
+QScrollBar::handle:vertical {{
+    background-color: {QTMATERIAL_PRIMARYCOLOR};
+}}
+
+QScrollBar::handle:horizontal {{
+    background-color: {QTMATERIAL_PRIMARYCOLOR};
+}}
+
+QTableWidget::item {{
+  padding:0;
+  alignment: center;
+  subcontrol-position: center center;
+  text-align:center;
+}}
+
+QTableWidget::item QRadioButton{{
+alignment: center;
+subcontrol-position: center center;
+text-align:center;
+}}
+
+QTableWidget::item QRadioButton::indicator {{
+padding-left: 12px;
+padding-right:12px;
+alignment: center;
+subcontrol-position: center center;
+text-align:center;
+}}
+
+QCheckBox::indicator {{
+padding-bottom: 16px;
+padding-top: 16px;
+}}
