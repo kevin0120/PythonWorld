@@ -8,6 +8,8 @@ B1. pyinstaller   http://c.biancheng.net/view/2690.html    https://jingyan.baidu
     pyinstaller -D n123.py 打包生成一个包含exe得文件夹  可以指定辅助文件datas=[('.\\styles', 'styles\\.'), ('settings.toml', '.'), ('.secrets.toml', '.')],
     pyinstaller n123.spec 安装最近一次打包参数得方式打包
     pyinstaller 打包一个可执行文件
+    spec 详解：https://blog.csdn.net/tangfreeze/article/details/112240342
+
 
 C1. setup   https://blog.csdn.net/lynn_kong/article/details/17540207
     python setup.py sdist为模块创建一个源码包    python setup.py bdist_wheel 打包成.whl可以直接pip install 像airflow一样

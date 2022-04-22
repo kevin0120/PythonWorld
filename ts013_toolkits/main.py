@@ -22,3 +22,8 @@ def excepthook(exc_type, exc_value, exc_tb):
 sys.excepthook = excepthook
 
 app_controller.run_app()
+
+
+if __name__ == "__main__":
+    sys.excepthook = excepthook
+    app_controller.run_app()
