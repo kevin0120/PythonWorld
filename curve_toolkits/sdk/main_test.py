@@ -4,7 +4,7 @@ from loguru import logger
 
 CURVE_LIB_PATH = os.environ.get(
     'CURVE_LIB_PATH',
-    '../lib/libcurve_analysis_platform.so')
+    '../lib/libcurve_analysis_platform.dll')
 
 bolt_number = 'W1-021R_1_1'
 craft_type = 1

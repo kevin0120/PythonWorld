@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from PyQt5.QtCore import QUrl
-from PyQt5.QtWebEngineWidgets import QWebEngineView
+
 from tools.view.mixin import ToolKitMixin
 from pyecharts.globals import ThemeType
 from pyecharts import options as opts
@@ -10,6 +10,7 @@ import numpy as np
 from jinja2.environment import Environment
 from jinja2.loaders import FileSystemLoader
 import os
+from PyQt5.QtWebEngineWidgets import QWebEngineView
 
 
 class Chart(ToolKitMixin):

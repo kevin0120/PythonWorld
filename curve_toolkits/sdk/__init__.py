@@ -15,9 +15,11 @@ try:
     if MSDK is not None:
         pass
     cwd = os.path.abspath(os.path.dirname(__file__))
-    if platform.system()=='Windows':
+    if platform.system() == 'Windows':
         ff = os.path.join(cwd, 'lib')
-        os.add_dll_directory(ff)
+        # 报错提示os没有这个函数
+        # os.add_dll_directory(ff)
+        os.environ['path'] += ";" + ff
         fl = os.path.join(ff, 'curve_analysis_platform.dll')
         MSDK = ctypes.cdll.LoadLibrary(fl)
     if platform.system() == 'Linux':
