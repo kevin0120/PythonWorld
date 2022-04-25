@@ -38,6 +38,7 @@ class Example(QWidget):
         self.setWindowTitle('Color dialog')
         self.show()
 
+        self.showMaximized()
     def showDialog(self):
         col = QColorDialog.getColor()
 

@@ -12,3 +12,5 @@ if __name__ == "__main__":
     template_curves_dir = path.join(_workspace, '111')
     if not path.exists(template_curves_dir):
         os.makedirs(template_curves_dir)
+
+    os.startfile(template_curves_dir)

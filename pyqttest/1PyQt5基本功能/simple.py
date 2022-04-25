@@ -52,14 +52,7 @@ if __name__ == '__main__':
     tabWidget_2.addTab(setting_tab, "")
     tabWidget_2.setTabText(tabWidget_2.indexOf(setting_tab), _translate("MainWindow", "设置"))
 
-
-
-
-
-
     MainWindow.setWindowTitle(_translate("MainWindow", "唐山转向架动检车间标定程序"))
-
-
 
     MainWindow.showMaximized()
 
