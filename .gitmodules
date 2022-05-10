@@ -4,3 +4,7 @@
 [submodule "submodule/stock-logistics-workflow"]
 	path = submodule/stock-logistics-workflow
 	url = git@github.com:OCA/stock-logistics-workflow.git
+[submodule "submodule/spc"]
+	path = submodule/spc
+	url = git@github.com:masami10/spc.git
+	branch = main
