@@ -2,7 +2,7 @@ from access_parser import AccessParser
 
 if __name__ == '__main__':
     # .mdb or .accdb file
-    db = AccessParser("data1.accdb")
+    db = AccessParser("data1.mdb")
 
     # Print DB tables
     print(db.catalog)
