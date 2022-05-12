@@ -8,3 +8,6 @@
 	path = submodule/spc
 	url = git@github.com:masami10/spc.git
 	branch = main
+[submodule "submodule/airflow"]
+	path = submodule/airflow
+	url = git@github.com:apache/airflow.git
