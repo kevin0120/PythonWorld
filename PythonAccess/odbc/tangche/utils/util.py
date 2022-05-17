@@ -1,5 +1,6 @@
 import argparse
 import json
+import threading
 from datetime import datetime
 
 import pyodbc
@@ -87,20 +88,41 @@ def readFromDbAndSend():
     crsr.commit()
     crsr.close()
     cnxn.close()
-
-    try:
-        httpSend()
-    except Exception as e:
-        print("发送失败", e)
-        return
+    httpSend()
 
 
 def httpSend():
-    r = requests.post("http://{}:8082/rush/v1/statusPress".format(args.rush), data=json.dumps(pressData))
-    print(r.text)
+    t1 = threading.Thread(target=rushStatus, args=())
+    t2 = threading.Thread(target=rushSendData, args=())
+    t3 = threading.Thread(target=odooSendData, args=())
+    t1.start()
+    t2.start()
+    t3.start()
 
-    r = requests.post("http://{}:8082/rush/v1/recvPress".format(args.rush), data=json.dumps(pressData))
-    print(r.text)
 
-    r = requests.post("http://{}:8069/ts031/recvPress".format(args.odoo), data=json.dumps(pressData))
-    print(r.text)
+def rushStatus():
+    try:
+        r = requests.post("http://{}:8082/rush/v1/statusPress".format(args.rush), data=json.dumps(pressData))
+        print(r.text)
+    except Exception as e:
+        print("发送失败rushStatus", e)
+        return
+
+
+def rushSendData():
+    try:
+        r = requests.post("http://{}:8082/rush/v1/recvPress".format(args.rush), data=json.dumps(pressData))
+        print(r.text)
+    except Exception as e:
+        print("发送失败rushSendData", e)
+        return
+
+
+def odooSendData():
+    try:
+        print("33333333")
+        r = requests.post("http://{}:8069/ts031/recvPress".format(args.odoo), data=json.dumps(pressData))
+        print(r.text)
+    except Exception as e:
+        print("发送失败odooSendData", e)
+        return
