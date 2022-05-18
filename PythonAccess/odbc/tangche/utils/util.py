@@ -21,12 +21,26 @@ parser.add_argument("-rush", type=str, default=r'127.0.0.1', dest='rush',
 
 parser.add_argument("-sn", type=str, default=r'001100', dest='sn',
                     help="压机序列号")
-parser.add_argument("-t", type=float, default=0.5, dest='t',
+parser.add_argument("-t", type=float, default=0.1, dest='t',
                     help="压机采样周期")
+
+parser.add_argument("-data", type=str, default=r'', dest='data',
+                    help="压机功能缓存数据")
 
 args = parser.parse_args()
 
 pressData = {'press_value': [], 'press_time': []}
+headers = {
+    "content-type": "application/json"
+}
+
+
+class saveData(object):
+    def __init__(self):
+        self.alreadySend = ""
+
+
+sd = saveData()
 
 
 def readFromDbAndSend():
@@ -102,7 +116,8 @@ def httpSend():
 
 def rushStatus():
     try:
-        r = requests.post("http://{}:8082/rush/v1/statusPress".format(args.rush), data=json.dumps(pressData))
+        r = requests.post("http://{}:8082/rush/v1/statusPress".format(args.rush), headers=headers,
+                          data=json.dumps(pressData))
         print(r.text)
     except Exception as e:
         print("发送失败rushStatus", e)
@@ -111,7 +126,8 @@ def rushStatus():
 
 def rushSendData():
     try:
-        r = requests.post("http://{}:8082/rush/v1/recvPress".format(args.rush), data=json.dumps(pressData))
+        r = requests.post("http://{}:8082/rush/v1/recvPress".format(args.rush), headers=headers,
+                          data=json.dumps(pressData))
         print(r.text)
     except Exception as e:
         print("发送失败rushSendData", e)
@@ -120,9 +136,14 @@ def rushSendData():
 
 def odooSendData():
     try:
-        print("33333333")
-        r = requests.post("http://{}:8069/ts031/recvPress".format(args.odoo), data=json.dumps(pressData))
-        print(r.text)
+        if pressData['press_file'] == args.data:
+            print("已成功发送过odooSendData",args.data)
+            return
+        r = requests.post("http://{}:8069/ts031/recvPress".format(args.odoo), headers=headers,
+                          data=json.dumps(pressData))
+        if r.status_code == 200:
+            args.data = pressData['press_file']
+
     except Exception as e:
         print("发送失败odooSendData", e)
         return
