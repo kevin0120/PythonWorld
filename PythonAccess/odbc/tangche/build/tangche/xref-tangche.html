@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>modulegraph cross reference for pyi_rth_certifi.py, tangche.py</title>
+    <title>modulegraph cross reference for pyi_rth_certifi.py, pyi_rth_multiprocessing.py, tangche.py</title>
     <style>
       .node { padding: 0.5em 0 0.5em; border-top: thin grey dotted; }
       .moduletype { font: smaller italic }
@@ -11,7 +11,7 @@
     </style>
   </head>
   <body>
-    <h1>modulegraph cross reference for pyi_rth_certifi.py, tangche.py</h1>
+    <h1>modulegraph cross reference for pyi_rth_certifi.py, pyi_rth_multiprocessing.py, tangche.py</h1>
 
 <div class="node">
   <a name="pyi_rth_certifi.py"></a>
@@ -20,6 +20,30 @@
 imports:
     <a href="#os">os</a>
  &#8226;   <a href="#ssl">ssl</a>
+ &#8226;   <a href="#sys">sys</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#tangche.py">tangche.py</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="pyi_rth_multiprocessing.py"></a>
+  <a target="code" href="///D:/venv/qt/lib/site-packages/PyInstaller/hooks/rthooks/pyi_rth_multiprocessing.py" type="text/plain"><tt>pyi_rth_multiprocessing.py</tt></a>
+<span class="moduletype">Script</span>  <div class="import">
+imports:
+    <a href="#multiprocessing">multiprocessing</a>
+ &#8226;   <a href="#multiprocessing.popen_fork">multiprocessing.popen_fork</a>
+ &#8226;   <a href="#multiprocessing.popen_spawn_posix">multiprocessing.popen_spawn_posix</a>
+ &#8226;   <a href="#multiprocessing.popen_spawn_win32">multiprocessing.popen_spawn_win32</a>
+ &#8226;   <a href="#multiprocessing.spawn">multiprocessing.spawn</a>
+ &#8226;   <a href="#os">os</a>
+ &#8226;   <a href="#re">re</a>
+ &#8226;   <a href="#subprocess">subprocess</a>
  &#8226;   <a href="#sys">sys</a>
 
   </div>
@@ -178,8 +202,10 @@ imports:
  &#8226;   <a href="#keyword">keyword</a>
  &#8226;   <a href="#linecache">linecache</a>
  &#8226;   <a href="#locale">locale</a>
+ &#8226;   <a href="#loguru">loguru</a>
  &#8226;   <a href="#operator">operator</a>
  &#8226;   <a href="#pyi_rth_certifi.py">pyi_rth_certifi.py</a>
+ &#8226;   <a href="#pyi_rth_multiprocessing.py">pyi_rth_multiprocessing.py</a>
  &#8226;   <a href="#re">re</a>
  &#8226;   <a href="#reprlib">reprlib</a>
  &#8226;   <a href="#sre_compile">sre_compile</a>
@@ -462,6 +488,18 @@ imported by:
 </div>
 
 <div class="node">
+  <a name="_asyncio"></a>
+  <tt>_asyncio</tt> <span class="moduletype"><tt>C:\Users\admin\AppData\Local\Programs\Python\Python37\DLLs\_asyncio.pyd</tt></span>  <div class="import">
+imported by:
+    <a href="#asyncio.events">asyncio.events</a>
+ &#8226;   <a href="#asyncio.futures">asyncio.futures</a>
+ &#8226;   <a href="#asyncio.tasks">asyncio.tasks</a>
+
+  </div>
+
+</div>
+
+<div class="node">
   <a name="_bisect"></a>
   <tt>_bisect</tt> <span class="moduletype"><i>(builtin module)</i></span>  <div class="import">
 imported by:
@@ -687,6 +725,16 @@ imported by:
 </div>
 
 <div class="node">
+  <a name="_ctypes"></a>
+  <tt>_ctypes</tt> <span class="moduletype"><tt>C:\Users\admin\AppData\Local\Programs\Python\Python37\DLLs\_ctypes.pyd</tt></span>  <div class="import">
+imported by:
+    <a href="#ctypes">ctypes</a>
+
+  </div>
+
+</div>
+
+<div class="node">
   <a name="_datetime"></a>
   <tt>_datetime</tt> <span class="moduletype"><i>(builtin module)</i></span>  <div class="import">
 imports:
@@ -903,6 +951,19 @@ imported by:
 </div>
 
 <div class="node">
+  <a name="_multiprocessing"></a>
+  <tt>_multiprocessing</tt> <span class="moduletype"><tt>C:\Users\admin\AppData\Local\Programs\Python\Python37\DLLs\_multiprocessing.pyd</tt></span>  <div class="import">
+imported by:
+    <a href="#multiprocessing.connection">multiprocessing.connection</a>
+ &#8226;   <a href="#multiprocessing.queues">multiprocessing.queues</a>
+ &#8226;   <a href="#multiprocessing.semaphore_tracker">multiprocessing.semaphore_tracker</a>
+ &#8226;   <a href="#multiprocessing.synchronize">multiprocessing.synchronize</a>
+
+  </div>
+
+</div>
+
+<div class="node">
   <a name="_opcode"></a>
   <tt>_opcode</tt> <span class="moduletype"><i>(builtin module)</i></span>  <div class="import">
 imported by:
@@ -946,6 +1007,16 @@ imported by:
 </div>
 
 <div class="node">
+  <a name="_overlapped"></a>
+  <tt>_overlapped</tt> <span class="moduletype"><tt>C:\Users\admin\AppData\Local\Programs\Python\Python37\DLLs\_overlapped.pyd</tt></span>  <div class="import">
+imported by:
+    <a href="#asyncio.windows_events">asyncio.windows_events</a>
+
+  </div>
+
+</div>
+
+<div class="node">
   <a name="_pickle"></a>
   <tt>_pickle</tt> <span class="moduletype"><i>(builtin module)</i></span>  <div class="import">
 imports:
@@ -972,7 +1043,8 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#subprocess">subprocess</a>
+    <a href="#multiprocessing.util">multiprocessing.util</a>
+ &#8226;   <a href="#subprocess">subprocess</a>
 
   </div>
 
@@ -1269,6 +1341,7 @@ imports:
   <div class="import">
 imported by:
     <a href="#_py_abc">_py_abc</a>
+ &#8226;   <a href="#multiprocessing.process">multiprocessing.process</a>
  &#8226;   <a href="#tangche.py">tangche.py</a>
  &#8226;   <a href="#threading">threading</a>
  &#8226;   <a href="#weakref">weakref</a>
@@ -1281,7 +1354,13 @@ imported by:
   <a name="_winapi"></a>
   <tt>_winapi</tt> <span class="moduletype"><i>(builtin module)</i></span>  <div class="import">
 imported by:
-    <a href="#encodings">encodings</a>
+    <a href="#asyncio.windows_events">asyncio.windows_events</a>
+ &#8226;   <a href="#asyncio.windows_utils">asyncio.windows_utils</a>
+ &#8226;   <a href="#encodings">encodings</a>
+ &#8226;   <a href="#multiprocessing.connection">multiprocessing.connection</a>
+ &#8226;   <a href="#multiprocessing.heap">multiprocessing.heap</a>
+ &#8226;   <a href="#multiprocessing.popen_spawn_win32">multiprocessing.popen_spawn_win32</a>
+ &#8226;   <a href="#multiprocessing.reduction">multiprocessing.reduction</a>
  &#8226;   <a href="#subprocess">subprocess</a>
 
   </div>
@@ -1339,12 +1418,24 @@ imported by:
  &#8226;   <a href="#importlib.abc">importlib.abc</a>
  &#8226;   <a href="#inspect">inspect</a>
  &#8226;   <a href="#io">io</a>
+ &#8226;   <a href="#multiprocessing.reduction">multiprocessing.reduction</a>
  &#8226;   <a href="#numbers">numbers</a>
  &#8226;   <a href="#os">os</a>
  &#8226;   <a href="#selectors">selectors</a>
  &#8226;   <a href="#tangche.py">tangche.py</a>
  &#8226;   <a href="#typing">typing</a>
  &#8226;   <a href="#typing_extensions">typing_extensions</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="aiocontextvars"></a>
+  <a target="code" href="" type="text/plain"><tt>aiocontextvars</tt></a>
+<span class="moduletype">MissingModule</span>  <div class="import">
+imported by:
+    <a href="#loguru._logger">loguru._logger</a>
 
   </div>
 
@@ -1383,6 +1474,18 @@ imported by:
 </div>
 
 <div class="node">
+  <a name="array"></a>
+  <tt>array</tt> <span class="moduletype"><i>(builtin module)</i></span>  <div class="import">
+imported by:
+    <a href="#multiprocessing.dummy">multiprocessing.dummy</a>
+ &#8226;   <a href="#multiprocessing.managers">multiprocessing.managers</a>
+ &#8226;   <a href="#multiprocessing.reduction">multiprocessing.reduction</a>
+
+  </div>
+
+</div>
+
+<div class="node">
   <a name="ast"></a>
   <a target="code" href="///C:/Users/admin/AppData/Local/Programs/Python/Python37/lib/ast.py" type="text/plain"><tt>ast</tt></a>
 <span class="moduletype">SourceModule</span>  <div class="import">
@@ -1401,10 +1504,756 @@ imported by:
 </div>
 
 <div class="node">
+  <a name="asyncio"></a>
+  <a target="code" href="///C:/Users/admin/AppData/Local/Programs/Python/Python37/lib/asyncio/__init__.py" type="text/plain"><tt>asyncio</tt></a>
+<span class="moduletype">Package</span>  <div class="import">
+imports:
+    <a href="#asyncio">asyncio</a>
+ &#8226;   <a href="#asyncio.DefaultEventLoopPolicy">asyncio.DefaultEventLoopPolicy</a>
+ &#8226;   <a href="#asyncio.base_events">asyncio.base_events</a>
+ &#8226;   <a href="#asyncio.base_futures">asyncio.base_futures</a>
+ &#8226;   <a href="#asyncio.base_subprocess">asyncio.base_subprocess</a>
+ &#8226;   <a href="#asyncio.base_tasks">asyncio.base_tasks</a>
+ &#8226;   <a href="#asyncio.constants">asyncio.constants</a>
+ &#8226;   <a href="#asyncio.coroutines">asyncio.coroutines</a>
+ &#8226;   <a href="#asyncio.events">asyncio.events</a>
+ &#8226;   <a href="#asyncio.format_helpers">asyncio.format_helpers</a>
+ &#8226;   <a href="#asyncio.futures">asyncio.futures</a>
+ &#8226;   <a href="#asyncio.locks">asyncio.locks</a>
+ &#8226;   <a href="#asyncio.proactor_events">asyncio.proactor_events</a>
+ &#8226;   <a href="#asyncio.protocols">asyncio.protocols</a>
+ &#8226;   <a href="#asyncio.queues">asyncio.queues</a>
+ &#8226;   <a href="#asyncio.runners">asyncio.runners</a>
+ &#8226;   <a href="#asyncio.selector_events">asyncio.selector_events</a>
+ &#8226;   <a href="#asyncio.sslproto">asyncio.sslproto</a>
+ &#8226;   <a href="#asyncio.streams">asyncio.streams</a>
+ &#8226;   <a href="#asyncio.subprocess">asyncio.subprocess</a>
+ &#8226;   <a href="#asyncio.tasks">asyncio.tasks</a>
+ &#8226;   <a href="#asyncio.transports">asyncio.transports</a>
+ &#8226;   <a href="#asyncio.unix_events">asyncio.unix_events</a>
+ &#8226;   <a href="#asyncio.windows_events">asyncio.windows_events</a>
+ &#8226;   <a href="#asyncio.windows_utils">asyncio.windows_utils</a>
+ &#8226;   <a href="#sys">sys</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#asyncio">asyncio</a>
+ &#8226;   <a href="#asyncio.base_events">asyncio.base_events</a>
+ &#8226;   <a href="#asyncio.base_futures">asyncio.base_futures</a>
+ &#8226;   <a href="#asyncio.base_subprocess">asyncio.base_subprocess</a>
+ &#8226;   <a href="#asyncio.base_tasks">asyncio.base_tasks</a>
+ &#8226;   <a href="#asyncio.constants">asyncio.constants</a>
+ &#8226;   <a href="#asyncio.coroutines">asyncio.coroutines</a>
+ &#8226;   <a href="#asyncio.events">asyncio.events</a>
+ &#8226;   <a href="#asyncio.format_helpers">asyncio.format_helpers</a>
+ &#8226;   <a href="#asyncio.futures">asyncio.futures</a>
+ &#8226;   <a href="#asyncio.locks">asyncio.locks</a>
+ &#8226;   <a href="#asyncio.log">asyncio.log</a>
+ &#8226;   <a href="#asyncio.proactor_events">asyncio.proactor_events</a>
+ &#8226;   <a href="#asyncio.protocols">asyncio.protocols</a>
+ &#8226;   <a href="#asyncio.queues">asyncio.queues</a>
+ &#8226;   <a href="#asyncio.runners">asyncio.runners</a>
+ &#8226;   <a href="#asyncio.selector_events">asyncio.selector_events</a>
+ &#8226;   <a href="#asyncio.sslproto">asyncio.sslproto</a>
+ &#8226;   <a href="#asyncio.streams">asyncio.streams</a>
+ &#8226;   <a href="#asyncio.subprocess">asyncio.subprocess</a>
+ &#8226;   <a href="#asyncio.tasks">asyncio.tasks</a>
+ &#8226;   <a href="#asyncio.transports">asyncio.transports</a>
+ &#8226;   <a href="#asyncio.unix_events">asyncio.unix_events</a>
+ &#8226;   <a href="#asyncio.windows_events">asyncio.windows_events</a>
+ &#8226;   <a href="#asyncio.windows_utils">asyncio.windows_utils</a>
+ &#8226;   <a href="#loguru._logger">loguru._logger</a>
+ &#8226;   <a href="#loguru._simple_sinks">loguru._simple_sinks</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="asyncio.DefaultEventLoopPolicy"></a>
+  <a target="code" href="" type="text/plain"><tt>asyncio.DefaultEventLoopPolicy</tt></a>
+<span class="moduletype">MissingModule</span>  <div class="import">
+imported by:
+    <a href="#asyncio">asyncio</a>
+ &#8226;   <a href="#asyncio.events">asyncio.events</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="asyncio.base_events"></a>
+  <a target="code" href="///C:/Users/admin/AppData/Local/Programs/Python/Python37/lib/asyncio/base_events.py" type="text/plain"><tt>asyncio.base_events</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#asyncio">asyncio</a>
+ &#8226;   <a href="#asyncio.constants">asyncio.constants</a>
+ &#8226;   <a href="#asyncio.coroutines">asyncio.coroutines</a>
+ &#8226;   <a href="#asyncio.events">asyncio.events</a>
+ &#8226;   <a href="#asyncio.futures">asyncio.futures</a>
+ &#8226;   <a href="#asyncio.log">asyncio.log</a>
+ &#8226;   <a href="#asyncio.protocols">asyncio.protocols</a>
+ &#8226;   <a href="#asyncio.sslproto">asyncio.sslproto</a>
+ &#8226;   <a href="#asyncio.tasks">asyncio.tasks</a>
+ &#8226;   <a href="#asyncio.transports">asyncio.transports</a>
+ &#8226;   <a href="#collections">collections</a>
+ &#8226;   <a href="#collections.abc">collections.abc</a>
+ &#8226;   <a href="#concurrent.futures">concurrent.futures</a>
+ &#8226;   <a href="#heapq">heapq</a>
+ &#8226;   <a href="#itertools">itertools</a>
+ &#8226;   <a href="#logging">logging</a>
+ &#8226;   <a href="#os">os</a>
+ &#8226;   <a href="#socket">socket</a>
+ &#8226;   <a href="#ssl">ssl</a>
+ &#8226;   <a href="#subprocess">subprocess</a>
+ &#8226;   <a href="#sys">sys</a>
+ &#8226;   <a href="#threading">threading</a>
+ &#8226;   <a href="#time">time</a>
+ &#8226;   <a href="#traceback">traceback</a>
+ &#8226;   <a href="#warnings">warnings</a>
+ &#8226;   <a href="#weakref">weakref</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#asyncio">asyncio</a>
+ &#8226;   <a href="#asyncio.proactor_events">asyncio.proactor_events</a>
+ &#8226;   <a href="#asyncio.selector_events">asyncio.selector_events</a>
+ &#8226;   <a href="#asyncio.sslproto">asyncio.sslproto</a>
+ &#8226;   <a href="#asyncio.unix_events">asyncio.unix_events</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="asyncio.base_futures"></a>
+  <a target="code" href="///C:/Users/admin/AppData/Local/Programs/Python/Python37/lib/asyncio/base_futures.py" type="text/plain"><tt>asyncio.base_futures</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#asyncio">asyncio</a>
+ &#8226;   <a href="#asyncio.format_helpers">asyncio.format_helpers</a>
+ &#8226;   <a href="#concurrent.futures._base">concurrent.futures._base</a>
+ &#8226;   <a href="#reprlib">reprlib</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#asyncio">asyncio</a>
+ &#8226;   <a href="#asyncio.base_tasks">asyncio.base_tasks</a>
+ &#8226;   <a href="#asyncio.coroutines">asyncio.coroutines</a>
+ &#8226;   <a href="#asyncio.futures">asyncio.futures</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="asyncio.base_subprocess"></a>
+  <a target="code" href="///C:/Users/admin/AppData/Local/Programs/Python/Python37/lib/asyncio/base_subprocess.py" type="text/plain"><tt>asyncio.base_subprocess</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#asyncio">asyncio</a>
+ &#8226;   <a href="#asyncio.log">asyncio.log</a>
+ &#8226;   <a href="#asyncio.protocols">asyncio.protocols</a>
+ &#8226;   <a href="#asyncio.transports">asyncio.transports</a>
+ &#8226;   <a href="#collections">collections</a>
+ &#8226;   <a href="#subprocess">subprocess</a>
+ &#8226;   <a href="#warnings">warnings</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#asyncio">asyncio</a>
+ &#8226;   <a href="#asyncio.unix_events">asyncio.unix_events</a>
+ &#8226;   <a href="#asyncio.windows_events">asyncio.windows_events</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="asyncio.base_tasks"></a>
+  <a target="code" href="///C:/Users/admin/AppData/Local/Programs/Python/Python37/lib/asyncio/base_tasks.py" type="text/plain"><tt>asyncio.base_tasks</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#asyncio">asyncio</a>
+ &#8226;   <a href="#asyncio.base_futures">asyncio.base_futures</a>
+ &#8226;   <a href="#asyncio.coroutines">asyncio.coroutines</a>
+ &#8226;   <a href="#linecache">linecache</a>
+ &#8226;   <a href="#traceback">traceback</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#asyncio">asyncio</a>
+ &#8226;   <a href="#asyncio.tasks">asyncio.tasks</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="asyncio.constants"></a>
+  <a target="code" href="///C:/Users/admin/AppData/Local/Programs/Python/Python37/lib/asyncio/constants.py" type="text/plain"><tt>asyncio.constants</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#asyncio">asyncio</a>
+ &#8226;   <a href="#enum">enum</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#asyncio">asyncio</a>
+ &#8226;   <a href="#asyncio.base_events">asyncio.base_events</a>
+ &#8226;   <a href="#asyncio.coroutines">asyncio.coroutines</a>
+ &#8226;   <a href="#asyncio.format_helpers">asyncio.format_helpers</a>
+ &#8226;   <a href="#asyncio.proactor_events">asyncio.proactor_events</a>
+ &#8226;   <a href="#asyncio.selector_events">asyncio.selector_events</a>
+ &#8226;   <a href="#asyncio.sslproto">asyncio.sslproto</a>
+ &#8226;   <a href="#asyncio.unix_events">asyncio.unix_events</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="asyncio.coroutines"></a>
+  <a target="code" href="///C:/Users/admin/AppData/Local/Programs/Python/Python37/lib/asyncio/coroutines.py" type="text/plain"><tt>asyncio.coroutines</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#asyncio">asyncio</a>
+ &#8226;   <a href="#asyncio.base_futures">asyncio.base_futures</a>
+ &#8226;   <a href="#asyncio.constants">asyncio.constants</a>
+ &#8226;   <a href="#asyncio.format_helpers">asyncio.format_helpers</a>
+ &#8226;   <a href="#asyncio.log">asyncio.log</a>
+ &#8226;   <a href="#collections.abc">collections.abc</a>
+ &#8226;   <a href="#functools">functools</a>
+ &#8226;   <a href="#inspect">inspect</a>
+ &#8226;   <a href="#os">os</a>
+ &#8226;   <a href="#sys">sys</a>
+ &#8226;   <a href="#traceback">traceback</a>
+ &#8226;   <a href="#types">types</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#asyncio">asyncio</a>
+ &#8226;   <a href="#asyncio.base_events">asyncio.base_events</a>
+ &#8226;   <a href="#asyncio.base_tasks">asyncio.base_tasks</a>
+ &#8226;   <a href="#asyncio.locks">asyncio.locks</a>
+ &#8226;   <a href="#asyncio.runners">asyncio.runners</a>
+ &#8226;   <a href="#asyncio.streams">asyncio.streams</a>
+ &#8226;   <a href="#asyncio.tasks">asyncio.tasks</a>
+ &#8226;   <a href="#asyncio.unix_events">asyncio.unix_events</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="asyncio.events"></a>
+  <a target="code" href="///C:/Users/admin/AppData/Local/Programs/Python/Python37/lib/asyncio/events.py" type="text/plain"><tt>asyncio.events</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#_asyncio">_asyncio</a>
+ &#8226;   <a href="#asyncio">asyncio</a>
+ &#8226;   <a href="#asyncio.DefaultEventLoopPolicy">asyncio.DefaultEventLoopPolicy</a>
+ &#8226;   <a href="#asyncio.format_helpers">asyncio.format_helpers</a>
+ &#8226;   <a href="#contextvars">contextvars</a>
+ &#8226;   <a href="#os">os</a>
+ &#8226;   <a href="#socket">socket</a>
+ &#8226;   <a href="#subprocess">subprocess</a>
+ &#8226;   <a href="#sys">sys</a>
+ &#8226;   <a href="#threading">threading</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#asyncio">asyncio</a>
+ &#8226;   <a href="#asyncio.base_events">asyncio.base_events</a>
+ &#8226;   <a href="#asyncio.futures">asyncio.futures</a>
+ &#8226;   <a href="#asyncio.locks">asyncio.locks</a>
+ &#8226;   <a href="#asyncio.proactor_events">asyncio.proactor_events</a>
+ &#8226;   <a href="#asyncio.queues">asyncio.queues</a>
+ &#8226;   <a href="#asyncio.runners">asyncio.runners</a>
+ &#8226;   <a href="#asyncio.selector_events">asyncio.selector_events</a>
+ &#8226;   <a href="#asyncio.streams">asyncio.streams</a>
+ &#8226;   <a href="#asyncio.subprocess">asyncio.subprocess</a>
+ &#8226;   <a href="#asyncio.tasks">asyncio.tasks</a>
+ &#8226;   <a href="#asyncio.unix_events">asyncio.unix_events</a>
+ &#8226;   <a href="#asyncio.windows_events">asyncio.windows_events</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="asyncio.format_helpers"></a>
+  <a target="code" href="///C:/Users/admin/AppData/Local/Programs/Python/Python37/lib/asyncio/format_helpers.py" type="text/plain"><tt>asyncio.format_helpers</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#asyncio">asyncio</a>
+ &#8226;   <a href="#asyncio.constants">asyncio.constants</a>
+ &#8226;   <a href="#functools">functools</a>
+ &#8226;   <a href="#inspect">inspect</a>
+ &#8226;   <a href="#reprlib">reprlib</a>
+ &#8226;   <a href="#sys">sys</a>
+ &#8226;   <a href="#traceback">traceback</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#asyncio">asyncio</a>
+ &#8226;   <a href="#asyncio.base_futures">asyncio.base_futures</a>
+ &#8226;   <a href="#asyncio.coroutines">asyncio.coroutines</a>
+ &#8226;   <a href="#asyncio.events">asyncio.events</a>
+ &#8226;   <a href="#asyncio.futures">asyncio.futures</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="asyncio.futures"></a>
+  <a target="code" href="///C:/Users/admin/AppData/Local/Programs/Python/Python37/lib/asyncio/futures.py" type="text/plain"><tt>asyncio.futures</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#_asyncio">_asyncio</a>
+ &#8226;   <a href="#asyncio">asyncio</a>
+ &#8226;   <a href="#asyncio.base_futures">asyncio.base_futures</a>
+ &#8226;   <a href="#asyncio.events">asyncio.events</a>
+ &#8226;   <a href="#asyncio.format_helpers">asyncio.format_helpers</a>
+ &#8226;   <a href="#concurrent.futures">concurrent.futures</a>
+ &#8226;   <a href="#contextvars">contextvars</a>
+ &#8226;   <a href="#logging">logging</a>
+ &#8226;   <a href="#sys">sys</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#asyncio">asyncio</a>
+ &#8226;   <a href="#asyncio.base_events">asyncio.base_events</a>
+ &#8226;   <a href="#asyncio.locks">asyncio.locks</a>
+ &#8226;   <a href="#asyncio.proactor_events">asyncio.proactor_events</a>
+ &#8226;   <a href="#asyncio.selector_events">asyncio.selector_events</a>
+ &#8226;   <a href="#asyncio.tasks">asyncio.tasks</a>
+ &#8226;   <a href="#asyncio.unix_events">asyncio.unix_events</a>
+ &#8226;   <a href="#asyncio.windows_events">asyncio.windows_events</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="asyncio.locks"></a>
+  <a target="code" href="///C:/Users/admin/AppData/Local/Programs/Python/Python37/lib/asyncio/locks.py" type="text/plain"><tt>asyncio.locks</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#asyncio">asyncio</a>
+ &#8226;   <a href="#asyncio.coroutines">asyncio.coroutines</a>
+ &#8226;   <a href="#asyncio.events">asyncio.events</a>
+ &#8226;   <a href="#asyncio.futures">asyncio.futures</a>
+ &#8226;   <a href="#collections">collections</a>
+ &#8226;   <a href="#warnings">warnings</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#asyncio">asyncio</a>
+ &#8226;   <a href="#asyncio.queues">asyncio.queues</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="asyncio.log"></a>
+  <a target="code" href="///C:/Users/admin/AppData/Local/Programs/Python/Python37/lib/asyncio/log.py" type="text/plain"><tt>asyncio.log</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#asyncio">asyncio</a>
+ &#8226;   <a href="#logging">logging</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#asyncio.base_events">asyncio.base_events</a>
+ &#8226;   <a href="#asyncio.base_subprocess">asyncio.base_subprocess</a>
+ &#8226;   <a href="#asyncio.coroutines">asyncio.coroutines</a>
+ &#8226;   <a href="#asyncio.proactor_events">asyncio.proactor_events</a>
+ &#8226;   <a href="#asyncio.selector_events">asyncio.selector_events</a>
+ &#8226;   <a href="#asyncio.sslproto">asyncio.sslproto</a>
+ &#8226;   <a href="#asyncio.streams">asyncio.streams</a>
+ &#8226;   <a href="#asyncio.subprocess">asyncio.subprocess</a>
+ &#8226;   <a href="#asyncio.unix_events">asyncio.unix_events</a>
+ &#8226;   <a href="#asyncio.windows_events">asyncio.windows_events</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="asyncio.proactor_events"></a>
+  <a target="code" href="///C:/Users/admin/AppData/Local/Programs/Python/Python37/lib/asyncio/proactor_events.py" type="text/plain"><tt>asyncio.proactor_events</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#asyncio">asyncio</a>
+ &#8226;   <a href="#asyncio.base_events">asyncio.base_events</a>
+ &#8226;   <a href="#asyncio.constants">asyncio.constants</a>
+ &#8226;   <a href="#asyncio.events">asyncio.events</a>
+ &#8226;   <a href="#asyncio.futures">asyncio.futures</a>
+ &#8226;   <a href="#asyncio.log">asyncio.log</a>
+ &#8226;   <a href="#asyncio.protocols">asyncio.protocols</a>
+ &#8226;   <a href="#asyncio.sslproto">asyncio.sslproto</a>
+ &#8226;   <a href="#asyncio.transports">asyncio.transports</a>
+ &#8226;   <a href="#io">io</a>
+ &#8226;   <a href="#os">os</a>
+ &#8226;   <a href="#socket">socket</a>
+ &#8226;   <a href="#warnings">warnings</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#asyncio">asyncio</a>
+ &#8226;   <a href="#asyncio.windows_events">asyncio.windows_events</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="asyncio.protocols"></a>
+  <a target="code" href="///C:/Users/admin/AppData/Local/Programs/Python/Python37/lib/asyncio/protocols.py" type="text/plain"><tt>asyncio.protocols</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#asyncio">asyncio</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#asyncio">asyncio</a>
+ &#8226;   <a href="#asyncio.base_events">asyncio.base_events</a>
+ &#8226;   <a href="#asyncio.base_subprocess">asyncio.base_subprocess</a>
+ &#8226;   <a href="#asyncio.proactor_events">asyncio.proactor_events</a>
+ &#8226;   <a href="#asyncio.selector_events">asyncio.selector_events</a>
+ &#8226;   <a href="#asyncio.sslproto">asyncio.sslproto</a>
+ &#8226;   <a href="#asyncio.streams">asyncio.streams</a>
+ &#8226;   <a href="#asyncio.subprocess">asyncio.subprocess</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="asyncio.queues"></a>
+  <a target="code" href="///C:/Users/admin/AppData/Local/Programs/Python/Python37/lib/asyncio/queues.py" type="text/plain"><tt>asyncio.queues</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#asyncio">asyncio</a>
+ &#8226;   <a href="#asyncio.events">asyncio.events</a>
+ &#8226;   <a href="#asyncio.locks">asyncio.locks</a>
+ &#8226;   <a href="#collections">collections</a>
+ &#8226;   <a href="#heapq">heapq</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#asyncio">asyncio</a>
+ &#8226;   <a href="#asyncio.tasks">asyncio.tasks</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="asyncio.runners"></a>
+  <a target="code" href="///C:/Users/admin/AppData/Local/Programs/Python/Python37/lib/asyncio/runners.py" type="text/plain"><tt>asyncio.runners</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#asyncio">asyncio</a>
+ &#8226;   <a href="#asyncio.coroutines">asyncio.coroutines</a>
+ &#8226;   <a href="#asyncio.events">asyncio.events</a>
+ &#8226;   <a href="#asyncio.tasks">asyncio.tasks</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#asyncio">asyncio</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="asyncio.selector_events"></a>
+  <a target="code" href="///C:/Users/admin/AppData/Local/Programs/Python/Python37/lib/asyncio/selector_events.py" type="text/plain"><tt>asyncio.selector_events</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#asyncio">asyncio</a>
+ &#8226;   <a href="#asyncio.base_events">asyncio.base_events</a>
+ &#8226;   <a href="#asyncio.constants">asyncio.constants</a>
+ &#8226;   <a href="#asyncio.events">asyncio.events</a>
+ &#8226;   <a href="#asyncio.futures">asyncio.futures</a>
+ &#8226;   <a href="#asyncio.log">asyncio.log</a>
+ &#8226;   <a href="#asyncio.protocols">asyncio.protocols</a>
+ &#8226;   <a href="#asyncio.sslproto">asyncio.sslproto</a>
+ &#8226;   <a href="#asyncio.transports">asyncio.transports</a>
+ &#8226;   <a href="#collections">collections</a>
+ &#8226;   <a href="#errno">errno</a>
+ &#8226;   <a href="#functools">functools</a>
+ &#8226;   <a href="#selectors">selectors</a>
+ &#8226;   <a href="#socket">socket</a>
+ &#8226;   <a href="#ssl">ssl</a>
+ &#8226;   <a href="#warnings">warnings</a>
+ &#8226;   <a href="#weakref">weakref</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#asyncio">asyncio</a>
+ &#8226;   <a href="#asyncio.unix_events">asyncio.unix_events</a>
+ &#8226;   <a href="#asyncio.windows_events">asyncio.windows_events</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="asyncio.sslproto"></a>
+  <a target="code" href="///C:/Users/admin/AppData/Local/Programs/Python/Python37/lib/asyncio/sslproto.py" type="text/plain"><tt>asyncio.sslproto</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#asyncio">asyncio</a>
+ &#8226;   <a href="#asyncio.base_events">asyncio.base_events</a>
+ &#8226;   <a href="#asyncio.constants">asyncio.constants</a>
+ &#8226;   <a href="#asyncio.log">asyncio.log</a>
+ &#8226;   <a href="#asyncio.protocols">asyncio.protocols</a>
+ &#8226;   <a href="#asyncio.transports">asyncio.transports</a>
+ &#8226;   <a href="#collections">collections</a>
+ &#8226;   <a href="#ssl">ssl</a>
+ &#8226;   <a href="#warnings">warnings</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#asyncio">asyncio</a>
+ &#8226;   <a href="#asyncio.base_events">asyncio.base_events</a>
+ &#8226;   <a href="#asyncio.proactor_events">asyncio.proactor_events</a>
+ &#8226;   <a href="#asyncio.selector_events">asyncio.selector_events</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="asyncio.streams"></a>
+  <a target="code" href="///C:/Users/admin/AppData/Local/Programs/Python/Python37/lib/asyncio/streams.py" type="text/plain"><tt>asyncio.streams</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#asyncio">asyncio</a>
+ &#8226;   <a href="#asyncio.coroutines">asyncio.coroutines</a>
+ &#8226;   <a href="#asyncio.events">asyncio.events</a>
+ &#8226;   <a href="#asyncio.log">asyncio.log</a>
+ &#8226;   <a href="#asyncio.protocols">asyncio.protocols</a>
+ &#8226;   <a href="#asyncio.tasks">asyncio.tasks</a>
+ &#8226;   <a href="#socket">socket</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#asyncio">asyncio</a>
+ &#8226;   <a href="#asyncio.subprocess">asyncio.subprocess</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="asyncio.subprocess"></a>
+  <a target="code" href="///C:/Users/admin/AppData/Local/Programs/Python/Python37/lib/asyncio/subprocess.py" type="text/plain"><tt>asyncio.subprocess</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#asyncio">asyncio</a>
+ &#8226;   <a href="#asyncio.events">asyncio.events</a>
+ &#8226;   <a href="#asyncio.log">asyncio.log</a>
+ &#8226;   <a href="#asyncio.protocols">asyncio.protocols</a>
+ &#8226;   <a href="#asyncio.streams">asyncio.streams</a>
+ &#8226;   <a href="#asyncio.tasks">asyncio.tasks</a>
+ &#8226;   <a href="#subprocess">subprocess</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#asyncio">asyncio</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="asyncio.tasks"></a>
+  <a target="code" href="///C:/Users/admin/AppData/Local/Programs/Python/Python37/lib/asyncio/tasks.py" type="text/plain"><tt>asyncio.tasks</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#_asyncio">_asyncio</a>
+ &#8226;   <a href="#asyncio">asyncio</a>
+ &#8226;   <a href="#asyncio.base_tasks">asyncio.base_tasks</a>
+ &#8226;   <a href="#asyncio.coroutines">asyncio.coroutines</a>
+ &#8226;   <a href="#asyncio.events">asyncio.events</a>
+ &#8226;   <a href="#asyncio.futures">asyncio.futures</a>
+ &#8226;   <a href="#asyncio.queues">asyncio.queues</a>
+ &#8226;   <a href="#concurrent.futures">concurrent.futures</a>
+ &#8226;   <a href="#contextvars">contextvars</a>
+ &#8226;   <a href="#functools">functools</a>
+ &#8226;   <a href="#inspect">inspect</a>
+ &#8226;   <a href="#types">types</a>
+ &#8226;   <a href="#warnings">warnings</a>
+ &#8226;   <a href="#weakref">weakref</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#asyncio">asyncio</a>
+ &#8226;   <a href="#asyncio.base_events">asyncio.base_events</a>
+ &#8226;   <a href="#asyncio.runners">asyncio.runners</a>
+ &#8226;   <a href="#asyncio.streams">asyncio.streams</a>
+ &#8226;   <a href="#asyncio.subprocess">asyncio.subprocess</a>
+ &#8226;   <a href="#asyncio.unix_events">asyncio.unix_events</a>
+ &#8226;   <a href="#asyncio.windows_events">asyncio.windows_events</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="asyncio.transports"></a>
+  <a target="code" href="///C:/Users/admin/AppData/Local/Programs/Python/Python37/lib/asyncio/transports.py" type="text/plain"><tt>asyncio.transports</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#asyncio">asyncio</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#asyncio">asyncio</a>
+ &#8226;   <a href="#asyncio.base_events">asyncio.base_events</a>
+ &#8226;   <a href="#asyncio.base_subprocess">asyncio.base_subprocess</a>
+ &#8226;   <a href="#asyncio.proactor_events">asyncio.proactor_events</a>
+ &#8226;   <a href="#asyncio.selector_events">asyncio.selector_events</a>
+ &#8226;   <a href="#asyncio.sslproto">asyncio.sslproto</a>
+ &#8226;   <a href="#asyncio.unix_events">asyncio.unix_events</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="asyncio.unix_events"></a>
+  <a target="code" href="///C:/Users/admin/AppData/Local/Programs/Python/Python37/lib/asyncio/unix_events.py" type="text/plain"><tt>asyncio.unix_events</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#asyncio">asyncio</a>
+ &#8226;   <a href="#asyncio.base_events">asyncio.base_events</a>
+ &#8226;   <a href="#asyncio.base_subprocess">asyncio.base_subprocess</a>
+ &#8226;   <a href="#asyncio.constants">asyncio.constants</a>
+ &#8226;   <a href="#asyncio.coroutines">asyncio.coroutines</a>
+ &#8226;   <a href="#asyncio.events">asyncio.events</a>
+ &#8226;   <a href="#asyncio.futures">asyncio.futures</a>
+ &#8226;   <a href="#asyncio.log">asyncio.log</a>
+ &#8226;   <a href="#asyncio.selector_events">asyncio.selector_events</a>
+ &#8226;   <a href="#asyncio.tasks">asyncio.tasks</a>
+ &#8226;   <a href="#asyncio.transports">asyncio.transports</a>
+ &#8226;   <a href="#errno">errno</a>
+ &#8226;   <a href="#io">io</a>
+ &#8226;   <a href="#os">os</a>
+ &#8226;   <a href="#selectors">selectors</a>
+ &#8226;   <a href="#signal">signal</a>
+ &#8226;   <a href="#socket">socket</a>
+ &#8226;   <a href="#stat">stat</a>
+ &#8226;   <a href="#subprocess">subprocess</a>
+ &#8226;   <a href="#sys">sys</a>
+ &#8226;   <a href="#threading">threading</a>
+ &#8226;   <a href="#warnings">warnings</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#asyncio">asyncio</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="asyncio.windows_events"></a>
+  <a target="code" href="///C:/Users/admin/AppData/Local/Programs/Python/Python37/lib/asyncio/windows_events.py" type="text/plain"><tt>asyncio.windows_events</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#_overlapped">_overlapped</a>
+ &#8226;   <a href="#_winapi">_winapi</a>
+ &#8226;   <a href="#asyncio">asyncio</a>
+ &#8226;   <a href="#asyncio.base_subprocess">asyncio.base_subprocess</a>
+ &#8226;   <a href="#asyncio.events">asyncio.events</a>
+ &#8226;   <a href="#asyncio.futures">asyncio.futures</a>
+ &#8226;   <a href="#asyncio.log">asyncio.log</a>
+ &#8226;   <a href="#asyncio.proactor_events">asyncio.proactor_events</a>
+ &#8226;   <a href="#asyncio.selector_events">asyncio.selector_events</a>
+ &#8226;   <a href="#asyncio.tasks">asyncio.tasks</a>
+ &#8226;   <a href="#asyncio.windows_utils">asyncio.windows_utils</a>
+ &#8226;   <a href="#errno">errno</a>
+ &#8226;   <a href="#math">math</a>
+ &#8226;   <a href="#msvcrt">msvcrt</a>
+ &#8226;   <a href="#socket">socket</a>
+ &#8226;   <a href="#struct">struct</a>
+ &#8226;   <a href="#time">time</a>
+ &#8226;   <a href="#weakref">weakref</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#asyncio">asyncio</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="asyncio.windows_utils"></a>
+  <a target="code" href="///C:/Users/admin/AppData/Local/Programs/Python/Python37/lib/asyncio/windows_utils.py" type="text/plain"><tt>asyncio.windows_utils</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#_winapi">_winapi</a>
+ &#8226;   <a href="#asyncio">asyncio</a>
+ &#8226;   <a href="#itertools">itertools</a>
+ &#8226;   <a href="#msvcrt">msvcrt</a>
+ &#8226;   <a href="#os">os</a>
+ &#8226;   <a href="#subprocess">subprocess</a>
+ &#8226;   <a href="#sys">sys</a>
+ &#8226;   <a href="#tempfile">tempfile</a>
+ &#8226;   <a href="#warnings">warnings</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#asyncio">asyncio</a>
+ &#8226;   <a href="#asyncio.windows_events">asyncio.windows_events</a>
+
+  </div>
+
+</div>
+
+<div class="node">
   <a name="atexit"></a>
   <tt>atexit</tt> <span class="moduletype"><i>(builtin module)</i></span>  <div class="import">
 imported by:
-    <a href="#logging">logging</a>
+    <a href="#colorama.initialise">colorama.initialise</a>
+ &#8226;   <a href="#concurrent.futures.process">concurrent.futures.process</a>
+ &#8226;   <a href="#concurrent.futures.thread">concurrent.futures.thread</a>
+ &#8226;   <a href="#logging">logging</a>
+ &#8226;   <a href="#loguru">loguru</a>
+ &#8226;   <a href="#multiprocessing.util">multiprocessing.util</a>
  &#8226;   <a href="#weakref">weakref</a>
 
   </div>
@@ -1436,6 +2285,7 @@ imported by:
  &#8226;   <a href="#ssl">ssl</a>
  &#8226;   <a href="#urllib.request">urllib.request</a>
  &#8226;   <a href="#urllib3.util.request">urllib3.util.request</a>
+ &#8226;   <a href="#xmlrpc.client">xmlrpc.client</a>
 
   </div>
 
@@ -1510,6 +2360,7 @@ imports:
 imported by:
     <a href="#idna.core">idna.core</a>
  &#8226;   <a href="#idna.intranges">idna.intranges</a>
+ &#8226;   <a href="#multiprocessing.heap">multiprocessing.heap</a>
  &#8226;   <a href="#random">random</a>
  &#8226;   <a href="#urllib.request">urllib.request</a>
 
@@ -1552,6 +2403,8 @@ imported by:
  &#8226;   <a href="#gzip">gzip</a>
  &#8226;   <a href="#inspect">inspect</a>
  &#8226;   <a href="#locale">locale</a>
+ &#8226;   <a href="#loguru._better_exceptions">loguru._better_exceptions</a>
+ &#8226;   <a href="#loguru._logger">loguru._logger</a>
  &#8226;   <a href="#lzma">lzma</a>
  &#8226;   <a href="#operator">operator</a>
  &#8226;   <a href="#pydoc">pydoc</a>
@@ -1582,6 +2435,7 @@ imports:
   <div class="import">
 imported by:
     <a href="#encodings.bz2_codec">encodings.bz2_codec</a>
+ &#8226;   <a href="#loguru._file_sink">loguru._file_sink</a>
  &#8226;   <a href="#shutil">shutil</a>
  &#8226;   <a href="#tarfile">tarfile</a>
  &#8226;   <a href="#zipfile">zipfile</a>
@@ -1623,6 +2477,7 @@ imported by:
     <a href="#_strptime">_strptime</a>
  &#8226;   <a href="#email._parseaddr">email._parseaddr</a>
  &#8226;   <a href="#http.cookiejar">http.cookiejar</a>
+ &#8226;   <a href="#loguru._datetime">loguru._datetime</a>
  &#8226;   <a href="#requests.cookies">requests.cookies</a>
  &#8226;   <a href="#ssl">ssl</a>
 
@@ -2934,12 +3789,19 @@ imports:
 imported by:
     <a href="#_pydecimal">_pydecimal</a>
  &#8226;   <a href="#ast">ast</a>
+ &#8226;   <a href="#asyncio.base_events">asyncio.base_events</a>
+ &#8226;   <a href="#asyncio.base_subprocess">asyncio.base_subprocess</a>
+ &#8226;   <a href="#asyncio.locks">asyncio.locks</a>
+ &#8226;   <a href="#asyncio.queues">asyncio.queues</a>
+ &#8226;   <a href="#asyncio.selector_events">asyncio.selector_events</a>
+ &#8226;   <a href="#asyncio.sslproto">asyncio.sslproto</a>
  &#8226;   <a href="#chardet.sbcharsetprober">chardet.sbcharsetprober</a>
  &#8226;   <a href="#charset_normalizer.assets">charset_normalizer.assets</a>
  &#8226;   <a href="#charset_normalizer.cd">charset_normalizer.cd</a>
  &#8226;   <a href="#charset_normalizer.constant">charset_normalizer.constant</a>
  &#8226;   <a href="#charset_normalizer.models">charset_normalizer.models</a>
  &#8226;   <a href="#collections.abc">collections.abc</a>
+ &#8226;   <a href="#concurrent.futures._base">concurrent.futures._base</a>
  &#8226;   <a href="#contextlib">contextlib</a>
  &#8226;   <a href="#cryptography.hazmat.backends.openssl.backend">cryptography.hazmat.backends.openssl.backend</a>
  &#8226;   <a href="#difflib">difflib</a>
@@ -2950,6 +3812,10 @@ imported by:
  &#8226;   <a href="#enum">enum</a>
  &#8226;   <a href="#functools">functools</a>
  &#8226;   <a href="#inspect">inspect</a>
+ &#8226;   <a href="#loguru._logger">loguru._logger</a>
+ &#8226;   <a href="#loguru._recattrs">loguru._recattrs</a>
+ &#8226;   <a href="#multiprocessing.pool">multiprocessing.pool</a>
+ &#8226;   <a href="#multiprocessing.queues">multiprocessing.queues</a>
  &#8226;   <a href="#pkgutil">pkgutil</a>
  &#8226;   <a href="#platform">platform</a>
  &#8226;   <a href="#pprint">pprint</a>
@@ -3033,7 +3899,9 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#http.client">http.client</a>
+    <a href="#asyncio.base_events">asyncio.base_events</a>
+ &#8226;   <a href="#asyncio.coroutines">asyncio.coroutines</a>
+ &#8226;   <a href="#http.client">http.client</a>
  &#8226;   <a href="#inspect">inspect</a>
  &#8226;   <a href="#logging">logging</a>
  &#8226;   <a href="#requests.compat">requests.compat</a>
@@ -3043,6 +3911,240 @@ imported by:
  &#8226;   <a href="#typing">typing</a>
  &#8226;   <a href="#typing_extensions">typing_extensions</a>
  &#8226;   <a href="#urllib3._collections">urllib3._collections</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="colorama"></a>
+  <a target="code" href="///C:/Users/admin/AppData/Local/Programs/Python/Python37/lib/site-packages/colorama/__init__.py" type="text/plain"><tt>colorama</tt></a>
+<span class="moduletype">Package</span>  <div class="import">
+imports:
+    <a href="#colorama">colorama</a>
+ &#8226;   <a href="#colorama.ansi">colorama.ansi</a>
+ &#8226;   <a href="#colorama.ansitowin32">colorama.ansitowin32</a>
+ &#8226;   <a href="#colorama.initialise">colorama.initialise</a>
+ &#8226;   <a href="#colorama.win32">colorama.win32</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#colorama">colorama</a>
+ &#8226;   <a href="#colorama.ansi">colorama.ansi</a>
+ &#8226;   <a href="#colorama.ansitowin32">colorama.ansitowin32</a>
+ &#8226;   <a href="#colorama.initialise">colorama.initialise</a>
+ &#8226;   <a href="#colorama.win32">colorama.win32</a>
+ &#8226;   <a href="#colorama.winterm">colorama.winterm</a>
+ &#8226;   <a href="#loguru._colorama">loguru._colorama</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="colorama.ansi"></a>
+  <a target="code" href="///C:/Users/admin/AppData/Local/Programs/Python/Python37/lib/site-packages/colorama/ansi.py" type="text/plain"><tt>colorama.ansi</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#colorama">colorama</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#colorama">colorama</a>
+ &#8226;   <a href="#colorama.ansitowin32">colorama.ansitowin32</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="colorama.ansitowin32"></a>
+  <a target="code" href="///C:/Users/admin/AppData/Local/Programs/Python/Python37/lib/site-packages/colorama/ansitowin32.py" type="text/plain"><tt>colorama.ansitowin32</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#colorama">colorama</a>
+ &#8226;   <a href="#colorama.ansi">colorama.ansi</a>
+ &#8226;   <a href="#colorama.win32">colorama.win32</a>
+ &#8226;   <a href="#colorama.winterm">colorama.winterm</a>
+ &#8226;   <a href="#os">os</a>
+ &#8226;   <a href="#re">re</a>
+ &#8226;   <a href="#sys">sys</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#colorama">colorama</a>
+ &#8226;   <a href="#colorama.initialise">colorama.initialise</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="colorama.initialise"></a>
+  <a target="code" href="///C:/Users/admin/AppData/Local/Programs/Python/Python37/lib/site-packages/colorama/initialise.py" type="text/plain"><tt>colorama.initialise</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#atexit">atexit</a>
+ &#8226;   <a href="#colorama">colorama</a>
+ &#8226;   <a href="#colorama.ansitowin32">colorama.ansitowin32</a>
+ &#8226;   <a href="#contextlib">contextlib</a>
+ &#8226;   <a href="#sys">sys</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#colorama">colorama</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="colorama.win32"></a>
+  <a target="code" href="///C:/Users/admin/AppData/Local/Programs/Python/Python37/lib/site-packages/colorama/win32.py" type="text/plain"><tt>colorama.win32</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#colorama">colorama</a>
+ &#8226;   <a href="#ctypes">ctypes</a>
+ &#8226;   <a href="#ctypes.wintypes">ctypes.wintypes</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#colorama">colorama</a>
+ &#8226;   <a href="#colorama.ansitowin32">colorama.ansitowin32</a>
+ &#8226;   <a href="#colorama.winterm">colorama.winterm</a>
+ &#8226;   <a href="#loguru._colorama">loguru._colorama</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="colorama.winterm"></a>
+  <a target="code" href="///C:/Users/admin/AppData/Local/Programs/Python/Python37/lib/site-packages/colorama/winterm.py" type="text/plain"><tt>colorama.winterm</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#colorama">colorama</a>
+ &#8226;   <a href="#colorama.win32">colorama.win32</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#colorama.ansitowin32">colorama.ansitowin32</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="concurrent"></a>
+  <a target="code" href="///C:/Users/admin/AppData/Local/Programs/Python/Python37/lib/concurrent/__init__.py" type="text/plain"><tt>concurrent</tt></a>
+<span class="moduletype">Package</span>  <div class="import">
+imported by:
+    <a href="#concurrent.futures">concurrent.futures</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="concurrent.futures"></a>
+  <a target="code" href="///C:/Users/admin/AppData/Local/Programs/Python/Python37/lib/concurrent/futures/__init__.py" type="text/plain"><tt>concurrent.futures</tt></a>
+<span class="moduletype">Package</span>  <div class="import">
+imports:
+    <a href="#concurrent">concurrent</a>
+ &#8226;   <a href="#concurrent.futures._base">concurrent.futures._base</a>
+ &#8226;   <a href="#concurrent.futures.process">concurrent.futures.process</a>
+ &#8226;   <a href="#concurrent.futures.thread">concurrent.futures.thread</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#asyncio.base_events">asyncio.base_events</a>
+ &#8226;   <a href="#asyncio.futures">asyncio.futures</a>
+ &#8226;   <a href="#asyncio.tasks">asyncio.tasks</a>
+ &#8226;   <a href="#concurrent.futures._base">concurrent.futures._base</a>
+ &#8226;   <a href="#concurrent.futures.process">concurrent.futures.process</a>
+ &#8226;   <a href="#concurrent.futures.thread">concurrent.futures.thread</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="concurrent.futures._base"></a>
+  <a target="code" href="///C:/Users/admin/AppData/Local/Programs/Python/Python37/lib/concurrent/futures/_base.py" type="text/plain"><tt>concurrent.futures._base</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#collections">collections</a>
+ &#8226;   <a href="#concurrent.futures">concurrent.futures</a>
+ &#8226;   <a href="#logging">logging</a>
+ &#8226;   <a href="#threading">threading</a>
+ &#8226;   <a href="#time">time</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#asyncio.base_futures">asyncio.base_futures</a>
+ &#8226;   <a href="#concurrent.futures">concurrent.futures</a>
+ &#8226;   <a href="#concurrent.futures.process">concurrent.futures.process</a>
+ &#8226;   <a href="#concurrent.futures.thread">concurrent.futures.thread</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="concurrent.futures.process"></a>
+  <a target="code" href="///C:/Users/admin/AppData/Local/Programs/Python/Python37/lib/concurrent/futures/process.py" type="text/plain"><tt>concurrent.futures.process</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#atexit">atexit</a>
+ &#8226;   <a href="#concurrent.futures">concurrent.futures</a>
+ &#8226;   <a href="#concurrent.futures._base">concurrent.futures._base</a>
+ &#8226;   <a href="#functools">functools</a>
+ &#8226;   <a href="#itertools">itertools</a>
+ &#8226;   <a href="#multiprocessing">multiprocessing</a>
+ &#8226;   <a href="#multiprocessing.connection">multiprocessing.connection</a>
+ &#8226;   <a href="#multiprocessing.queues">multiprocessing.queues</a>
+ &#8226;   <a href="#os">os</a>
+ &#8226;   <a href="#queue">queue</a>
+ &#8226;   <a href="#sys">sys</a>
+ &#8226;   <a href="#threading">threading</a>
+ &#8226;   <a href="#traceback">traceback</a>
+ &#8226;   <a href="#weakref">weakref</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#concurrent.futures">concurrent.futures</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="concurrent.futures.thread"></a>
+  <a target="code" href="///C:/Users/admin/AppData/Local/Programs/Python/Python37/lib/concurrent/futures/thread.py" type="text/plain"><tt>concurrent.futures.thread</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#atexit">atexit</a>
+ &#8226;   <a href="#concurrent.futures">concurrent.futures</a>
+ &#8226;   <a href="#concurrent.futures._base">concurrent.futures._base</a>
+ &#8226;   <a href="#itertools">itertools</a>
+ &#8226;   <a href="#os">os</a>
+ &#8226;   <a href="#queue">queue</a>
+ &#8226;   <a href="#threading">threading</a>
+ &#8226;   <a href="#weakref">weakref</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#concurrent.futures">concurrent.futures</a>
 
   </div>
 
@@ -3064,10 +4166,12 @@ imports:
 imported by:
     <a href="#_osx_support">_osx_support</a>
  &#8226;   <a href="#_threading_local">_threading_local</a>
+ &#8226;   <a href="#colorama.initialise">colorama.initialise</a>
  &#8226;   <a href="#cryptography.hazmat.backends.openssl.backend">cryptography.hazmat.backends.openssl.backend</a>
  &#8226;   <a href="#getpass">getpass</a>
  &#8226;   <a href="#importlib.resources">importlib.resources</a>
  &#8226;   <a href="#importlib.util">importlib.util</a>
+ &#8226;   <a href="#loguru._logger">loguru._logger</a>
  &#8226;   <a href="#plistlib">plistlib</a>
  &#8226;   <a href="#requests.utils">requests.utils</a>
  &#8226;   <a href="#typing">typing</a>
@@ -3090,6 +4194,10 @@ imports:
   <div class="import">
 imported by:
     <a href="#_pydecimal">_pydecimal</a>
+ &#8226;   <a href="#asyncio.events">asyncio.events</a>
+ &#8226;   <a href="#asyncio.futures">asyncio.futures</a>
+ &#8226;   <a href="#asyncio.tasks">asyncio.tasks</a>
+ &#8226;   <a href="#loguru._logger">loguru._logger</a>
 
   </div>
 
@@ -3153,6 +4261,7 @@ imported by:
 imported by:
     <a href="#_pickle">_pickle</a>
  &#8226;   <a href="#copy">copy</a>
+ &#8226;   <a href="#multiprocessing.reduction">multiprocessing.reduction</a>
  &#8226;   <a href="#pickle">pickle</a>
  &#8226;   <a href="#re">re</a>
  &#8226;   <a href="#tangche.py">tangche.py</a>
@@ -5124,6 +6233,66 @@ imported by:
 </div>
 
 <div class="node">
+  <a name="ctypes"></a>
+  <a target="code" href="///C:/Users/admin/AppData/Local/Programs/Python/Python37/lib/ctypes/__init__.py" type="text/plain"><tt>ctypes</tt></a>
+<span class="moduletype">Package</span>  <div class="import">
+imports:
+    <a href="#_ctypes">_ctypes</a>
+ &#8226;   <a href="#ctypes._endian">ctypes._endian</a>
+ &#8226;   <a href="#ctypes.wintypes">ctypes.wintypes</a>
+ &#8226;   <a href="#os">os</a>
+ &#8226;   <a href="#struct">struct</a>
+ &#8226;   <a href="#sys">sys</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#colorama.win32">colorama.win32</a>
+ &#8226;   <a href="#ctypes._endian">ctypes._endian</a>
+ &#8226;   <a href="#ctypes.wintypes">ctypes.wintypes</a>
+ &#8226;   <a href="#multiprocessing.sharedctypes">multiprocessing.sharedctypes</a>
+ &#8226;   <a href="#win32_setctime">win32_setctime</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="ctypes._endian"></a>
+  <a target="code" href="///C:/Users/admin/AppData/Local/Programs/Python/Python37/lib/ctypes/_endian.py" type="text/plain"><tt>ctypes._endian</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#ctypes">ctypes</a>
+ &#8226;   <a href="#sys">sys</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#ctypes">ctypes</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="ctypes.wintypes"></a>
+  <a target="code" href="///C:/Users/admin/AppData/Local/Programs/Python/Python37/lib/ctypes/wintypes.py" type="text/plain"><tt>ctypes.wintypes</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#ctypes">ctypes</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#colorama.win32">colorama.win32</a>
+ &#8226;   <a href="#ctypes">ctypes</a>
+ &#8226;   <a href="#win32_setctime">win32_setctime</a>
+
+  </div>
+
+</div>
+
+<div class="node">
   <a name="datetime"></a>
   <a target="code" href="///C:/Users/admin/AppData/Local/Programs/Python/Python37/lib/datetime.py" type="text/plain"><tt>datetime</tt></a>
 <span class="moduletype">SourceModule</span>  <div class="import">
@@ -5146,10 +6315,14 @@ imported by:
  &#8226;   <a href="#email.utils">email.utils</a>
  &#8226;   <a href="#http.cookiejar">http.cookiejar</a>
  &#8226;   <a href="#http.server">http.server</a>
+ &#8226;   <a href="#loguru._datetime">loguru._datetime</a>
+ &#8226;   <a href="#loguru._file_sink">loguru._file_sink</a>
+ &#8226;   <a href="#loguru._string_parsers">loguru._string_parsers</a>
  &#8226;   <a href="#plistlib">plistlib</a>
  &#8226;   <a href="#requests.models">requests.models</a>
  &#8226;   <a href="#requests.sessions">requests.sessions</a>
  &#8226;   <a href="#urllib3.connection">urllib3.connection</a>
+ &#8226;   <a href="#xmlrpc.client">xmlrpc.client</a>
 
   </div>
 
@@ -5166,8 +6339,10 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#simplejson">simplejson</a>
+    <a href="#loguru._file_sink">loguru._file_sink</a>
+ &#8226;   <a href="#simplejson">simplejson</a>
  &#8226;   <a href="#simplejson.encoder">simplejson.encoder</a>
+ &#8226;   <a href="#xmlrpc.client">xmlrpc.client</a>
 
   </div>
 
@@ -8357,7 +9532,8 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#cryptography.utils">cryptography.utils</a>
+    <a href="#asyncio.constants">asyncio.constants</a>
+ &#8226;   <a href="#cryptography.utils">cryptography.utils</a>
  &#8226;   <a href="#http">http</a>
  &#8226;   <a href="#inspect">inspect</a>
  &#8226;   <a href="#plistlib">plistlib</a>
@@ -8376,8 +9552,13 @@ imported by:
   <a name="errno"></a>
   <tt>errno</tt> <span class="moduletype"><i>(builtin module)</i></span>  <div class="import">
 imported by:
-    <a href="#gettext">gettext</a>
+    <a href="#asyncio.selector_events">asyncio.selector_events</a>
+ &#8226;   <a href="#asyncio.unix_events">asyncio.unix_events</a>
+ &#8226;   <a href="#asyncio.windows_events">asyncio.windows_events</a>
+ &#8226;   <a href="#gettext">gettext</a>
  &#8226;   <a href="#gzip">gzip</a>
+ &#8226;   <a href="#multiprocessing.forkserver">multiprocessing.forkserver</a>
+ &#8226;   <a href="#multiprocessing.queues">multiprocessing.queues</a>
  &#8226;   <a href="#pathlib">pathlib</a>
  &#8226;   <a href="#shutil">shutil</a>
  &#8226;   <a href="#socket">socket</a>
@@ -8386,6 +9567,7 @@ imported by:
  &#8226;   <a href="#tempfile">tempfile</a>
  &#8226;   <a href="#urllib3.connectionpool">urllib3.connectionpool</a>
  &#8226;   <a href="#urllib3.util.wait">urllib3.util.wait</a>
+ &#8226;   <a href="#xmlrpc.client">xmlrpc.client</a>
 
   </div>
 
@@ -8454,9 +9636,14 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#charset_normalizer.cd">charset_normalizer.cd</a>
+    <a href="#asyncio.coroutines">asyncio.coroutines</a>
+ &#8226;   <a href="#asyncio.format_helpers">asyncio.format_helpers</a>
+ &#8226;   <a href="#asyncio.selector_events">asyncio.selector_events</a>
+ &#8226;   <a href="#asyncio.tasks">asyncio.tasks</a>
+ &#8226;   <a href="#charset_normalizer.cd">charset_normalizer.cd</a>
  &#8226;   <a href="#charset_normalizer.md">charset_normalizer.md</a>
  &#8226;   <a href="#charset_normalizer.utils">charset_normalizer.utils</a>
+ &#8226;   <a href="#concurrent.futures.process">concurrent.futures.process</a>
  &#8226;   <a href="#contextlib">contextlib</a>
  &#8226;   <a href="#email._encoded_words">email._encoded_words</a>
  &#8226;   <a href="#email.charset">email.charset</a>
@@ -8468,6 +9655,10 @@ imported by:
  &#8226;   <a href="#ipaddress">ipaddress</a>
  &#8226;   <a href="#linecache">linecache</a>
  &#8226;   <a href="#locale">locale</a>
+ &#8226;   <a href="#loguru._file_sink">loguru._file_sink</a>
+ &#8226;   <a href="#loguru._handler">loguru._handler</a>
+ &#8226;   <a href="#loguru._logger">loguru._logger</a>
+ &#8226;   <a href="#multiprocessing.reduction">multiprocessing.reduction</a>
  &#8226;   <a href="#operator">operator</a>
  &#8226;   <a href="#pathlib">pathlib</a>
  &#8226;   <a href="#pickle">pickle</a>
@@ -8610,7 +9801,8 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#pdb">pdb</a>
+    <a href="#loguru._file_sink">loguru._file_sink</a>
+ &#8226;   <a href="#pdb">pdb</a>
  &#8226;   <a href="#webbrowser">webbrowser</a>
 
   </div>
@@ -8649,7 +9841,9 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#tarfile">tarfile</a>
+    <a href="#loguru._file_sink">loguru._file_sink</a>
+ &#8226;   <a href="#tarfile">tarfile</a>
+ &#8226;   <a href="#xmlrpc.client">xmlrpc.client</a>
 
   </div>
 
@@ -8694,7 +9888,9 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#collections">collections</a>
+    <a href="#asyncio.base_events">asyncio.base_events</a>
+ &#8226;   <a href="#asyncio.queues">asyncio.queues</a>
+ &#8226;   <a href="#collections">collections</a>
  &#8226;   <a href="#difflib">difflib</a>
  &#8226;   <a href="#queue">queue</a>
  &#8226;   <a href="#tangche.py">tangche.py</a>
@@ -8717,6 +9913,7 @@ imports:
   <div class="import">
 imported by:
     <a href="#cryptography.hazmat.primitives.constant_time">cryptography.hazmat.primitives.constant_time</a>
+ &#8226;   <a href="#multiprocessing.connection">multiprocessing.connection</a>
  &#8226;   <a href="#urllib3.util.ssl_">urllib3.util.ssl_</a>
 
   </div>
@@ -8800,6 +9997,7 @@ imported by:
  &#8226;   <a href="#http.cookiejar">http.cookiejar</a>
  &#8226;   <a href="#http.server">http.server</a>
  &#8226;   <a href="#urllib.request">urllib.request</a>
+ &#8226;   <a href="#xmlrpc.client">xmlrpc.client</a>
 
   </div>
 
@@ -9273,9 +10471,14 @@ imports:
   <div class="import">
 imported by:
     <a href="#ast">ast</a>
+ &#8226;   <a href="#asyncio.coroutines">asyncio.coroutines</a>
+ &#8226;   <a href="#asyncio.format_helpers">asyncio.format_helpers</a>
+ &#8226;   <a href="#asyncio.tasks">asyncio.tasks</a>
  &#8226;   <a href="#bdb">bdb</a>
  &#8226;   <a href="#cryptography.utils">cryptography.utils</a>
  &#8226;   <a href="#doctest">doctest</a>
+ &#8226;   <a href="#loguru._better_exceptions">loguru._better_exceptions</a>
+ &#8226;   <a href="#loguru._logger">loguru._logger</a>
  &#8226;   <a href="#pdb">pdb</a>
  &#8226;   <a href="#pkgutil">pkgutil</a>
  &#8226;   <a href="#pydoc">pydoc</a>
@@ -9296,6 +10499,8 @@ imports:
   <div class="import">
 imported by:
     <a href="#_compression">_compression</a>
+ &#8226;   <a href="#asyncio.proactor_events">asyncio.proactor_events</a>
+ &#8226;   <a href="#asyncio.unix_events">asyncio.unix_events</a>
  &#8226;   <a href="#bz2">bz2</a>
  &#8226;   <a href="#dis">dis</a>
  &#8226;   <a href="#doctest">doctest</a>
@@ -9313,7 +10518,12 @@ imported by:
  &#8226;   <a href="#http.server">http.server</a>
  &#8226;   <a href="#importlib.resources">importlib.resources</a>
  &#8226;   <a href="#logging">logging</a>
+ &#8226;   <a href="#loguru._better_exceptions">loguru._better_exceptions</a>
  &#8226;   <a href="#lzma">lzma</a>
+ &#8226;   <a href="#multiprocessing.connection">multiprocessing.connection</a>
+ &#8226;   <a href="#multiprocessing.popen_forkserver">multiprocessing.popen_forkserver</a>
+ &#8226;   <a href="#multiprocessing.popen_spawn_posix">multiprocessing.popen_spawn_posix</a>
+ &#8226;   <a href="#multiprocessing.reduction">multiprocessing.reduction</a>
  &#8226;   <a href="#os">os</a>
  &#8226;   <a href="#pathlib">pathlib</a>
  &#8226;   <a href="#pickle">pickle</a>
@@ -9343,6 +10553,7 @@ imported by:
  &#8226;   <a href="#urllib3.util.ssltransport">urllib3.util.ssltransport</a>
  &#8226;   <a href="#xml.sax">xml.sax</a>
  &#8226;   <a href="#xml.sax.saxutils">xml.sax.saxutils</a>
+ &#8226;   <a href="#xmlrpc.client">xmlrpc.client</a>
  &#8226;   <a href="#zipfile">zipfile</a>
 
   </div>
@@ -9372,10 +10583,19 @@ imported by:
   <tt>itertools</tt> <span class="moduletype"><i>(builtin module)</i></span>  <div class="import">
 imported by:
     <a href="#_pydecimal">_pydecimal</a>
+ &#8226;   <a href="#asyncio.base_events">asyncio.base_events</a>
+ &#8226;   <a href="#asyncio.windows_utils">asyncio.windows_utils</a>
  &#8226;   <a href="#calendar">calendar</a>
  &#8226;   <a href="#collections">collections</a>
+ &#8226;   <a href="#concurrent.futures.process">concurrent.futures.process</a>
+ &#8226;   <a href="#concurrent.futures.thread">concurrent.futures.thread</a>
  &#8226;   <a href="#cryptography.hazmat.backends.openssl.backend">cryptography.hazmat.backends.openssl.backend</a>
  &#8226;   <a href="#inspect">inspect</a>
+ &#8226;   <a href="#loguru._logger">loguru._logger</a>
+ &#8226;   <a href="#multiprocessing.connection">multiprocessing.connection</a>
+ &#8226;   <a href="#multiprocessing.pool">multiprocessing.pool</a>
+ &#8226;   <a href="#multiprocessing.process">multiprocessing.process</a>
+ &#8226;   <a href="#multiprocessing.util">multiprocessing.util</a>
  &#8226;   <a href="#pickle">pickle</a>
  &#8226;   <a href="#plistlib">plistlib</a>
  &#8226;   <a href="#random">random</a>
@@ -9420,6 +10640,7 @@ imported by:
  &#8226;   <a href="#json.decoder">json.decoder</a>
  &#8226;   <a href="#json.encoder">json.encoder</a>
  &#8226;   <a href="#json.scanner">json.scanner</a>
+ &#8226;   <a href="#loguru._handler">loguru._handler</a>
  &#8226;   <a href="#requests.compat">requests.compat</a>
 
   </div>
@@ -9495,6 +10716,7 @@ imports:
   <div class="import">
 imported by:
     <a href="#collections">collections</a>
+ &#8226;   <a href="#loguru._better_exceptions">loguru._better_exceptions</a>
  &#8226;   <a href="#tangche.py">tangche.py</a>
 
   </div>
@@ -9514,9 +10736,11 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#bdb">bdb</a>
+    <a href="#asyncio.base_tasks">asyncio.base_tasks</a>
+ &#8226;   <a href="#bdb">bdb</a>
  &#8226;   <a href="#doctest">doctest</a>
  &#8226;   <a href="#inspect">inspect</a>
+ &#8226;   <a href="#loguru._better_exceptions">loguru._better_exceptions</a>
  &#8226;   <a href="#pdb">pdb</a>
  &#8226;   <a href="#tangche.py">tangche.py</a>
  &#8226;   <a href="#traceback">traceback</a>
@@ -9552,6 +10776,7 @@ imported by:
  &#8226;   <a href="#_strptime">_strptime</a>
  &#8226;   <a href="#calendar">calendar</a>
  &#8226;   <a href="#gettext">gettext</a>
+ &#8226;   <a href="#loguru._file_sink">loguru._file_sink</a>
  &#8226;   <a href="#tangche.py">tangche.py</a>
 
   </div>
@@ -9579,14 +10804,21 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#chardet.charsetprober">chardet.charsetprober</a>
+    <a href="#asyncio.base_events">asyncio.base_events</a>
+ &#8226;   <a href="#asyncio.futures">asyncio.futures</a>
+ &#8226;   <a href="#asyncio.log">asyncio.log</a>
+ &#8226;   <a href="#chardet.charsetprober">chardet.charsetprober</a>
  &#8226;   <a href="#chardet.codingstatemachine">chardet.codingstatemachine</a>
  &#8226;   <a href="#chardet.universaldetector">chardet.universaldetector</a>
  &#8226;   <a href="#charset_normalizer">charset_normalizer</a>
  &#8226;   <a href="#charset_normalizer.api">charset_normalizer.api</a>
  &#8226;   <a href="#charset_normalizer.utils">charset_normalizer.utils</a>
+ &#8226;   <a href="#concurrent.futures._base">concurrent.futures._base</a>
  &#8226;   <a href="#hashlib">hashlib</a>
  &#8226;   <a href="#http.cookiejar">http.cookiejar</a>
+ &#8226;   <a href="#loguru._logger">loguru._logger</a>
+ &#8226;   <a href="#loguru._simple_sinks">loguru._simple_sinks</a>
+ &#8226;   <a href="#multiprocessing.util">multiprocessing.util</a>
  &#8226;   <a href="#requests">requests</a>
  &#8226;   <a href="#unittest.case">unittest.case</a>
  &#8226;   <a href="#urllib3">urllib3</a>
@@ -9596,6 +10828,403 @@ imported by:
  &#8226;   <a href="#urllib3.poolmanager">urllib3.poolmanager</a>
  &#8226;   <a href="#urllib3.response">urllib3.response</a>
  &#8226;   <a href="#urllib3.util.retry">urllib3.util.retry</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="loguru"></a>
+  <a target="code" href="///C:/Users/admin/AppData/Local/Programs/Python/Python37/lib/site-packages/loguru/__init__.py" type="text/plain"><tt>loguru</tt></a>
+<span class="moduletype">Package</span>  <div class="import">
+imports:
+    <a href="#atexit">atexit</a>
+ &#8226;   <a href="#loguru">loguru</a>
+ &#8226;   <a href="#loguru._colorama">loguru._colorama</a>
+ &#8226;   <a href="#loguru._defaults">loguru._defaults</a>
+ &#8226;   <a href="#loguru._filters">loguru._filters</a>
+ &#8226;   <a href="#loguru._logger">loguru._logger</a>
+ &#8226;   <a href="#loguru._string_parsers">loguru._string_parsers</a>
+ &#8226;   <a href="#sys">sys</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#loguru">loguru</a>
+ &#8226;   <a href="#loguru._better_exceptions">loguru._better_exceptions</a>
+ &#8226;   <a href="#loguru._colorama">loguru._colorama</a>
+ &#8226;   <a href="#loguru._colorizer">loguru._colorizer</a>
+ &#8226;   <a href="#loguru._ctime_functions">loguru._ctime_functions</a>
+ &#8226;   <a href="#loguru._datetime">loguru._datetime</a>
+ &#8226;   <a href="#loguru._defaults">loguru._defaults</a>
+ &#8226;   <a href="#loguru._error_interceptor">loguru._error_interceptor</a>
+ &#8226;   <a href="#loguru._file_sink">loguru._file_sink</a>
+ &#8226;   <a href="#loguru._filters">loguru._filters</a>
+ &#8226;   <a href="#loguru._get_frame">loguru._get_frame</a>
+ &#8226;   <a href="#loguru._handler">loguru._handler</a>
+ &#8226;   <a href="#loguru._locks_machinery">loguru._locks_machinery</a>
+ &#8226;   <a href="#loguru._logger">loguru._logger</a>
+ &#8226;   <a href="#loguru._recattrs">loguru._recattrs</a>
+ &#8226;   <a href="#loguru._simple_sinks">loguru._simple_sinks</a>
+ &#8226;   <a href="#loguru._string_parsers">loguru._string_parsers</a>
+ &#8226;   <a href="#tangche.py">tangche.py</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="loguru._better_exceptions"></a>
+  <a target="code" href="///C:/Users/admin/AppData/Local/Programs/Python/Python37/lib/site-packages/loguru/_better_exceptions.py" type="text/plain"><tt>loguru._better_exceptions</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#builtins">builtins</a>
+ &#8226;   <a href="#inspect">inspect</a>
+ &#8226;   <a href="#io">io</a>
+ &#8226;   <a href="#keyword">keyword</a>
+ &#8226;   <a href="#linecache">linecache</a>
+ &#8226;   <a href="#loguru">loguru</a>
+ &#8226;   <a href="#os">os</a>
+ &#8226;   <a href="#re">re</a>
+ &#8226;   <a href="#sys">sys</a>
+ &#8226;   <a href="#sysconfig">sysconfig</a>
+ &#8226;   <a href="#tokenize">tokenize</a>
+ &#8226;   <a href="#traceback">traceback</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#loguru._logger">loguru._logger</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="loguru._colorama"></a>
+  <a target="code" href="///C:/Users/admin/AppData/Local/Programs/Python/Python37/lib/site-packages/loguru/_colorama.py" type="text/plain"><tt>loguru._colorama</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#colorama">colorama</a>
+ &#8226;   <a href="#colorama.win32">colorama.win32</a>
+ &#8226;   <a href="#loguru">loguru</a>
+ &#8226;   <a href="#os">os</a>
+ &#8226;   <a href="#sys">sys</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#loguru">loguru</a>
+ &#8226;   <a href="#loguru._logger">loguru._logger</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="loguru._colorizer"></a>
+  <a target="code" href="///C:/Users/admin/AppData/Local/Programs/Python/Python37/lib/site-packages/loguru/_colorizer.py" type="text/plain"><tt>loguru._colorizer</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#loguru">loguru</a>
+ &#8226;   <a href="#re">re</a>
+ &#8226;   <a href="#string">string</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#loguru._handler">loguru._handler</a>
+ &#8226;   <a href="#loguru._logger">loguru._logger</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="loguru._ctime_functions"></a>
+  <a target="code" href="///C:/Users/admin/AppData/Local/Programs/Python/Python37/lib/site-packages/loguru/_ctime_functions.py" type="text/plain"><tt>loguru._ctime_functions</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#loguru">loguru</a>
+ &#8226;   <a href="#os">os</a>
+ &#8226;   <a href="#win32_setctime">win32_setctime</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#loguru._file_sink">loguru._file_sink</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="loguru._datetime"></a>
+  <a target="code" href="///C:/Users/admin/AppData/Local/Programs/Python/Python37/lib/site-packages/loguru/_datetime.py" type="text/plain"><tt>loguru._datetime</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#calendar">calendar</a>
+ &#8226;   <a href="#datetime">datetime</a>
+ &#8226;   <a href="#loguru">loguru</a>
+ &#8226;   <a href="#re">re</a>
+ &#8226;   <a href="#time">time</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#loguru._file_sink">loguru._file_sink</a>
+ &#8226;   <a href="#loguru._logger">loguru._logger</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="loguru._defaults"></a>
+  <a target="code" href="///C:/Users/admin/AppData/Local/Programs/Python/Python37/lib/site-packages/loguru/_defaults.py" type="text/plain"><tt>loguru._defaults</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#loguru">loguru</a>
+ &#8226;   <a href="#os">os</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#loguru">loguru</a>
+ &#8226;   <a href="#loguru._logger">loguru._logger</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="loguru._error_interceptor"></a>
+  <a target="code" href="///C:/Users/admin/AppData/Local/Programs/Python/Python37/lib/site-packages/loguru/_error_interceptor.py" type="text/plain"><tt>loguru._error_interceptor</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#loguru">loguru</a>
+ &#8226;   <a href="#sys">sys</a>
+ &#8226;   <a href="#traceback">traceback</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#loguru._logger">loguru._logger</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="loguru._file_sink"></a>
+  <a target="code" href="///C:/Users/admin/AppData/Local/Programs/Python/Python37/lib/site-packages/loguru/_file_sink.py" type="text/plain"><tt>loguru._file_sink</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#bz2">bz2</a>
+ &#8226;   <a href="#datetime">datetime</a>
+ &#8226;   <a href="#decimal">decimal</a>
+ &#8226;   <a href="#functools">functools</a>
+ &#8226;   <a href="#glob">glob</a>
+ &#8226;   <a href="#gzip">gzip</a>
+ &#8226;   <a href="#locale">locale</a>
+ &#8226;   <a href="#loguru">loguru</a>
+ &#8226;   <a href="#loguru._ctime_functions">loguru._ctime_functions</a>
+ &#8226;   <a href="#loguru._datetime">loguru._datetime</a>
+ &#8226;   <a href="#loguru._string_parsers">loguru._string_parsers</a>
+ &#8226;   <a href="#lzma">lzma</a>
+ &#8226;   <a href="#numbers">numbers</a>
+ &#8226;   <a href="#os">os</a>
+ &#8226;   <a href="#shutil">shutil</a>
+ &#8226;   <a href="#string">string</a>
+ &#8226;   <a href="#tarfile">tarfile</a>
+ &#8226;   <a href="#zipfile">zipfile</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#loguru._logger">loguru._logger</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="loguru._filters"></a>
+  <a target="code" href="///C:/Users/admin/AppData/Local/Programs/Python/Python37/lib/site-packages/loguru/_filters.py" type="text/plain"><tt>loguru._filters</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#loguru">loguru</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#loguru">loguru</a>
+ &#8226;   <a href="#loguru._logger">loguru._logger</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="loguru._get_frame"></a>
+  <a target="code" href="///C:/Users/admin/AppData/Local/Programs/Python/Python37/lib/site-packages/loguru/_get_frame.py" type="text/plain"><tt>loguru._get_frame</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#loguru">loguru</a>
+ &#8226;   <a href="#sys">sys</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#loguru._logger">loguru._logger</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="loguru._handler"></a>
+  <a target="code" href="///C:/Users/admin/AppData/Local/Programs/Python/Python37/lib/site-packages/loguru/_handler.py" type="text/plain"><tt>loguru._handler</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#functools">functools</a>
+ &#8226;   <a href="#json">json</a>
+ &#8226;   <a href="#loguru">loguru</a>
+ &#8226;   <a href="#loguru._colorizer">loguru._colorizer</a>
+ &#8226;   <a href="#loguru._locks_machinery">loguru._locks_machinery</a>
+ &#8226;   <a href="#multiprocessing">multiprocessing</a>
+ &#8226;   <a href="#os">os</a>
+ &#8226;   <a href="#threading">threading</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#loguru._logger">loguru._logger</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="loguru._locks_machinery"></a>
+  <a target="code" href="///C:/Users/admin/AppData/Local/Programs/Python/Python37/lib/site-packages/loguru/_locks_machinery.py" type="text/plain"><tt>loguru._locks_machinery</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#loguru">loguru</a>
+ &#8226;   <a href="#os">os</a>
+ &#8226;   <a href="#threading">threading</a>
+ &#8226;   <a href="#weakref">weakref</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#loguru._handler">loguru._handler</a>
+ &#8226;   <a href="#loguru._logger">loguru._logger</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="loguru._logger"></a>
+  <a target="code" href="///C:/Users/admin/AppData/Local/Programs/Python/Python37/lib/site-packages/loguru/_logger.py" type="text/plain"><tt>loguru._logger</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#aiocontextvars">aiocontextvars</a>
+ &#8226;   <a href="#asyncio">asyncio</a>
+ &#8226;   <a href="#builtins">builtins</a>
+ &#8226;   <a href="#collections">collections</a>
+ &#8226;   <a href="#contextlib">contextlib</a>
+ &#8226;   <a href="#contextvars">contextvars</a>
+ &#8226;   <a href="#functools">functools</a>
+ &#8226;   <a href="#inspect">inspect</a>
+ &#8226;   <a href="#itertools">itertools</a>
+ &#8226;   <a href="#logging">logging</a>
+ &#8226;   <a href="#loguru">loguru</a>
+ &#8226;   <a href="#loguru._better_exceptions">loguru._better_exceptions</a>
+ &#8226;   <a href="#loguru._colorama">loguru._colorama</a>
+ &#8226;   <a href="#loguru._colorizer">loguru._colorizer</a>
+ &#8226;   <a href="#loguru._datetime">loguru._datetime</a>
+ &#8226;   <a href="#loguru._defaults">loguru._defaults</a>
+ &#8226;   <a href="#loguru._error_interceptor">loguru._error_interceptor</a>
+ &#8226;   <a href="#loguru._file_sink">loguru._file_sink</a>
+ &#8226;   <a href="#loguru._filters">loguru._filters</a>
+ &#8226;   <a href="#loguru._get_frame">loguru._get_frame</a>
+ &#8226;   <a href="#loguru._handler">loguru._handler</a>
+ &#8226;   <a href="#loguru._locks_machinery">loguru._locks_machinery</a>
+ &#8226;   <a href="#loguru._recattrs">loguru._recattrs</a>
+ &#8226;   <a href="#loguru._simple_sinks">loguru._simple_sinks</a>
+ &#8226;   <a href="#multiprocessing">multiprocessing</a>
+ &#8226;   <a href="#multiprocessing.current_process">multiprocessing.current_process</a>
+ &#8226;   <a href="#ntpath">ntpath</a>
+ &#8226;   <a href="#os">os</a>
+ &#8226;   <a href="#pathlib">pathlib</a>
+ &#8226;   <a href="#re">re</a>
+ &#8226;   <a href="#sys">sys</a>
+ &#8226;   <a href="#threading">threading</a>
+ &#8226;   <a href="#warnings">warnings</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#loguru">loguru</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="loguru._recattrs"></a>
+  <a target="code" href="///C:/Users/admin/AppData/Local/Programs/Python/Python37/lib/site-packages/loguru/_recattrs.py" type="text/plain"><tt>loguru._recattrs</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#collections">collections</a>
+ &#8226;   <a href="#loguru">loguru</a>
+ &#8226;   <a href="#pickle">pickle</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#loguru._logger">loguru._logger</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="loguru._simple_sinks"></a>
+  <a target="code" href="///C:/Users/admin/AppData/Local/Programs/Python/Python37/lib/site-packages/loguru/_simple_sinks.py" type="text/plain"><tt>loguru._simple_sinks</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#asyncio">asyncio</a>
+ &#8226;   <a href="#logging">logging</a>
+ &#8226;   <a href="#loguru">loguru</a>
+ &#8226;   <a href="#sys">sys</a>
+ &#8226;   <a href="#weakref">weakref</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#loguru._logger">loguru._logger</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="loguru._string_parsers"></a>
+  <a target="code" href="///C:/Users/admin/AppData/Local/Programs/Python/Python37/lib/site-packages/loguru/_string_parsers.py" type="text/plain"><tt>loguru._string_parsers</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#datetime">datetime</a>
+ &#8226;   <a href="#loguru">loguru</a>
+ &#8226;   <a href="#re">re</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#loguru">loguru</a>
+ &#8226;   <a href="#loguru._file_sink">loguru._file_sink</a>
 
   </div>
 
@@ -9615,7 +11244,8 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#shutil">shutil</a>
+    <a href="#loguru._file_sink">loguru._file_sink</a>
+ &#8226;   <a href="#shutil">shutil</a>
  &#8226;   <a href="#tarfile">tarfile</a>
  &#8226;   <a href="#zipfile">zipfile</a>
 
@@ -9638,6 +11268,7 @@ imported by:
   <tt>math</tt> <span class="moduletype"><i>(builtin module)</i></span>  <div class="import">
 imported by:
     <a href="#_pydecimal">_pydecimal</a>
+ &#8226;   <a href="#asyncio.windows_events">asyncio.windows_events</a>
  &#8226;   <a href="#cryptography.hazmat.primitives.asymmetric.rsa">cryptography.hazmat.primitives.asymmetric.rsa</a>
  &#8226;   <a href="#datetime">datetime</a>
  &#8226;   <a href="#random">random</a>
@@ -9671,11 +11302,791 @@ imported by:
 </div>
 
 <div class="node">
+  <a name="mmap"></a>
+  <tt>mmap</tt> <span class="moduletype"><i>(builtin module)</i></span>  <div class="import">
+imported by:
+    <a href="#multiprocessing.heap">multiprocessing.heap</a>
+
+  </div>
+
+</div>
+
+<div class="node">
   <a name="msvcrt"></a>
   <tt>msvcrt</tt> <span class="moduletype"><i>(builtin module)</i></span>  <div class="import">
 imported by:
-    <a href="#getpass">getpass</a>
+    <a href="#asyncio.windows_events">asyncio.windows_events</a>
+ &#8226;   <a href="#asyncio.windows_utils">asyncio.windows_utils</a>
+ &#8226;   <a href="#getpass">getpass</a>
+ &#8226;   <a href="#multiprocessing.popen_spawn_win32">multiprocessing.popen_spawn_win32</a>
+ &#8226;   <a href="#multiprocessing.spawn">multiprocessing.spawn</a>
  &#8226;   <a href="#subprocess">subprocess</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="multiprocessing"></a>
+  <a target="code" href="///C:/Users/admin/AppData/Local/Programs/Python/Python37/lib/multiprocessing/__init__.py" type="text/plain"><tt>multiprocessing</tt></a>
+<span class="moduletype">Package</span>  <div class="import">
+imports:
+    <a href="#multiprocessing">multiprocessing</a>
+ &#8226;   <a href="#multiprocessing.AuthenticationError">multiprocessing.AuthenticationError</a>
+ &#8226;   <a href="#multiprocessing.BufferTooShort">multiprocessing.BufferTooShort</a>
+ &#8226;   <a href="#multiprocessing.TimeoutError">multiprocessing.TimeoutError</a>
+ &#8226;   <a href="#multiprocessing.connection">multiprocessing.connection</a>
+ &#8226;   <a href="#multiprocessing.context">multiprocessing.context</a>
+ &#8226;   <a href="#multiprocessing.current_process">multiprocessing.current_process</a>
+ &#8226;   <a href="#multiprocessing.forkserver">multiprocessing.forkserver</a>
+ &#8226;   <a href="#multiprocessing.get_context">multiprocessing.get_context</a>
+ &#8226;   <a href="#multiprocessing.get_start_method">multiprocessing.get_start_method</a>
+ &#8226;   <a href="#multiprocessing.pool">multiprocessing.pool</a>
+ &#8226;   <a href="#multiprocessing.process">multiprocessing.process</a>
+ &#8226;   <a href="#multiprocessing.reduction">multiprocessing.reduction</a>
+ &#8226;   <a href="#multiprocessing.resource_sharer">multiprocessing.resource_sharer</a>
+ &#8226;   <a href="#multiprocessing.semaphore_tracker">multiprocessing.semaphore_tracker</a>
+ &#8226;   <a href="#multiprocessing.set_start_method">multiprocessing.set_start_method</a>
+ &#8226;   <a href="#multiprocessing.spawn">multiprocessing.spawn</a>
+ &#8226;   <a href="#multiprocessing.util">multiprocessing.util</a>
+ &#8226;   <a href="#sys">sys</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#concurrent.futures.process">concurrent.futures.process</a>
+ &#8226;   <a href="#loguru._handler">loguru._handler</a>
+ &#8226;   <a href="#loguru._logger">loguru._logger</a>
+ &#8226;   <a href="#multiprocessing">multiprocessing</a>
+ &#8226;   <a href="#multiprocessing.connection">multiprocessing.connection</a>
+ &#8226;   <a href="#multiprocessing.context">multiprocessing.context</a>
+ &#8226;   <a href="#multiprocessing.dummy">multiprocessing.dummy</a>
+ &#8226;   <a href="#multiprocessing.forkserver">multiprocessing.forkserver</a>
+ &#8226;   <a href="#multiprocessing.heap">multiprocessing.heap</a>
+ &#8226;   <a href="#multiprocessing.managers">multiprocessing.managers</a>
+ &#8226;   <a href="#multiprocessing.pool">multiprocessing.pool</a>
+ &#8226;   <a href="#multiprocessing.popen_fork">multiprocessing.popen_fork</a>
+ &#8226;   <a href="#multiprocessing.popen_forkserver">multiprocessing.popen_forkserver</a>
+ &#8226;   <a href="#multiprocessing.popen_spawn_posix">multiprocessing.popen_spawn_posix</a>
+ &#8226;   <a href="#multiprocessing.popen_spawn_win32">multiprocessing.popen_spawn_win32</a>
+ &#8226;   <a href="#multiprocessing.process">multiprocessing.process</a>
+ &#8226;   <a href="#multiprocessing.queues">multiprocessing.queues</a>
+ &#8226;   <a href="#multiprocessing.reduction">multiprocessing.reduction</a>
+ &#8226;   <a href="#multiprocessing.resource_sharer">multiprocessing.resource_sharer</a>
+ &#8226;   <a href="#multiprocessing.semaphore_tracker">multiprocessing.semaphore_tracker</a>
+ &#8226;   <a href="#multiprocessing.sharedctypes">multiprocessing.sharedctypes</a>
+ &#8226;   <a href="#multiprocessing.spawn">multiprocessing.spawn</a>
+ &#8226;   <a href="#multiprocessing.synchronize">multiprocessing.synchronize</a>
+ &#8226;   <a href="#multiprocessing.util">multiprocessing.util</a>
+ &#8226;   <a href="#pyi_rth_multiprocessing.py">pyi_rth_multiprocessing.py</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="multiprocessing.AuthenticationError"></a>
+  <a target="code" href="" type="text/plain"><tt>multiprocessing.AuthenticationError</tt></a>
+<span class="moduletype">MissingModule</span>  <div class="import">
+imported by:
+    <a href="#multiprocessing">multiprocessing</a>
+ &#8226;   <a href="#multiprocessing.connection">multiprocessing.connection</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="multiprocessing.BufferTooShort"></a>
+  <a target="code" href="" type="text/plain"><tt>multiprocessing.BufferTooShort</tt></a>
+<span class="moduletype">MissingModule</span>  <div class="import">
+imported by:
+    <a href="#multiprocessing">multiprocessing</a>
+ &#8226;   <a href="#multiprocessing.connection">multiprocessing.connection</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="multiprocessing.TimeoutError"></a>
+  <a target="code" href="" type="text/plain"><tt>multiprocessing.TimeoutError</tt></a>
+<span class="moduletype">MissingModule</span>  <div class="import">
+imported by:
+    <a href="#multiprocessing">multiprocessing</a>
+ &#8226;   <a href="#multiprocessing.pool">multiprocessing.pool</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="multiprocessing.connection"></a>
+  <a target="code" href="///C:/Users/admin/AppData/Local/Programs/Python/Python37/lib/multiprocessing/connection.py" type="text/plain"><tt>multiprocessing.connection</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#_multiprocessing">_multiprocessing</a>
+ &#8226;   <a href="#_winapi">_winapi</a>
+ &#8226;   <a href="#hmac">hmac</a>
+ &#8226;   <a href="#io">io</a>
+ &#8226;   <a href="#itertools">itertools</a>
+ &#8226;   <a href="#multiprocessing">multiprocessing</a>
+ &#8226;   <a href="#multiprocessing.AuthenticationError">multiprocessing.AuthenticationError</a>
+ &#8226;   <a href="#multiprocessing.BufferTooShort">multiprocessing.BufferTooShort</a>
+ &#8226;   <a href="#multiprocessing.context">multiprocessing.context</a>
+ &#8226;   <a href="#multiprocessing.resource_sharer">multiprocessing.resource_sharer</a>
+ &#8226;   <a href="#multiprocessing.util">multiprocessing.util</a>
+ &#8226;   <a href="#os">os</a>
+ &#8226;   <a href="#selectors">selectors</a>
+ &#8226;   <a href="#socket">socket</a>
+ &#8226;   <a href="#struct">struct</a>
+ &#8226;   <a href="#sys">sys</a>
+ &#8226;   <a href="#tempfile">tempfile</a>
+ &#8226;   <a href="#time">time</a>
+ &#8226;   <a href="#xmlrpc.client">xmlrpc.client</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#concurrent.futures.process">concurrent.futures.process</a>
+ &#8226;   <a href="#multiprocessing">multiprocessing</a>
+ &#8226;   <a href="#multiprocessing.context">multiprocessing.context</a>
+ &#8226;   <a href="#multiprocessing.forkserver">multiprocessing.forkserver</a>
+ &#8226;   <a href="#multiprocessing.managers">multiprocessing.managers</a>
+ &#8226;   <a href="#multiprocessing.popen_fork">multiprocessing.popen_fork</a>
+ &#8226;   <a href="#multiprocessing.popen_forkserver">multiprocessing.popen_forkserver</a>
+ &#8226;   <a href="#multiprocessing.queues">multiprocessing.queues</a>
+ &#8226;   <a href="#multiprocessing.resource_sharer">multiprocessing.resource_sharer</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="multiprocessing.context"></a>
+  <a target="code" href="///C:/Users/admin/AppData/Local/Programs/Python/Python37/lib/multiprocessing/context.py" type="text/plain"><tt>multiprocessing.context</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#multiprocessing">multiprocessing</a>
+ &#8226;   <a href="#multiprocessing.connection">multiprocessing.connection</a>
+ &#8226;   <a href="#multiprocessing.forkserver">multiprocessing.forkserver</a>
+ &#8226;   <a href="#multiprocessing.managers">multiprocessing.managers</a>
+ &#8226;   <a href="#multiprocessing.pool">multiprocessing.pool</a>
+ &#8226;   <a href="#multiprocessing.popen_fork">multiprocessing.popen_fork</a>
+ &#8226;   <a href="#multiprocessing.popen_forkserver">multiprocessing.popen_forkserver</a>
+ &#8226;   <a href="#multiprocessing.popen_spawn_posix">multiprocessing.popen_spawn_posix</a>
+ &#8226;   <a href="#multiprocessing.popen_spawn_win32">multiprocessing.popen_spawn_win32</a>
+ &#8226;   <a href="#multiprocessing.process">multiprocessing.process</a>
+ &#8226;   <a href="#multiprocessing.queues">multiprocessing.queues</a>
+ &#8226;   <a href="#multiprocessing.reduction">multiprocessing.reduction</a>
+ &#8226;   <a href="#multiprocessing.sharedctypes">multiprocessing.sharedctypes</a>
+ &#8226;   <a href="#multiprocessing.spawn">multiprocessing.spawn</a>
+ &#8226;   <a href="#multiprocessing.synchronize">multiprocessing.synchronize</a>
+ &#8226;   <a href="#multiprocessing.util">multiprocessing.util</a>
+ &#8226;   <a href="#os">os</a>
+ &#8226;   <a href="#sys">sys</a>
+ &#8226;   <a href="#threading">threading</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#multiprocessing">multiprocessing</a>
+ &#8226;   <a href="#multiprocessing.connection">multiprocessing.connection</a>
+ &#8226;   <a href="#multiprocessing.forkserver">multiprocessing.forkserver</a>
+ &#8226;   <a href="#multiprocessing.heap">multiprocessing.heap</a>
+ &#8226;   <a href="#multiprocessing.managers">multiprocessing.managers</a>
+ &#8226;   <a href="#multiprocessing.popen_forkserver">multiprocessing.popen_forkserver</a>
+ &#8226;   <a href="#multiprocessing.popen_spawn_posix">multiprocessing.popen_spawn_posix</a>
+ &#8226;   <a href="#multiprocessing.popen_spawn_win32">multiprocessing.popen_spawn_win32</a>
+ &#8226;   <a href="#multiprocessing.process">multiprocessing.process</a>
+ &#8226;   <a href="#multiprocessing.queues">multiprocessing.queues</a>
+ &#8226;   <a href="#multiprocessing.reduction">multiprocessing.reduction</a>
+ &#8226;   <a href="#multiprocessing.resource_sharer">multiprocessing.resource_sharer</a>
+ &#8226;   <a href="#multiprocessing.sharedctypes">multiprocessing.sharedctypes</a>
+ &#8226;   <a href="#multiprocessing.spawn">multiprocessing.spawn</a>
+ &#8226;   <a href="#multiprocessing.synchronize">multiprocessing.synchronize</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="multiprocessing.current_process"></a>
+  <a target="code" href="" type="text/plain"><tt>multiprocessing.current_process</tt></a>
+<span class="moduletype">MissingModule</span>  <div class="import">
+imported by:
+    <a href="#loguru._logger">loguru._logger</a>
+ &#8226;   <a href="#multiprocessing">multiprocessing</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="multiprocessing.dummy"></a>
+  <a target="code" href="///C:/Users/admin/AppData/Local/Programs/Python/Python37/lib/multiprocessing/dummy/__init__.py" type="text/plain"><tt>multiprocessing.dummy</tt></a>
+<span class="moduletype">Package</span>  <div class="import">
+imports:
+    <a href="#array">array</a>
+ &#8226;   <a href="#multiprocessing">multiprocessing</a>
+ &#8226;   <a href="#multiprocessing.dummy.connection">multiprocessing.dummy.connection</a>
+ &#8226;   <a href="#multiprocessing.pool">multiprocessing.pool</a>
+ &#8226;   <a href="#queue">queue</a>
+ &#8226;   <a href="#sys">sys</a>
+ &#8226;   <a href="#threading">threading</a>
+ &#8226;   <a href="#weakref">weakref</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#multiprocessing.dummy.connection">multiprocessing.dummy.connection</a>
+ &#8226;   <a href="#multiprocessing.pool">multiprocessing.pool</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="multiprocessing.dummy.connection"></a>
+  <a target="code" href="///C:/Users/admin/AppData/Local/Programs/Python/Python37/lib/multiprocessing/dummy/connection.py" type="text/plain"><tt>multiprocessing.dummy.connection</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#multiprocessing.dummy">multiprocessing.dummy</a>
+ &#8226;   <a href="#queue">queue</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#multiprocessing.dummy">multiprocessing.dummy</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="multiprocessing.forkserver"></a>
+  <a target="code" href="///C:/Users/admin/AppData/Local/Programs/Python/Python37/lib/multiprocessing/forkserver.py" type="text/plain"><tt>multiprocessing.forkserver</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#errno">errno</a>
+ &#8226;   <a href="#multiprocessing">multiprocessing</a>
+ &#8226;   <a href="#multiprocessing.connection">multiprocessing.connection</a>
+ &#8226;   <a href="#multiprocessing.context">multiprocessing.context</a>
+ &#8226;   <a href="#multiprocessing.process">multiprocessing.process</a>
+ &#8226;   <a href="#multiprocessing.semaphore_tracker">multiprocessing.semaphore_tracker</a>
+ &#8226;   <a href="#multiprocessing.spawn">multiprocessing.spawn</a>
+ &#8226;   <a href="#multiprocessing.util">multiprocessing.util</a>
+ &#8226;   <a href="#os">os</a>
+ &#8226;   <a href="#selectors">selectors</a>
+ &#8226;   <a href="#signal">signal</a>
+ &#8226;   <a href="#socket">socket</a>
+ &#8226;   <a href="#struct">struct</a>
+ &#8226;   <a href="#sys">sys</a>
+ &#8226;   <a href="#threading">threading</a>
+ &#8226;   <a href="#warnings">warnings</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#multiprocessing">multiprocessing</a>
+ &#8226;   <a href="#multiprocessing.context">multiprocessing.context</a>
+ &#8226;   <a href="#multiprocessing.popen_forkserver">multiprocessing.popen_forkserver</a>
+ &#8226;   <a href="#multiprocessing.util">multiprocessing.util</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="multiprocessing.get_context"></a>
+  <a target="code" href="" type="text/plain"><tt>multiprocessing.get_context</tt></a>
+<span class="moduletype">MissingModule</span>  <div class="import">
+imported by:
+    <a href="#multiprocessing">multiprocessing</a>
+ &#8226;   <a href="#multiprocessing.managers">multiprocessing.managers</a>
+ &#8226;   <a href="#multiprocessing.pool">multiprocessing.pool</a>
+ &#8226;   <a href="#multiprocessing.sharedctypes">multiprocessing.sharedctypes</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="multiprocessing.get_start_method"></a>
+  <a target="code" href="" type="text/plain"><tt>multiprocessing.get_start_method</tt></a>
+<span class="moduletype">MissingModule</span>  <div class="import">
+imported by:
+    <a href="#multiprocessing">multiprocessing</a>
+ &#8226;   <a href="#multiprocessing.spawn">multiprocessing.spawn</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="multiprocessing.heap"></a>
+  <a target="code" href="///C:/Users/admin/AppData/Local/Programs/Python/Python37/lib/multiprocessing/heap.py" type="text/plain"><tt>multiprocessing.heap</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#_winapi">_winapi</a>
+ &#8226;   <a href="#bisect">bisect</a>
+ &#8226;   <a href="#mmap">mmap</a>
+ &#8226;   <a href="#multiprocessing">multiprocessing</a>
+ &#8226;   <a href="#multiprocessing.context">multiprocessing.context</a>
+ &#8226;   <a href="#multiprocessing.util">multiprocessing.util</a>
+ &#8226;   <a href="#os">os</a>
+ &#8226;   <a href="#sys">sys</a>
+ &#8226;   <a href="#tempfile">tempfile</a>
+ &#8226;   <a href="#threading">threading</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#multiprocessing.sharedctypes">multiprocessing.sharedctypes</a>
+ &#8226;   <a href="#multiprocessing.synchronize">multiprocessing.synchronize</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="multiprocessing.managers"></a>
+  <a target="code" href="///C:/Users/admin/AppData/Local/Programs/Python/Python37/lib/multiprocessing/managers.py" type="text/plain"><tt>multiprocessing.managers</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#array">array</a>
+ &#8226;   <a href="#multiprocessing">multiprocessing</a>
+ &#8226;   <a href="#multiprocessing.connection">multiprocessing.connection</a>
+ &#8226;   <a href="#multiprocessing.context">multiprocessing.context</a>
+ &#8226;   <a href="#multiprocessing.get_context">multiprocessing.get_context</a>
+ &#8226;   <a href="#multiprocessing.pool">multiprocessing.pool</a>
+ &#8226;   <a href="#multiprocessing.process">multiprocessing.process</a>
+ &#8226;   <a href="#multiprocessing.util">multiprocessing.util</a>
+ &#8226;   <a href="#queue">queue</a>
+ &#8226;   <a href="#sys">sys</a>
+ &#8226;   <a href="#threading">threading</a>
+ &#8226;   <a href="#time">time</a>
+ &#8226;   <a href="#traceback">traceback</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#multiprocessing.context">multiprocessing.context</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="multiprocessing.pool"></a>
+  <a target="code" href="///C:/Users/admin/AppData/Local/Programs/Python/Python37/lib/multiprocessing/pool.py" type="text/plain"><tt>multiprocessing.pool</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#collections">collections</a>
+ &#8226;   <a href="#itertools">itertools</a>
+ &#8226;   <a href="#multiprocessing">multiprocessing</a>
+ &#8226;   <a href="#multiprocessing.TimeoutError">multiprocessing.TimeoutError</a>
+ &#8226;   <a href="#multiprocessing.dummy">multiprocessing.dummy</a>
+ &#8226;   <a href="#multiprocessing.get_context">multiprocessing.get_context</a>
+ &#8226;   <a href="#multiprocessing.util">multiprocessing.util</a>
+ &#8226;   <a href="#os">os</a>
+ &#8226;   <a href="#queue">queue</a>
+ &#8226;   <a href="#threading">threading</a>
+ &#8226;   <a href="#time">time</a>
+ &#8226;   <a href="#traceback">traceback</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#multiprocessing">multiprocessing</a>
+ &#8226;   <a href="#multiprocessing.context">multiprocessing.context</a>
+ &#8226;   <a href="#multiprocessing.dummy">multiprocessing.dummy</a>
+ &#8226;   <a href="#multiprocessing.managers">multiprocessing.managers</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="multiprocessing.popen_fork"></a>
+  <a target="code" href="///C:/Users/admin/AppData/Local/Programs/Python/Python37/lib/multiprocessing/popen_fork.py" type="text/plain"><tt>multiprocessing.popen_fork</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#multiprocessing">multiprocessing</a>
+ &#8226;   <a href="#multiprocessing.connection">multiprocessing.connection</a>
+ &#8226;   <a href="#multiprocessing.util">multiprocessing.util</a>
+ &#8226;   <a href="#os">os</a>
+ &#8226;   <a href="#signal">signal</a>
+ &#8226;   <a href="#sys">sys</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#multiprocessing.context">multiprocessing.context</a>
+ &#8226;   <a href="#multiprocessing.popen_forkserver">multiprocessing.popen_forkserver</a>
+ &#8226;   <a href="#multiprocessing.popen_spawn_posix">multiprocessing.popen_spawn_posix</a>
+ &#8226;   <a href="#pyi_rth_multiprocessing.py">pyi_rth_multiprocessing.py</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="multiprocessing.popen_forkserver"></a>
+  <a target="code" href="///C:/Users/admin/AppData/Local/Programs/Python/Python37/lib/multiprocessing/popen_forkserver.py" type="text/plain"><tt>multiprocessing.popen_forkserver</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#io">io</a>
+ &#8226;   <a href="#multiprocessing">multiprocessing</a>
+ &#8226;   <a href="#multiprocessing.connection">multiprocessing.connection</a>
+ &#8226;   <a href="#multiprocessing.context">multiprocessing.context</a>
+ &#8226;   <a href="#multiprocessing.forkserver">multiprocessing.forkserver</a>
+ &#8226;   <a href="#multiprocessing.popen_fork">multiprocessing.popen_fork</a>
+ &#8226;   <a href="#multiprocessing.spawn">multiprocessing.spawn</a>
+ &#8226;   <a href="#multiprocessing.util">multiprocessing.util</a>
+ &#8226;   <a href="#os">os</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#multiprocessing.context">multiprocessing.context</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="multiprocessing.popen_spawn_posix"></a>
+  <a target="code" href="///C:/Users/admin/AppData/Local/Programs/Python/Python37/lib/multiprocessing/popen_spawn_posix.py" type="text/plain"><tt>multiprocessing.popen_spawn_posix</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#io">io</a>
+ &#8226;   <a href="#multiprocessing">multiprocessing</a>
+ &#8226;   <a href="#multiprocessing.context">multiprocessing.context</a>
+ &#8226;   <a href="#multiprocessing.popen_fork">multiprocessing.popen_fork</a>
+ &#8226;   <a href="#multiprocessing.semaphore_tracker">multiprocessing.semaphore_tracker</a>
+ &#8226;   <a href="#multiprocessing.spawn">multiprocessing.spawn</a>
+ &#8226;   <a href="#multiprocessing.util">multiprocessing.util</a>
+ &#8226;   <a href="#os">os</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#multiprocessing.context">multiprocessing.context</a>
+ &#8226;   <a href="#pyi_rth_multiprocessing.py">pyi_rth_multiprocessing.py</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="multiprocessing.popen_spawn_win32"></a>
+  <a target="code" href="///C:/Users/admin/AppData/Local/Programs/Python/Python37/lib/multiprocessing/popen_spawn_win32.py" type="text/plain"><tt>multiprocessing.popen_spawn_win32</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#_winapi">_winapi</a>
+ &#8226;   <a href="#msvcrt">msvcrt</a>
+ &#8226;   <a href="#multiprocessing">multiprocessing</a>
+ &#8226;   <a href="#multiprocessing.context">multiprocessing.context</a>
+ &#8226;   <a href="#multiprocessing.spawn">multiprocessing.spawn</a>
+ &#8226;   <a href="#multiprocessing.util">multiprocessing.util</a>
+ &#8226;   <a href="#os">os</a>
+ &#8226;   <a href="#signal">signal</a>
+ &#8226;   <a href="#sys">sys</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#multiprocessing.context">multiprocessing.context</a>
+ &#8226;   <a href="#pyi_rth_multiprocessing.py">pyi_rth_multiprocessing.py</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="multiprocessing.process"></a>
+  <a target="code" href="///C:/Users/admin/AppData/Local/Programs/Python/Python37/lib/multiprocessing/process.py" type="text/plain"><tt>multiprocessing.process</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#_weakrefset">_weakrefset</a>
+ &#8226;   <a href="#itertools">itertools</a>
+ &#8226;   <a href="#multiprocessing">multiprocessing</a>
+ &#8226;   <a href="#multiprocessing.context">multiprocessing.context</a>
+ &#8226;   <a href="#multiprocessing.util">multiprocessing.util</a>
+ &#8226;   <a href="#os">os</a>
+ &#8226;   <a href="#signal">signal</a>
+ &#8226;   <a href="#sys">sys</a>
+ &#8226;   <a href="#threading">threading</a>
+ &#8226;   <a href="#traceback">traceback</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#multiprocessing">multiprocessing</a>
+ &#8226;   <a href="#multiprocessing.context">multiprocessing.context</a>
+ &#8226;   <a href="#multiprocessing.forkserver">multiprocessing.forkserver</a>
+ &#8226;   <a href="#multiprocessing.managers">multiprocessing.managers</a>
+ &#8226;   <a href="#multiprocessing.resource_sharer">multiprocessing.resource_sharer</a>
+ &#8226;   <a href="#multiprocessing.spawn">multiprocessing.spawn</a>
+ &#8226;   <a href="#multiprocessing.synchronize">multiprocessing.synchronize</a>
+ &#8226;   <a href="#multiprocessing.util">multiprocessing.util</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="multiprocessing.queues"></a>
+  <a target="code" href="///C:/Users/admin/AppData/Local/Programs/Python/Python37/lib/multiprocessing/queues.py" type="text/plain"><tt>multiprocessing.queues</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#_multiprocessing">_multiprocessing</a>
+ &#8226;   <a href="#collections">collections</a>
+ &#8226;   <a href="#errno">errno</a>
+ &#8226;   <a href="#multiprocessing">multiprocessing</a>
+ &#8226;   <a href="#multiprocessing.connection">multiprocessing.connection</a>
+ &#8226;   <a href="#multiprocessing.context">multiprocessing.context</a>
+ &#8226;   <a href="#multiprocessing.synchronize">multiprocessing.synchronize</a>
+ &#8226;   <a href="#multiprocessing.util">multiprocessing.util</a>
+ &#8226;   <a href="#os">os</a>
+ &#8226;   <a href="#queue">queue</a>
+ &#8226;   <a href="#sys">sys</a>
+ &#8226;   <a href="#threading">threading</a>
+ &#8226;   <a href="#time">time</a>
+ &#8226;   <a href="#traceback">traceback</a>
+ &#8226;   <a href="#weakref">weakref</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#concurrent.futures.process">concurrent.futures.process</a>
+ &#8226;   <a href="#multiprocessing.context">multiprocessing.context</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="multiprocessing.reduction"></a>
+  <a target="code" href="///C:/Users/admin/AppData/Local/Programs/Python/Python37/lib/multiprocessing/reduction.py" type="text/plain"><tt>multiprocessing.reduction</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#_winapi">_winapi</a>
+ &#8226;   <a href="#abc">abc</a>
+ &#8226;   <a href="#array">array</a>
+ &#8226;   <a href="#copyreg">copyreg</a>
+ &#8226;   <a href="#functools">functools</a>
+ &#8226;   <a href="#io">io</a>
+ &#8226;   <a href="#multiprocessing">multiprocessing</a>
+ &#8226;   <a href="#multiprocessing.context">multiprocessing.context</a>
+ &#8226;   <a href="#multiprocessing.resource_sharer">multiprocessing.resource_sharer</a>
+ &#8226;   <a href="#os">os</a>
+ &#8226;   <a href="#pickle">pickle</a>
+ &#8226;   <a href="#socket">socket</a>
+ &#8226;   <a href="#sys">sys</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#multiprocessing">multiprocessing</a>
+ &#8226;   <a href="#multiprocessing.context">multiprocessing.context</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="multiprocessing.resource_sharer"></a>
+  <a target="code" href="///C:/Users/admin/AppData/Local/Programs/Python/Python37/lib/multiprocessing/resource_sharer.py" type="text/plain"><tt>multiprocessing.resource_sharer</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#multiprocessing">multiprocessing</a>
+ &#8226;   <a href="#multiprocessing.connection">multiprocessing.connection</a>
+ &#8226;   <a href="#multiprocessing.context">multiprocessing.context</a>
+ &#8226;   <a href="#multiprocessing.process">multiprocessing.process</a>
+ &#8226;   <a href="#multiprocessing.util">multiprocessing.util</a>
+ &#8226;   <a href="#os">os</a>
+ &#8226;   <a href="#signal">signal</a>
+ &#8226;   <a href="#socket">socket</a>
+ &#8226;   <a href="#sys">sys</a>
+ &#8226;   <a href="#threading">threading</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#multiprocessing">multiprocessing</a>
+ &#8226;   <a href="#multiprocessing.connection">multiprocessing.connection</a>
+ &#8226;   <a href="#multiprocessing.reduction">multiprocessing.reduction</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="multiprocessing.semaphore_tracker"></a>
+  <a target="code" href="///C:/Users/admin/AppData/Local/Programs/Python/Python37/lib/multiprocessing/semaphore_tracker.py" type="text/plain"><tt>multiprocessing.semaphore_tracker</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#_multiprocessing">_multiprocessing</a>
+ &#8226;   <a href="#multiprocessing">multiprocessing</a>
+ &#8226;   <a href="#multiprocessing.spawn">multiprocessing.spawn</a>
+ &#8226;   <a href="#multiprocessing.util">multiprocessing.util</a>
+ &#8226;   <a href="#os">os</a>
+ &#8226;   <a href="#signal">signal</a>
+ &#8226;   <a href="#sys">sys</a>
+ &#8226;   <a href="#threading">threading</a>
+ &#8226;   <a href="#warnings">warnings</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#multiprocessing">multiprocessing</a>
+ &#8226;   <a href="#multiprocessing.forkserver">multiprocessing.forkserver</a>
+ &#8226;   <a href="#multiprocessing.popen_spawn_posix">multiprocessing.popen_spawn_posix</a>
+ &#8226;   <a href="#multiprocessing.spawn">multiprocessing.spawn</a>
+ &#8226;   <a href="#multiprocessing.synchronize">multiprocessing.synchronize</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="multiprocessing.set_start_method"></a>
+  <a target="code" href="" type="text/plain"><tt>multiprocessing.set_start_method</tt></a>
+<span class="moduletype">MissingModule</span>  <div class="import">
+imported by:
+    <a href="#multiprocessing">multiprocessing</a>
+ &#8226;   <a href="#multiprocessing.spawn">multiprocessing.spawn</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="multiprocessing.sharedctypes"></a>
+  <a target="code" href="///C:/Users/admin/AppData/Local/Programs/Python/Python37/lib/multiprocessing/sharedctypes.py" type="text/plain"><tt>multiprocessing.sharedctypes</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#ctypes">ctypes</a>
+ &#8226;   <a href="#multiprocessing">multiprocessing</a>
+ &#8226;   <a href="#multiprocessing.context">multiprocessing.context</a>
+ &#8226;   <a href="#multiprocessing.get_context">multiprocessing.get_context</a>
+ &#8226;   <a href="#multiprocessing.heap">multiprocessing.heap</a>
+ &#8226;   <a href="#weakref">weakref</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#multiprocessing.context">multiprocessing.context</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="multiprocessing.spawn"></a>
+  <a target="code" href="///C:/Users/admin/AppData/Local/Programs/Python/Python37/lib/multiprocessing/spawn.py" type="text/plain"><tt>multiprocessing.spawn</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#msvcrt">msvcrt</a>
+ &#8226;   <a href="#multiprocessing">multiprocessing</a>
+ &#8226;   <a href="#multiprocessing.context">multiprocessing.context</a>
+ &#8226;   <a href="#multiprocessing.get_start_method">multiprocessing.get_start_method</a>
+ &#8226;   <a href="#multiprocessing.process">multiprocessing.process</a>
+ &#8226;   <a href="#multiprocessing.semaphore_tracker">multiprocessing.semaphore_tracker</a>
+ &#8226;   <a href="#multiprocessing.set_start_method">multiprocessing.set_start_method</a>
+ &#8226;   <a href="#multiprocessing.util">multiprocessing.util</a>
+ &#8226;   <a href="#os">os</a>
+ &#8226;   <a href="#runpy">runpy</a>
+ &#8226;   <a href="#sys">sys</a>
+ &#8226;   <a href="#types">types</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#multiprocessing">multiprocessing</a>
+ &#8226;   <a href="#multiprocessing.context">multiprocessing.context</a>
+ &#8226;   <a href="#multiprocessing.forkserver">multiprocessing.forkserver</a>
+ &#8226;   <a href="#multiprocessing.popen_forkserver">multiprocessing.popen_forkserver</a>
+ &#8226;   <a href="#multiprocessing.popen_spawn_posix">multiprocessing.popen_spawn_posix</a>
+ &#8226;   <a href="#multiprocessing.popen_spawn_win32">multiprocessing.popen_spawn_win32</a>
+ &#8226;   <a href="#multiprocessing.semaphore_tracker">multiprocessing.semaphore_tracker</a>
+ &#8226;   <a href="#pyi_rth_multiprocessing.py">pyi_rth_multiprocessing.py</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="multiprocessing.synchronize"></a>
+  <a target="code" href="///C:/Users/admin/AppData/Local/Programs/Python/Python37/lib/multiprocessing/synchronize.py" type="text/plain"><tt>multiprocessing.synchronize</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#_multiprocessing">_multiprocessing</a>
+ &#8226;   <a href="#multiprocessing">multiprocessing</a>
+ &#8226;   <a href="#multiprocessing.context">multiprocessing.context</a>
+ &#8226;   <a href="#multiprocessing.heap">multiprocessing.heap</a>
+ &#8226;   <a href="#multiprocessing.process">multiprocessing.process</a>
+ &#8226;   <a href="#multiprocessing.semaphore_tracker">multiprocessing.semaphore_tracker</a>
+ &#8226;   <a href="#multiprocessing.util">multiprocessing.util</a>
+ &#8226;   <a href="#struct">struct</a>
+ &#8226;   <a href="#sys">sys</a>
+ &#8226;   <a href="#tempfile">tempfile</a>
+ &#8226;   <a href="#threading">threading</a>
+ &#8226;   <a href="#time">time</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#multiprocessing.context">multiprocessing.context</a>
+ &#8226;   <a href="#multiprocessing.queues">multiprocessing.queues</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="multiprocessing.util"></a>
+  <a target="code" href="///C:/Users/admin/AppData/Local/Programs/Python/Python37/lib/multiprocessing/util.py" type="text/plain"><tt>multiprocessing.util</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#_posixsubprocess">_posixsubprocess</a>
+ &#8226;   <a href="#atexit">atexit</a>
+ &#8226;   <a href="#itertools">itertools</a>
+ &#8226;   <a href="#logging">logging</a>
+ &#8226;   <a href="#multiprocessing">multiprocessing</a>
+ &#8226;   <a href="#multiprocessing.forkserver">multiprocessing.forkserver</a>
+ &#8226;   <a href="#multiprocessing.process">multiprocessing.process</a>
+ &#8226;   <a href="#os">os</a>
+ &#8226;   <a href="#shutil">shutil</a>
+ &#8226;   <a href="#subprocess">subprocess</a>
+ &#8226;   <a href="#sys">sys</a>
+ &#8226;   <a href="#tempfile">tempfile</a>
+ &#8226;   <a href="#threading">threading</a>
+ &#8226;   <a href="#traceback">traceback</a>
+ &#8226;   <a href="#weakref">weakref</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#multiprocessing">multiprocessing</a>
+ &#8226;   <a href="#multiprocessing.connection">multiprocessing.connection</a>
+ &#8226;   <a href="#multiprocessing.context">multiprocessing.context</a>
+ &#8226;   <a href="#multiprocessing.forkserver">multiprocessing.forkserver</a>
+ &#8226;   <a href="#multiprocessing.heap">multiprocessing.heap</a>
+ &#8226;   <a href="#multiprocessing.managers">multiprocessing.managers</a>
+ &#8226;   <a href="#multiprocessing.pool">multiprocessing.pool</a>
+ &#8226;   <a href="#multiprocessing.popen_fork">multiprocessing.popen_fork</a>
+ &#8226;   <a href="#multiprocessing.popen_forkserver">multiprocessing.popen_forkserver</a>
+ &#8226;   <a href="#multiprocessing.popen_spawn_posix">multiprocessing.popen_spawn_posix</a>
+ &#8226;   <a href="#multiprocessing.popen_spawn_win32">multiprocessing.popen_spawn_win32</a>
+ &#8226;   <a href="#multiprocessing.process">multiprocessing.process</a>
+ &#8226;   <a href="#multiprocessing.queues">multiprocessing.queues</a>
+ &#8226;   <a href="#multiprocessing.resource_sharer">multiprocessing.resource_sharer</a>
+ &#8226;   <a href="#multiprocessing.semaphore_tracker">multiprocessing.semaphore_tracker</a>
+ &#8226;   <a href="#multiprocessing.spawn">multiprocessing.spawn</a>
+ &#8226;   <a href="#multiprocessing.synchronize">multiprocessing.synchronize</a>
 
   </div>
 
@@ -9749,6 +12160,7 @@ imports:
   <div class="import">
 imported by:
     <a href="#charset_normalizer.api">charset_normalizer.api</a>
+ &#8226;   <a href="#loguru._logger">loguru._logger</a>
  &#8226;   <a href="#os">os</a>
  &#8226;   <a href="#pkgutil">pkgutil</a>
  &#8226;   <a href="#py_compile">py_compile</a>
@@ -9790,6 +12202,7 @@ imports:
   <div class="import">
 imported by:
     <a href="#_pydecimal">_pydecimal</a>
+ &#8226;   <a href="#loguru._file_sink">loguru._file_sink</a>
 
   </div>
 
@@ -9890,13 +12303,23 @@ imports:
 imported by:
     <a href="#_osx_support">_osx_support</a>
  &#8226;   <a href="#argparse">argparse</a>
+ &#8226;   <a href="#asyncio.base_events">asyncio.base_events</a>
+ &#8226;   <a href="#asyncio.coroutines">asyncio.coroutines</a>
+ &#8226;   <a href="#asyncio.events">asyncio.events</a>
+ &#8226;   <a href="#asyncio.proactor_events">asyncio.proactor_events</a>
+ &#8226;   <a href="#asyncio.unix_events">asyncio.unix_events</a>
+ &#8226;   <a href="#asyncio.windows_utils">asyncio.windows_utils</a>
  &#8226;   <a href="#bdb">bdb</a>
  &#8226;   <a href="#bz2">bz2</a>
  &#8226;   <a href="#certifi.core">certifi.core</a>
  &#8226;   <a href="#charset_normalizer.api">charset_normalizer.api</a>
+ &#8226;   <a href="#colorama.ansitowin32">colorama.ansitowin32</a>
+ &#8226;   <a href="#concurrent.futures.process">concurrent.futures.process</a>
+ &#8226;   <a href="#concurrent.futures.thread">concurrent.futures.thread</a>
  &#8226;   <a href="#cryptography.hazmat.primitives.ciphers.aead">cryptography.hazmat.primitives.ciphers.aead</a>
  &#8226;   <a href="#cryptography.hazmat.primitives.serialization.ssh">cryptography.hazmat.primitives.serialization.ssh</a>
  &#8226;   <a href="#cryptography.x509.base">cryptography.x509.base</a>
+ &#8226;   <a href="#ctypes">ctypes</a>
  &#8226;   <a href="#doctest">doctest</a>
  &#8226;   <a href="#email.utils">email.utils</a>
  &#8226;   <a href="#fnmatch">fnmatch</a>
@@ -9913,8 +12336,32 @@ imported by:
  &#8226;   <a href="#linecache">linecache</a>
  &#8226;   <a href="#locale">locale</a>
  &#8226;   <a href="#logging">logging</a>
+ &#8226;   <a href="#loguru._better_exceptions">loguru._better_exceptions</a>
+ &#8226;   <a href="#loguru._colorama">loguru._colorama</a>
+ &#8226;   <a href="#loguru._ctime_functions">loguru._ctime_functions</a>
+ &#8226;   <a href="#loguru._defaults">loguru._defaults</a>
+ &#8226;   <a href="#loguru._file_sink">loguru._file_sink</a>
+ &#8226;   <a href="#loguru._handler">loguru._handler</a>
+ &#8226;   <a href="#loguru._locks_machinery">loguru._locks_machinery</a>
+ &#8226;   <a href="#loguru._logger">loguru._logger</a>
  &#8226;   <a href="#lzma">lzma</a>
  &#8226;   <a href="#mimetypes">mimetypes</a>
+ &#8226;   <a href="#multiprocessing.connection">multiprocessing.connection</a>
+ &#8226;   <a href="#multiprocessing.context">multiprocessing.context</a>
+ &#8226;   <a href="#multiprocessing.forkserver">multiprocessing.forkserver</a>
+ &#8226;   <a href="#multiprocessing.heap">multiprocessing.heap</a>
+ &#8226;   <a href="#multiprocessing.pool">multiprocessing.pool</a>
+ &#8226;   <a href="#multiprocessing.popen_fork">multiprocessing.popen_fork</a>
+ &#8226;   <a href="#multiprocessing.popen_forkserver">multiprocessing.popen_forkserver</a>
+ &#8226;   <a href="#multiprocessing.popen_spawn_posix">multiprocessing.popen_spawn_posix</a>
+ &#8226;   <a href="#multiprocessing.popen_spawn_win32">multiprocessing.popen_spawn_win32</a>
+ &#8226;   <a href="#multiprocessing.process">multiprocessing.process</a>
+ &#8226;   <a href="#multiprocessing.queues">multiprocessing.queues</a>
+ &#8226;   <a href="#multiprocessing.reduction">multiprocessing.reduction</a>
+ &#8226;   <a href="#multiprocessing.resource_sharer">multiprocessing.resource_sharer</a>
+ &#8226;   <a href="#multiprocessing.semaphore_tracker">multiprocessing.semaphore_tracker</a>
+ &#8226;   <a href="#multiprocessing.spawn">multiprocessing.spawn</a>
+ &#8226;   <a href="#multiprocessing.util">multiprocessing.util</a>
  &#8226;   <a href="#netrc">netrc</a>
  &#8226;   <a href="#ntpath">ntpath</a>
  &#8226;   <a href="#ntpath">ntpath</a>
@@ -9928,6 +12375,7 @@ imported by:
  &#8226;   <a href="#py_compile">py_compile</a>
  &#8226;   <a href="#pydoc">pydoc</a>
  &#8226;   <a href="#pyi_rth_certifi.py">pyi_rth_certifi.py</a>
+ &#8226;   <a href="#pyi_rth_multiprocessing.py">pyi_rth_multiprocessing.py</a>
  &#8226;   <a href="#random">random</a>
  &#8226;   <a href="#requests.auth">requests.auth</a>
  &#8226;   <a href="#requests.sessions">requests.sessions</a>
@@ -9951,6 +12399,7 @@ imported by:
  &#8226;   <a href="#urllib3.util.ssl_">urllib3.util.ssl_</a>
  &#8226;   <a href="#uu">uu</a>
  &#8226;   <a href="#webbrowser">webbrowser</a>
+ &#8226;   <a href="#win32_setctime">win32_setctime</a>
  &#8226;   <a href="#xml.sax">xml.sax</a>
  &#8226;   <a href="#xml.sax.saxutils">xml.sax.saxutils</a>
  &#8226;   <a href="#zipfile">zipfile</a>
@@ -9985,6 +12434,7 @@ imports:
   <div class="import">
 imported by:
     <a href="#importlib.resources">importlib.resources</a>
+ &#8226;   <a href="#loguru._logger">loguru._logger</a>
 
   </div>
 
@@ -10049,6 +12499,8 @@ imports:
   <div class="import">
 imported by:
     <a href="#logging">logging</a>
+ &#8226;   <a href="#loguru._recattrs">loguru._recattrs</a>
+ &#8226;   <a href="#multiprocessing.reduction">multiprocessing.reduction</a>
  &#8226;   <a href="#tracemalloc">tracemalloc</a>
 
   </div>
@@ -10354,7 +12806,14 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#queue">queue</a>
+    <a href="#concurrent.futures.process">concurrent.futures.process</a>
+ &#8226;   <a href="#concurrent.futures.thread">concurrent.futures.thread</a>
+ &#8226;   <a href="#multiprocessing.dummy">multiprocessing.dummy</a>
+ &#8226;   <a href="#multiprocessing.dummy.connection">multiprocessing.dummy.connection</a>
+ &#8226;   <a href="#multiprocessing.managers">multiprocessing.managers</a>
+ &#8226;   <a href="#multiprocessing.pool">multiprocessing.pool</a>
+ &#8226;   <a href="#multiprocessing.queues">multiprocessing.queues</a>
+ &#8226;   <a href="#queue">queue</a>
 
   </div>
 
@@ -10453,6 +12912,7 @@ imported by:
  &#8226;   <a href="#charset_normalizer.constant">charset_normalizer.constant</a>
  &#8226;   <a href="#charset_normalizer.models">charset_normalizer.models</a>
  &#8226;   <a href="#charset_normalizer.utils">charset_normalizer.utils</a>
+ &#8226;   <a href="#colorama.ansitowin32">colorama.ansitowin32</a>
  &#8226;   <a href="#cryptography.hazmat.primitives.serialization.ssh">cryptography.hazmat.primitives.serialization.ssh</a>
  &#8226;   <a href="#cryptography.x509.name">cryptography.x509.name</a>
  &#8226;   <a href="#difflib">difflib</a>
@@ -10482,6 +12942,11 @@ imported by:
  &#8226;   <a href="#json.scanner">json.scanner</a>
  &#8226;   <a href="#keyword">keyword</a>
  &#8226;   <a href="#locale">locale</a>
+ &#8226;   <a href="#loguru._better_exceptions">loguru._better_exceptions</a>
+ &#8226;   <a href="#loguru._colorizer">loguru._colorizer</a>
+ &#8226;   <a href="#loguru._datetime">loguru._datetime</a>
+ &#8226;   <a href="#loguru._logger">loguru._logger</a>
+ &#8226;   <a href="#loguru._string_parsers">loguru._string_parsers</a>
  &#8226;   <a href="#pathlib">pathlib</a>
  &#8226;   <a href="#pdb">pdb</a>
  &#8226;   <a href="#pickle">pickle</a>
@@ -10490,6 +12955,7 @@ imported by:
  &#8226;   <a href="#posixpath">posixpath</a>
  &#8226;   <a href="#pprint">pprint</a>
  &#8226;   <a href="#pydoc">pydoc</a>
+ &#8226;   <a href="#pyi_rth_multiprocessing.py">pyi_rth_multiprocessing.py</a>
  &#8226;   <a href="#requests.auth">requests.auth</a>
  &#8226;   <a href="#requests.utils">requests.utils</a>
  &#8226;   <a href="#shlex">shlex</a>
@@ -10545,7 +13011,9 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#bdb">bdb</a>
+    <a href="#asyncio.base_futures">asyncio.base_futures</a>
+ &#8226;   <a href="#asyncio.format_helpers">asyncio.format_helpers</a>
+ &#8226;   <a href="#bdb">bdb</a>
  &#8226;   <a href="#collections">collections</a>
  &#8226;   <a href="#functools">functools</a>
  &#8226;   <a href="#pydoc">pydoc</a>
@@ -11060,7 +13528,8 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#pdb">pdb</a>
+    <a href="#multiprocessing.spawn">multiprocessing.spawn</a>
+ &#8226;   <a href="#pdb">pdb</a>
 
   </div>
 
@@ -11095,7 +13564,11 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#socket">socket</a>
+    <a href="#asyncio.selector_events">asyncio.selector_events</a>
+ &#8226;   <a href="#asyncio.unix_events">asyncio.unix_events</a>
+ &#8226;   <a href="#multiprocessing.connection">multiprocessing.connection</a>
+ &#8226;   <a href="#multiprocessing.forkserver">multiprocessing.forkserver</a>
+ &#8226;   <a href="#socket">socket</a>
  &#8226;   <a href="#socketserver">socketserver</a>
  &#8226;   <a href="#subprocess">subprocess</a>
 
@@ -11149,6 +13622,8 @@ imports:
   <div class="import">
 imported by:
     <a href="#http.server">http.server</a>
+ &#8226;   <a href="#loguru._file_sink">loguru._file_sink</a>
+ &#8226;   <a href="#multiprocessing.util">multiprocessing.util</a>
  &#8226;   <a href="#tarfile">tarfile</a>
  &#8226;   <a href="#tempfile">tempfile</a>
  &#8226;   <a href="#webbrowser">webbrowser</a>
@@ -11170,7 +13645,14 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#pdb">pdb</a>
+    <a href="#asyncio.unix_events">asyncio.unix_events</a>
+ &#8226;   <a href="#multiprocessing.forkserver">multiprocessing.forkserver</a>
+ &#8226;   <a href="#multiprocessing.popen_fork">multiprocessing.popen_fork</a>
+ &#8226;   <a href="#multiprocessing.popen_spawn_win32">multiprocessing.popen_spawn_win32</a>
+ &#8226;   <a href="#multiprocessing.process">multiprocessing.process</a>
+ &#8226;   <a href="#multiprocessing.resource_sharer">multiprocessing.resource_sharer</a>
+ &#8226;   <a href="#multiprocessing.semaphore_tracker">multiprocessing.semaphore_tracker</a>
+ &#8226;   <a href="#pdb">pdb</a>
  &#8226;   <a href="#subprocess">subprocess</a>
  &#8226;   <a href="#unittest.signals">unittest.signals</a>
 
@@ -11390,10 +13872,21 @@ imports:
   <div class="import">
 imported by:
     <a href="#_ssl">_ssl</a>
+ &#8226;   <a href="#asyncio.base_events">asyncio.base_events</a>
+ &#8226;   <a href="#asyncio.events">asyncio.events</a>
+ &#8226;   <a href="#asyncio.proactor_events">asyncio.proactor_events</a>
+ &#8226;   <a href="#asyncio.selector_events">asyncio.selector_events</a>
+ &#8226;   <a href="#asyncio.streams">asyncio.streams</a>
+ &#8226;   <a href="#asyncio.unix_events">asyncio.unix_events</a>
+ &#8226;   <a href="#asyncio.windows_events">asyncio.windows_events</a>
  &#8226;   <a href="#email.utils">email.utils</a>
  &#8226;   <a href="#ftplib">ftplib</a>
  &#8226;   <a href="#http.client">http.client</a>
  &#8226;   <a href="#http.server">http.server</a>
+ &#8226;   <a href="#multiprocessing.connection">multiprocessing.connection</a>
+ &#8226;   <a href="#multiprocessing.forkserver">multiprocessing.forkserver</a>
+ &#8226;   <a href="#multiprocessing.reduction">multiprocessing.reduction</a>
+ &#8226;   <a href="#multiprocessing.resource_sharer">multiprocessing.resource_sharer</a>
  &#8226;   <a href="#platform">platform</a>
  &#8226;   <a href="#requests.adapters">requests.adapters</a>
  &#8226;   <a href="#requests.utils">requests.utils</a>
@@ -11527,7 +14020,10 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#ftplib">ftplib</a>
+    <a href="#asyncio.base_events">asyncio.base_events</a>
+ &#8226;   <a href="#asyncio.selector_events">asyncio.selector_events</a>
+ &#8226;   <a href="#asyncio.sslproto">asyncio.sslproto</a>
+ &#8226;   <a href="#ftplib">ftplib</a>
  &#8226;   <a href="#http.client">http.client</a>
  &#8226;   <a href="#pyi_rth_certifi.py">pyi_rth_certifi.py</a>
  &#8226;   <a href="#requests">requests</a>
@@ -11552,7 +14048,8 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#genericpath">genericpath</a>
+    <a href="#asyncio.unix_events">asyncio.unix_events</a>
+ &#8226;   <a href="#genericpath">genericpath</a>
  &#8226;   <a href="#netrc">netrc</a>
  &#8226;   <a href="#ntpath">ntpath</a>
  &#8226;   <a href="#os">os</a>
@@ -11584,6 +14081,8 @@ imported by:
  &#8226;   <a href="#email.quoprimime">email.quoprimime</a>
  &#8226;   <a href="#http.cookies">http.cookies</a>
  &#8226;   <a href="#logging">logging</a>
+ &#8226;   <a href="#loguru._colorizer">loguru._colorizer</a>
+ &#8226;   <a href="#loguru._file_sink">loguru._file_sink</a>
  &#8226;   <a href="#ntpath">ntpath</a>
  &#8226;   <a href="#nturl2path">nturl2path</a>
  &#8226;   <a href="#urllib.request">urllib.request</a>
@@ -11618,9 +14117,14 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#base64">base64</a>
+    <a href="#asyncio.windows_events">asyncio.windows_events</a>
+ &#8226;   <a href="#base64">base64</a>
+ &#8226;   <a href="#ctypes">ctypes</a>
  &#8226;   <a href="#gettext">gettext</a>
  &#8226;   <a href="#gzip">gzip</a>
+ &#8226;   <a href="#multiprocessing.connection">multiprocessing.connection</a>
+ &#8226;   <a href="#multiprocessing.forkserver">multiprocessing.forkserver</a>
+ &#8226;   <a href="#multiprocessing.synchronize">multiprocessing.synchronize</a>
  &#8226;   <a href="#pickle">pickle</a>
  &#8226;   <a href="#platform">platform</a>
  &#8226;   <a href="#plistlib">plistlib</a>
@@ -11657,10 +14161,18 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#http.server">http.server</a>
+    <a href="#asyncio.base_events">asyncio.base_events</a>
+ &#8226;   <a href="#asyncio.base_subprocess">asyncio.base_subprocess</a>
+ &#8226;   <a href="#asyncio.events">asyncio.events</a>
+ &#8226;   <a href="#asyncio.subprocess">asyncio.subprocess</a>
+ &#8226;   <a href="#asyncio.unix_events">asyncio.unix_events</a>
+ &#8226;   <a href="#asyncio.windows_utils">asyncio.windows_utils</a>
+ &#8226;   <a href="#http.server">http.server</a>
+ &#8226;   <a href="#multiprocessing.util">multiprocessing.util</a>
  &#8226;   <a href="#os">os</a>
  &#8226;   <a href="#platform">platform</a>
  &#8226;   <a href="#pydoc">pydoc</a>
+ &#8226;   <a href="#pyi_rth_multiprocessing.py">pyi_rth_multiprocessing.py</a>
  &#8226;   <a href="#webbrowser">webbrowser</a>
 
   </div>
@@ -11676,6 +14188,14 @@ imported by:
  &#8226;   <a href="#_osx_support">_osx_support</a>
  &#8226;   <a href="#_pydecimal">_pydecimal</a>
  &#8226;   <a href="#argparse">argparse</a>
+ &#8226;   <a href="#asyncio">asyncio</a>
+ &#8226;   <a href="#asyncio.base_events">asyncio.base_events</a>
+ &#8226;   <a href="#asyncio.coroutines">asyncio.coroutines</a>
+ &#8226;   <a href="#asyncio.events">asyncio.events</a>
+ &#8226;   <a href="#asyncio.format_helpers">asyncio.format_helpers</a>
+ &#8226;   <a href="#asyncio.futures">asyncio.futures</a>
+ &#8226;   <a href="#asyncio.unix_events">asyncio.unix_events</a>
+ &#8226;   <a href="#asyncio.windows_utils">asyncio.windows_utils</a>
  &#8226;   <a href="#base64">base64</a>
  &#8226;   <a href="#bdb">bdb</a>
  &#8226;   <a href="#calendar">calendar</a>
@@ -11683,11 +14203,16 @@ imported by:
  &#8226;   <a href="#code">code</a>
  &#8226;   <a href="#codecs">codecs</a>
  &#8226;   <a href="#collections">collections</a>
+ &#8226;   <a href="#colorama.ansitowin32">colorama.ansitowin32</a>
+ &#8226;   <a href="#colorama.initialise">colorama.initialise</a>
+ &#8226;   <a href="#concurrent.futures.process">concurrent.futures.process</a>
  &#8226;   <a href="#contextlib">contextlib</a>
  &#8226;   <a href="#cryptography">cryptography</a>
  &#8226;   <a href="#cryptography.hazmat.primitives.kdf.scrypt">cryptography.hazmat.primitives.kdf.scrypt</a>
  &#8226;   <a href="#cryptography.utils">cryptography.utils</a>
  &#8226;   <a href="#cryptography.x509.name">cryptography.x509.name</a>
+ &#8226;   <a href="#ctypes">ctypes</a>
+ &#8226;   <a href="#ctypes._endian">ctypes._endian</a>
  &#8226;   <a href="#datetime">datetime</a>
  &#8226;   <a href="#dis">dis</a>
  &#8226;   <a href="#distutils">distutils</a>
@@ -11718,7 +14243,31 @@ imported by:
  &#8226;   <a href="#linecache">linecache</a>
  &#8226;   <a href="#locale">locale</a>
  &#8226;   <a href="#logging">logging</a>
+ &#8226;   <a href="#loguru">loguru</a>
+ &#8226;   <a href="#loguru._better_exceptions">loguru._better_exceptions</a>
+ &#8226;   <a href="#loguru._colorama">loguru._colorama</a>
+ &#8226;   <a href="#loguru._error_interceptor">loguru._error_interceptor</a>
+ &#8226;   <a href="#loguru._get_frame">loguru._get_frame</a>
+ &#8226;   <a href="#loguru._logger">loguru._logger</a>
+ &#8226;   <a href="#loguru._simple_sinks">loguru._simple_sinks</a>
  &#8226;   <a href="#mimetypes">mimetypes</a>
+ &#8226;   <a href="#multiprocessing">multiprocessing</a>
+ &#8226;   <a href="#multiprocessing.connection">multiprocessing.connection</a>
+ &#8226;   <a href="#multiprocessing.context">multiprocessing.context</a>
+ &#8226;   <a href="#multiprocessing.dummy">multiprocessing.dummy</a>
+ &#8226;   <a href="#multiprocessing.forkserver">multiprocessing.forkserver</a>
+ &#8226;   <a href="#multiprocessing.heap">multiprocessing.heap</a>
+ &#8226;   <a href="#multiprocessing.managers">multiprocessing.managers</a>
+ &#8226;   <a href="#multiprocessing.popen_fork">multiprocessing.popen_fork</a>
+ &#8226;   <a href="#multiprocessing.popen_spawn_win32">multiprocessing.popen_spawn_win32</a>
+ &#8226;   <a href="#multiprocessing.process">multiprocessing.process</a>
+ &#8226;   <a href="#multiprocessing.queues">multiprocessing.queues</a>
+ &#8226;   <a href="#multiprocessing.reduction">multiprocessing.reduction</a>
+ &#8226;   <a href="#multiprocessing.resource_sharer">multiprocessing.resource_sharer</a>
+ &#8226;   <a href="#multiprocessing.semaphore_tracker">multiprocessing.semaphore_tracker</a>
+ &#8226;   <a href="#multiprocessing.spawn">multiprocessing.spawn</a>
+ &#8226;   <a href="#multiprocessing.synchronize">multiprocessing.synchronize</a>
+ &#8226;   <a href="#multiprocessing.util">multiprocessing.util</a>
  &#8226;   <a href="#ntpath">ntpath</a>
  &#8226;   <a href="#optparse">optparse</a>
  &#8226;   <a href="#os">os</a>
@@ -11732,6 +14281,7 @@ imported by:
  &#8226;   <a href="#py_compile">py_compile</a>
  &#8226;   <a href="#pydoc">pydoc</a>
  &#8226;   <a href="#pyi_rth_certifi.py">pyi_rth_certifi.py</a>
+ &#8226;   <a href="#pyi_rth_multiprocessing.py">pyi_rth_multiprocessing.py</a>
  &#8226;   <a href="#quopri">quopri</a>
  &#8226;   <a href="#requests.compat">requests.compat</a>
  &#8226;   <a href="#requests.models">requests.models</a>
@@ -11781,6 +14331,7 @@ imported by:
  &#8226;   <a href="#xml.sax._exceptions">xml.sax._exceptions</a>
  &#8226;   <a href="#xml.sax.expatreader">xml.sax.expatreader</a>
  &#8226;   <a href="#xml.sax.saxutils">xml.sax.saxutils</a>
+ &#8226;   <a href="#xmlrpc.client">xmlrpc.client</a>
  &#8226;   <a href="#zipfile">zipfile</a>
 
   </div>
@@ -11804,7 +14355,8 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#pydoc">pydoc</a>
+    <a href="#loguru._better_exceptions">loguru._better_exceptions</a>
+ &#8226;   <a href="#pydoc">pydoc</a>
 
   </div>
 
@@ -11837,7 +14389,8 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#shutil">shutil</a>
+    <a href="#loguru._file_sink">loguru._file_sink</a>
+ &#8226;   <a href="#shutil">shutil</a>
 
   </div>
 
@@ -11862,7 +14415,12 @@ imports:
   <div class="import">
 imported by:
     <a href="#_osx_support">_osx_support</a>
+ &#8226;   <a href="#asyncio.windows_utils">asyncio.windows_utils</a>
  &#8226;   <a href="#importlib.resources">importlib.resources</a>
+ &#8226;   <a href="#multiprocessing.connection">multiprocessing.connection</a>
+ &#8226;   <a href="#multiprocessing.heap">multiprocessing.heap</a>
+ &#8226;   <a href="#multiprocessing.synchronize">multiprocessing.synchronize</a>
+ &#8226;   <a href="#multiprocessing.util">multiprocessing.util</a>
  &#8226;   <a href="#pydoc">pydoc</a>
  &#8226;   <a href="#requests.utils">requests.utils</a>
  &#8226;   <a href="#urllib.request">urllib.request</a>
@@ -11925,11 +14483,32 @@ imports:
 imported by:
     <a href="#PythonAccess.odbc.tangche.utils.util">PythonAccess.odbc.tangche.utils.util</a>
  &#8226;   <a href="#_threading_local">_threading_local</a>
+ &#8226;   <a href="#asyncio.base_events">asyncio.base_events</a>
+ &#8226;   <a href="#asyncio.events">asyncio.events</a>
+ &#8226;   <a href="#asyncio.unix_events">asyncio.unix_events</a>
  &#8226;   <a href="#bz2">bz2</a>
+ &#8226;   <a href="#concurrent.futures._base">concurrent.futures._base</a>
+ &#8226;   <a href="#concurrent.futures.process">concurrent.futures.process</a>
+ &#8226;   <a href="#concurrent.futures.thread">concurrent.futures.thread</a>
  &#8226;   <a href="#cryptography.hazmat.bindings.openssl.binding">cryptography.hazmat.bindings.openssl.binding</a>
  &#8226;   <a href="#dummy_threading">dummy_threading</a>
  &#8226;   <a href="#http.cookiejar">http.cookiejar</a>
  &#8226;   <a href="#logging">logging</a>
+ &#8226;   <a href="#loguru._handler">loguru._handler</a>
+ &#8226;   <a href="#loguru._locks_machinery">loguru._locks_machinery</a>
+ &#8226;   <a href="#loguru._logger">loguru._logger</a>
+ &#8226;   <a href="#multiprocessing.context">multiprocessing.context</a>
+ &#8226;   <a href="#multiprocessing.dummy">multiprocessing.dummy</a>
+ &#8226;   <a href="#multiprocessing.forkserver">multiprocessing.forkserver</a>
+ &#8226;   <a href="#multiprocessing.heap">multiprocessing.heap</a>
+ &#8226;   <a href="#multiprocessing.managers">multiprocessing.managers</a>
+ &#8226;   <a href="#multiprocessing.pool">multiprocessing.pool</a>
+ &#8226;   <a href="#multiprocessing.process">multiprocessing.process</a>
+ &#8226;   <a href="#multiprocessing.queues">multiprocessing.queues</a>
+ &#8226;   <a href="#multiprocessing.resource_sharer">multiprocessing.resource_sharer</a>
+ &#8226;   <a href="#multiprocessing.semaphore_tracker">multiprocessing.semaphore_tracker</a>
+ &#8226;   <a href="#multiprocessing.synchronize">multiprocessing.synchronize</a>
+ &#8226;   <a href="#multiprocessing.util">multiprocessing.util</a>
  &#8226;   <a href="#pydoc">pydoc</a>
  &#8226;   <a href="#queue">queue</a>
  &#8226;   <a href="#requests.auth">requests.auth</a>
@@ -11956,6 +14535,9 @@ imported by:
     <a href="#_datetime">_datetime</a>
  &#8226;   <a href="#_dummy_thread">_dummy_thread</a>
  &#8226;   <a href="#_strptime">_strptime</a>
+ &#8226;   <a href="#asyncio.base_events">asyncio.base_events</a>
+ &#8226;   <a href="#asyncio.windows_events">asyncio.windows_events</a>
+ &#8226;   <a href="#concurrent.futures._base">concurrent.futures._base</a>
  &#8226;   <a href="#datetime">datetime</a>
  &#8226;   <a href="#email._parseaddr">email._parseaddr</a>
  &#8226;   <a href="#email.generator">email.generator</a>
@@ -11966,6 +14548,12 @@ imported by:
  &#8226;   <a href="#http.cookies">http.cookies</a>
  &#8226;   <a href="#http.server">http.server</a>
  &#8226;   <a href="#logging">logging</a>
+ &#8226;   <a href="#loguru._datetime">loguru._datetime</a>
+ &#8226;   <a href="#multiprocessing.connection">multiprocessing.connection</a>
+ &#8226;   <a href="#multiprocessing.managers">multiprocessing.managers</a>
+ &#8226;   <a href="#multiprocessing.pool">multiprocessing.pool</a>
+ &#8226;   <a href="#multiprocessing.queues">multiprocessing.queues</a>
+ &#8226;   <a href="#multiprocessing.synchronize">multiprocessing.synchronize</a>
  &#8226;   <a href="#pprint">pprint</a>
  &#8226;   <a href="#pydoc">pydoc</a>
  &#8226;   <a href="#queue">queue</a>
@@ -11984,6 +14572,7 @@ imported by:
  &#8226;   <a href="#urllib3.util.retry">urllib3.util.retry</a>
  &#8226;   <a href="#urllib3.util.timeout">urllib3.util.timeout</a>
  &#8226;   <a href="#urllib3.util.wait">urllib3.util.wait</a>
+ &#8226;   <a href="#xmlrpc.client">xmlrpc.client</a>
  &#8226;   <a href="#zipfile">zipfile</a>
 
   </div>
@@ -12030,6 +14619,7 @@ imported by:
  &#8226;   <a href="#importlib._bootstrap_external">importlib._bootstrap_external</a>
  &#8226;   <a href="#inspect">inspect</a>
  &#8226;   <a href="#linecache">linecache</a>
+ &#8226;   <a href="#loguru._better_exceptions">loguru._better_exceptions</a>
  &#8226;   <a href="#pydoc">pydoc</a>
 
   </div>
@@ -12050,10 +14640,22 @@ imports:
   <div class="import">
 imported by:
     <a href="#_dummy_thread">_dummy_thread</a>
+ &#8226;   <a href="#asyncio.base_events">asyncio.base_events</a>
+ &#8226;   <a href="#asyncio.base_tasks">asyncio.base_tasks</a>
+ &#8226;   <a href="#asyncio.coroutines">asyncio.coroutines</a>
+ &#8226;   <a href="#asyncio.format_helpers">asyncio.format_helpers</a>
  &#8226;   <a href="#code">code</a>
+ &#8226;   <a href="#concurrent.futures.process">concurrent.futures.process</a>
  &#8226;   <a href="#doctest">doctest</a>
  &#8226;   <a href="#http.cookiejar">http.cookiejar</a>
  &#8226;   <a href="#logging">logging</a>
+ &#8226;   <a href="#loguru._better_exceptions">loguru._better_exceptions</a>
+ &#8226;   <a href="#loguru._error_interceptor">loguru._error_interceptor</a>
+ &#8226;   <a href="#multiprocessing.managers">multiprocessing.managers</a>
+ &#8226;   <a href="#multiprocessing.pool">multiprocessing.pool</a>
+ &#8226;   <a href="#multiprocessing.process">multiprocessing.process</a>
+ &#8226;   <a href="#multiprocessing.queues">multiprocessing.queues</a>
+ &#8226;   <a href="#multiprocessing.util">multiprocessing.util</a>
  &#8226;   <a href="#pdb">pdb</a>
  &#8226;   <a href="#py_compile">py_compile</a>
  &#8226;   <a href="#pydoc">pydoc</a>
@@ -12119,7 +14721,9 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#copy">copy</a>
+    <a href="#asyncio.coroutines">asyncio.coroutines</a>
+ &#8226;   <a href="#asyncio.tasks">asyncio.tasks</a>
+ &#8226;   <a href="#copy">copy</a>
  &#8226;   <a href="#cryptography.hazmat.bindings.openssl.binding">cryptography.hazmat.bindings.openssl.binding</a>
  &#8226;   <a href="#cryptography.utils">cryptography.utils</a>
  &#8226;   <a href="#dis">dis</a>
@@ -12131,6 +14735,7 @@ imported by:
  &#8226;   <a href="#importlib.resources">importlib.resources</a>
  &#8226;   <a href="#importlib.util">importlib.util</a>
  &#8226;   <a href="#inspect">inspect</a>
+ &#8226;   <a href="#multiprocessing.spawn">multiprocessing.spawn</a>
  &#8226;   <a href="#pickle">pickle</a>
  &#8226;   <a href="#pkgutil">pkgutil</a>
  &#8226;   <a href="#pprint">pprint</a>
@@ -12588,6 +15193,7 @@ imported by:
  &#8226;   <a href="#requests.compat">requests.compat</a>
  &#8226;   <a href="#urllib.request">urllib.request</a>
  &#8226;   <a href="#xml.sax.saxutils">xml.sax.saxutils</a>
+ &#8226;   <a href="#xmlrpc.client">xmlrpc.client</a>
 
   </div>
 
@@ -13711,6 +16317,15 @@ imports:
   <div class="import">
 imported by:
     <a href="#argparse">argparse</a>
+ &#8226;   <a href="#asyncio.base_events">asyncio.base_events</a>
+ &#8226;   <a href="#asyncio.base_subprocess">asyncio.base_subprocess</a>
+ &#8226;   <a href="#asyncio.locks">asyncio.locks</a>
+ &#8226;   <a href="#asyncio.proactor_events">asyncio.proactor_events</a>
+ &#8226;   <a href="#asyncio.selector_events">asyncio.selector_events</a>
+ &#8226;   <a href="#asyncio.sslproto">asyncio.sslproto</a>
+ &#8226;   <a href="#asyncio.tasks">asyncio.tasks</a>
+ &#8226;   <a href="#asyncio.unix_events">asyncio.unix_events</a>
+ &#8226;   <a href="#asyncio.windows_utils">asyncio.windows_utils</a>
  &#8226;   <a href="#base64">base64</a>
  &#8226;   <a href="#bz2">bz2</a>
  &#8226;   <a href="#charset_normalizer.legacy">charset_normalizer.legacy</a>
@@ -13739,6 +16354,9 @@ imported by:
  &#8226;   <a href="#inspect">inspect</a>
  &#8226;   <a href="#locale">locale</a>
  &#8226;   <a href="#logging">logging</a>
+ &#8226;   <a href="#loguru._logger">loguru._logger</a>
+ &#8226;   <a href="#multiprocessing.forkserver">multiprocessing.forkserver</a>
+ &#8226;   <a href="#multiprocessing.semaphore_tracker">multiprocessing.semaphore_tracker</a>
  &#8226;   <a href="#os">os</a>
  &#8226;   <a href="#pkgutil">pkgutil</a>
  &#8226;   <a href="#platform">platform</a>
@@ -13793,9 +16411,21 @@ imports:
   <div class="import">
 imported by:
     <a href="#_threading_local">_threading_local</a>
+ &#8226;   <a href="#asyncio.base_events">asyncio.base_events</a>
+ &#8226;   <a href="#asyncio.selector_events">asyncio.selector_events</a>
+ &#8226;   <a href="#asyncio.tasks">asyncio.tasks</a>
+ &#8226;   <a href="#asyncio.windows_events">asyncio.windows_events</a>
+ &#8226;   <a href="#concurrent.futures.process">concurrent.futures.process</a>
+ &#8226;   <a href="#concurrent.futures.thread">concurrent.futures.thread</a>
  &#8226;   <a href="#copy">copy</a>
  &#8226;   <a href="#functools">functools</a>
  &#8226;   <a href="#logging">logging</a>
+ &#8226;   <a href="#loguru._locks_machinery">loguru._locks_machinery</a>
+ &#8226;   <a href="#loguru._simple_sinks">loguru._simple_sinks</a>
+ &#8226;   <a href="#multiprocessing.dummy">multiprocessing.dummy</a>
+ &#8226;   <a href="#multiprocessing.queues">multiprocessing.queues</a>
+ &#8226;   <a href="#multiprocessing.sharedctypes">multiprocessing.sharedctypes</a>
+ &#8226;   <a href="#multiprocessing.util">multiprocessing.util</a>
  &#8226;   <a href="#tangche.py">tangche.py</a>
  &#8226;   <a href="#tempfile">tempfile</a>
  &#8226;   <a href="#unittest.signals">unittest.signals</a>
@@ -13827,6 +16457,24 @@ imports:
   <div class="import">
 imported by:
     <a href="#pydoc">pydoc</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="win32_setctime"></a>
+  <a target="code" href="///D:/venv/qt/lib/site-packages/win32_setctime.py" type="text/plain"><tt>win32_setctime</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#ctypes">ctypes</a>
+ &#8226;   <a href="#ctypes.wintypes">ctypes.wintypes</a>
+ &#8226;   <a href="#os">os</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#loguru._ctime_functions">loguru._ctime_functions</a>
 
   </div>
 
@@ -13875,6 +16523,7 @@ imports:
 imported by:
     <a href="#xml.parsers.expat">xml.parsers.expat</a>
  &#8226;   <a href="#xml.sax.expatreader">xml.sax.expatreader</a>
+ &#8226;   <a href="#xmlrpc.client">xmlrpc.client</a>
 
   </div>
 
@@ -13894,6 +16543,7 @@ imports:
 imported by:
     <a href="#plistlib">plistlib</a>
  &#8226;   <a href="#xml.sax.expatreader">xml.sax.expatreader</a>
+ &#8226;   <a href="#xmlrpc.client">xmlrpc.client</a>
 
   </div>
 
@@ -14044,6 +16694,45 @@ imported by:
 </div>
 
 <div class="node">
+  <a name="xmlrpc"></a>
+  <a target="code" href="///C:/Users/admin/AppData/Local/Programs/Python/Python37/lib/xmlrpc/__init__.py" type="text/plain"><tt>xmlrpc</tt></a>
+<span class="moduletype">Package</span>  <div class="import">
+imported by:
+    <a href="#xmlrpc.client">xmlrpc.client</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="xmlrpc.client"></a>
+  <a target="code" href="///C:/Users/admin/AppData/Local/Programs/Python/Python37/lib/xmlrpc/client.py" type="text/plain"><tt>xmlrpc.client</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#base64">base64</a>
+ &#8226;   <a href="#datetime">datetime</a>
+ &#8226;   <a href="#decimal">decimal</a>
+ &#8226;   <a href="#errno">errno</a>
+ &#8226;   <a href="#gzip">gzip</a>
+ &#8226;   <a href="#http.client">http.client</a>
+ &#8226;   <a href="#io">io</a>
+ &#8226;   <a href="#sys">sys</a>
+ &#8226;   <a href="#time">time</a>
+ &#8226;   <a href="#urllib.parse">urllib.parse</a>
+ &#8226;   <a href="#xml.parsers">xml.parsers</a>
+ &#8226;   <a href="#xml.parsers.expat">xml.parsers.expat</a>
+ &#8226;   <a href="#xmlrpc">xmlrpc</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#multiprocessing.connection">multiprocessing.connection</a>
+
+  </div>
+
+</div>
+
+<div class="node">
   <a name="zipfile"></a>
   <a target="code" href="///C:/Users/admin/AppData/Local/Programs/Python/Python37/lib/zipfile.py" type="text/plain"><tt>zipfile</tt></a>
 <span class="moduletype">SourceModule</span>  <div class="import">
@@ -14068,7 +16757,8 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#requests.utils">requests.utils</a>
+    <a href="#loguru._file_sink">loguru._file_sink</a>
+ &#8226;   <a href="#requests.utils">requests.utils</a>
  &#8226;   <a href="#shutil">shutil</a>
 
   </div>

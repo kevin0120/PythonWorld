@@ -2,7 +2,7 @@ import argparse
 import json
 import threading
 from datetime import datetime
-
+from loguru import logger
 import pyodbc
 import requests
 
@@ -33,15 +33,6 @@ pressData = {'press_value': [], 'press_time': []}
 headers = {
     "content-type": "application/json"
 }
-
-
-class saveData(object):
-    def __init__(self):
-        self.alreadySend = ""
-
-
-sd = saveData()
-
 
 def readFromDbAndSend():
     # 连接数据库（不需要配置数据源）,connect()函数创建并返回一个 Connection 对象
@@ -98,7 +89,7 @@ def readFromDbAndSend():
             pressData['left'] = pressSignalData
 
     # print(json.dumps(pressData, indent=2))
-    print(json.dumps(pressData))
+    logger.info(u"成功从数据库中读取一条记录:{}".format(json.dumps(pressData)))
     crsr.commit()
     crsr.close()
     cnxn.close()
@@ -118,9 +109,9 @@ def rushStatus():
     try:
         r = requests.post("http://{}:8082/rush/v1/statusPress".format(args.rush), headers=headers,
                           data=json.dumps(pressData))
-        print(r.text)
+        logger.info(u"发送成功rushStatus:{}".format(r.text))
     except Exception as e:
-        print("发送失败rushStatus", e)
+        logger.error("发送失败rushStatus:{}".format(e))
         return
 
 
@@ -128,22 +119,22 @@ def rushSendData():
     try:
         r = requests.post("http://{}:8082/rush/v1/recvPress".format(args.rush), headers=headers,
                           data=json.dumps(pressData))
-        print(r.text)
+        logger.info(u"发送成功rushSendData:{}".format(r.text))
     except Exception as e:
-        print("发送失败rushSendData", e)
+        logger.error("发送失败rushSendData:{}".format(e))
         return
 
 
 def odooSendData():
     try:
         if pressData['press_file'] == args.data:
-            print("已成功发送过odooSendData",args.data)
+            logger.info(u"已成功发送过odooSendData:{}  不再重复发送".format(args.data))
             return
         r = requests.post("http://{}:8069/ts031/recvPress".format(args.odoo), headers=headers,
                           data=json.dumps(pressData))
         if r.status_code == 200:
             args.data = pressData['press_file']
-
+            logger.info(u"发送成功odooSendData:{}".format(r.text))
     except Exception as e:
-        print("发送失败odooSendData", e)
+        logger.error("发送失败odooSendData:{}".format(e))
         return

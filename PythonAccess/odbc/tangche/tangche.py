@@ -2,16 +2,23 @@
 
 import time
 from PythonAccess.odbc.tangche.utils import util
+from loguru import logger
+
+logger.add("logs/curve_toolkit.log", rotation="1 days", level="INFO", encoding='utf-8')  # 文件日誌
+# logger.add(sys.stderr, format="{time} {level} {message}", level="INFO")
+
+logger.info('系统启动！！！')
+
 
 if __name__ == '__main__':
-    print(util.args)
+    logger.info(util.args)
     while 1 == 1:
         try:
             util.readFromDbAndSend()
         except:
-            print("read fail")
+            logger.info('read db fail')
             time.sleep(util.args.t)
             continue
         else:
-            print("read success")
+            logger.info('read db success')
         time.sleep(util.args.pt)
