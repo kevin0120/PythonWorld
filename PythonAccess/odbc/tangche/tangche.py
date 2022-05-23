@@ -9,14 +9,13 @@ logger.add("logs/tangche_press.log", rotation="1 days", level="INFO", encoding='
 
 logger.info('系统启动！！！')
 
-
 if __name__ == '__main__':
     logger.info(util.args)
     while 1 == 1:
         try:
             util.readFromDbAndSend()
-        except:
-            logger.info('read db fail')
+        except Exception as e:
+            logger.error('read db fail')
             time.sleep(util.args.t)
             continue
         else:
