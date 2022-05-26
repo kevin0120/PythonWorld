@@ -1,7 +1,19 @@
-if __name__ == '__main__':
-    parser = cli_parser.get_parser()
+import io
+import os
+import sys
 
-    # 自动补全命令
-    argcomplete.autocomplete(parser)
-    args = parser.parse_args()
-    args.func(args)
+from pythontool.conf.configration.configuration import conf
+
+
+def show_config():
+    """Show current application configuration"""
+    with io.StringIO() as output:
+        conf.write(output)
+        code = output.getvalue()
+        print(code)
+
+
+if __name__ == '__main__':
+    print("world###########################################################")
+    print(os.environ)
+    show_config()

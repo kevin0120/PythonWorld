@@ -1,4 +1,5 @@
 import argparse
+import os
 from typing import Callable
 
 # https://blog.csdn.net/qq_41629756/article/details/105689494
@@ -48,6 +49,7 @@ def sub(args):
 
 
 if __name__ == '__main__':
+    print(os.environ)
     parser = argparse.ArgumentParser(prog='PROG')
 
     subparsers = parser.add_subparsers(dest='subcommand', metavar="GROUP_OR_COMMAND")
