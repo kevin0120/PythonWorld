@@ -1,9 +1,9 @@
+import datetime
 import os
 from os.path import dirname
 from pathlib import Path
 
 if __name__ == "__main__":
-
     my_dir = dirname(__file__)
     print("你输入的内容是: ", my_dir)
 
@@ -13,3 +13,8 @@ if __name__ == "__main__":
 
     airflow_sources = str(Path(__file__).parents[2])
     print("你输入的内容是: ", airflow_sources)
+
+    cur = datetime.datetime.now()
+    print(cur)
+
+

@@ -1343,6 +1343,6 @@ FERNET_KEY = ''  # Set only if needed when generating a new file
 WEBSERVER_CONFIG = ''  # Set by initialize_config
 
 conf = initialize_config()
-secrets_backend_list = initialize_secrets_backends()
+# secrets_backend_list = initialize_secrets_backends()
 conf.validate()
 print("hello###########################################################")

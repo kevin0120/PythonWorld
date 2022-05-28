@@ -208,6 +208,18 @@ DAG 参数说明
     :param tags: List of tags to help filtering DAGS in the UI.
     :type tags: List[str]
 
+
+每天00：45
+ schedule_interval='45 00 * * *'
+每天08：01，09：01，10：01 到 22：01
+schedule_interval='01 08-22/1 * * *'
+每个周六的23：45
+schedule_interval='45 23 * * 6'
+每天01:00, 01:05, 01:10, 直到 03:55
+schedule_interval='*/5 1,2,3 * * *'
+schedule_interval='@hourly'
+
+
 ```
 DAG example
 ```bash
