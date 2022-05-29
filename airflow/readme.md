@@ -1,3 +1,17 @@
+参考文件
+```bash
+中文文档：
+https://airflow.apachecn.org/#/zh/start
+官方文档：
+https://airflow.apache.org/docs/apache-airflow/stable/index.html
+```
+
+日志
+```bash
+日志格式：
+{dag_id}/{task_id}/{execution_date}/{try_number}.log
+```
+
 import 路径逻辑
 ```bash
 from pythontool.conf.configration.configuration import conf
@@ -74,8 +88,16 @@ from configparser import ConfigParser
         # expand_env_var(os.environ.get('AIRFLOW_HOME', '~/airflow')):'C:\\Users\\admin/airflow'
         # expand_env_var(os.environ.get('AIRFLOW_HOME', '$GOPATH/airflow')):'C:\\Users\\admin\\go/airflow'
 
-```
 
+```
+配置文件参数说明
+```bash
+expose_config = True  是否会在界面暴露config文件 Admin-Configration
+dag_concurrency：每个 DAG 中允许并发运行的最大task instance数。
+parallelism： 可以在 Airflow 中同时运行的最大任务实例数，跨scheduler和worker。
+max_active_runs_per_dag：每个 DAG 运行的最大dag_run数。
+
+```
 
 
 环境变量
@@ -268,5 +290,49 @@ t3 = BashOperator(
 
 t2.set_upstream(t1)
 t3.set_upstream(t1)
+
+```
+
+曲线项目dags
+```bash
+airflow_log_cleanup
+定期清理任务日志
+analysis_failure_handler
+分析异常处理DAG，当mq_result_storage接收到的结果中没有分析结果时，会创建一个该dag，用于手动进行重试。（见架构图）
+curve_template_upgrade
+曲线模板升级DAG，订阅消息队列中由cas发布的新模板并保存。（见架构图）
+curve_training_dag
+模板训练DAG。用户在界面上点击二次确认按钮后，会自动触发一个该DAG，将二次确认的结果和训练需要的数据通过http发送到cas中进行训练。（见架构图）
+data_retention_policy
+自动清除一段时间之前的数据（包括DagRun, TaskFail, TaskInstance, TaskReschedule, XCom, Log），时间由环境变量DATA_STORAGE_DURATION控制，默认值为30（天）
+load_all_curve_tmpls
+模板加载DAG，将持久化的模板加载到redis中。（见架构图）
+mq_result_storage
+结果保存DAG，通过rabbitmq订阅结果并保存。（见架构图）
+publish_result_dag
+结果推送DAG，将结果通过rabbitmq推送到外部系统。
+report
+通过邮件发送日报（项目中未实际使用）。
+report_analysis_timeout
+通过邮件发送分析超时报警（项目中未实际使用）。
+report_retry
+通过邮件发送分析任务重试数量报警（项目中未实际使用）。
+
+```
+
+
+Airflow Operator
+```bash
+BashOperator - 执行 bash 命令
+PythonOperator - 调用任意 Python 函数
+EmailOperator - 发送电子邮件
+SimpleHttpOperator - 发送 HTTP 请求
+MySqlOperator，SqliteOperator，PostgresOperator，MsSqlOperator，OracleOperator，JdbcOperator等 - 执行 SQL 命令
+Sensor - 等待一定时间，文件，数据库行，S3 键等...
+
+除了这些基本构建块之外，还有许多特定的 Operator ： DockerOperator，HiveOperator，
+S3FileTransformOperator，PrestoToMysqlOperator，SlackOperator......你会明白的！
+
+airflow/contrib/目录包含更多由社区构建的 Operator 。这些运算符并不总是像主发行版中那样完整或经过良好测试，但允许用户更轻松地向平台添加新功能。
 
 ```

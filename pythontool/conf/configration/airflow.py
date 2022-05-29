@@ -2,7 +2,6 @@ import io
 import os
 import sys
 
-from pythontool.conf.airflow.utils import dates
 from pythontool.conf.configration.configuration import conf
 
 
@@ -14,8 +13,12 @@ def show_config():
         print(code)
 
 
+a = 5
+
 if __name__ == '__main__':
+    print(sys.path)
+    print(globals())
+    print(locals())
     print("world###########################################################")
     print(os.environ)
     show_config()
-    print(dates.days_ago(1))
