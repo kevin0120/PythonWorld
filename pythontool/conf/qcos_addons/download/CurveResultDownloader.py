@@ -61,7 +61,7 @@ class CurveResultDownloader:
             if controller is not None and controller.device_type is not None and controller.device_type.view_config is not None else None
         if view_config is None:
             try:
-                from qcos_addons.constants import ENV_DEFAULT_DEVICE_VIEW_CONFIG
+                from pythontool.conf.qcos_addons.constants import ENV_DEFAULT_DEVICE_VIEW_CONFIG
                 view_config = ENV_DEFAULT_DEVICE_VIEW_CONFIG
             except Exception as e:
                 _logger.error(e)

@@ -130,6 +130,8 @@ dag_concurrency：每个 DAG 中允许并发运行的最大task instance数。
 parallelism： 可以在 Airflow 中同时运行的最大任务实例数，跨scheduler和worker。
 max_active_runs_per_dag：每个 DAG 运行的最大dag_run数。
 
+api_client = airflow.api.client.local_client  用import_module的方式导入client 可以进行dag的操作
+
 ```
 
 
@@ -276,6 +278,52 @@ schedule_interval='@hourly'
 
 
 ```
+DAG 逻辑说明
+```bash
+执行或者说计划一个Dag的函数入口：airflow.api.common.experimental.trigger_dag.py 文件中的trigger_dag()函数
+
+一.那些地方会调用到上方trigger_dag()函数
+    1.airflow 的command 命令可以触发 原理是配置文件中api_client = airflow.api.client.local_client
+        用import_module的方式
+        a.入口airflow.cli.commands.dag_command.py dag_trigger(args)函数。
+        b.airflow.api.client.__init__.py get_current_api_client函数 new一个local_client,
+                用import_module的方式引入一个client。还要先api.load_auth()获取授权
+        c.airflow.api.clent.local_client.py 调用client的trigger_dag()函数,函数内部调用Dag函数入口
+    2.结合flask框架定义一个web服务器用post http的方式调用
+        a.airflow.www.api.experimental.endpoints.py文件：
+            @api_experimental.route('/dags/<string:dag_id>/dag_runs', methods=['POST'])
+            def trigger_dag(dag_id):
+    3.airflow.operator.dagrun_operator.py 官方一个TriggerDagRunOperator可以在任务里execute调用其他dag
+        例如task = TriggerDagRunOperator(task_id="test_task", trigger_dag_id=TRIGGERED_DAG_ID, dag=self.dag)
+
+    4.新增一个HOOK 直接定义一个静态函数直接调用 trigger_dag()函数  
+        例如plugin.publish_result.publish_result_plugin.py里的trigger_publish()
+
+一.trigger_dag()函数后面发生了什么
+    1.先用orm框架找到dag表中的dag，并根据表中的fileloc字段找到相应的文件
+    2.airflow.model.dag.py 调用create_dagrun()
+    3.生成实例化一个DagRun实例  ，在表dag_run中新增一行      
+        run = DagRun(
+            dag_id=self.dag_id,
+            run_id=run_id,
+            execution_date=execution_date,
+            start_date=start_date,
+            external_trigger=external_trigger,
+            conf=conf,
+            state=state,
+            run_type=run_type,
+            dag_hash=dag_hash,
+            creating_job_id=creating_job_id,
+        )
+        session.add(run)
+        session.flush()
+
+    4.在另一个线程里的调用dag 当调用某一operation的excute(self, context)时，context['dag_run']代表刚才的一行记录可以
+        访问其中的数据
+```
+
+
+
 DAG example
 ```bash
 example
