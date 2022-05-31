@@ -2,6 +2,10 @@ import json
 import os
 
 # 默认的设备view_cofnig, 单条曲线分析页面的显示内容控制，默认值不建议修改，可以在设备类型模型view_cofnig字段中为不同设备类型单独配置
+import sys
+
+from pythontool.conf.qcos_addons.access_log.log import access_log
+
 ENV_DEFAULT_DEVICE_VIEW_CONFIG = os.environ.get('ENV_DEFAULT_DEVICE_VIEW_CONFIG', json.dumps({
     "curve_key_map": {
         "cur_w": "角度",
@@ -24,3 +28,13 @@ ENV_DEFAULT_DEVICE_VIEW_CONFIG = os.environ.get('ENV_DEFAULT_DEVICE_VIEW_CONFIG'
                             "torque_min": "最小扭矩", "torque_target": "目标扭矩", "torque_threshold": "扭矩阈值",
                             "update_time": "更新时间", "user_id": "用户ID", "workorder_id": "工单号"}
 }))
+
+
+@access_log('LOGOUT', 'LOGOUT', '登出')
+def logout(*args, **kwargs):
+    print("hello world")
+
+
+if __name__ == '__main__':
+    print("rrr{}".format(sys.path))
+    logout("hello", "world", a="ni", b="hao")

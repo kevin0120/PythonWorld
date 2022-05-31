@@ -61,9 +61,11 @@ if __name__ == '__main__':
 
     parser_a.add_argument('-x', type=int, default=5, help='x value')
     parser_a.add_argument('-y', type=int, default=5, help='y value')
+    parser_a.add_argument('-b', action='store_true')
+
     # 设置默认函数
     # parser_a.set_defaults(func=add)
-    parser_a.set_defaults(func=lazy_load_command('pythontool.conf.hello.add'))
+    parser_a.set_defaults(func=lazy_load_command('pythontool.conf.command.hello.add'))
 
     # 添加子命令 sub
     parser_s = subparsers.add_parser('sub', help='sub help')
@@ -71,7 +73,7 @@ if __name__ == '__main__':
     parser_s.add_argument('-y', type=int, help='y value')
     # 设置默认函数
     # parser_s.set_defaults(func=sub)
-    parser_s.set_defaults(func=lazy_load_command('pythontool.conf.hello.sub'))
+    parser_s.set_defaults(func=lazy_load_command('pythontool.conf.command.hello.sub'))
     args = parser.parse_args()
     # 执行函数功能
     args.func(args)

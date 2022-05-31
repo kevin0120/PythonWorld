@@ -417,7 +417,7 @@ ARG_DB_TABLES = Arg(
     ("-t", "--tables"),
     help=lazy_object_proxy.Proxy(
         lambda: f"Table names to perform maintenance on (use comma-separated list).\n"
-        f"Options: {import_string('airflow.cli.commands.db_command.all_tables')}"
+        f"Options: {import_string('pythontool.conf.airflow.cli.commands.db_command.all_tables')}"
     ),
     type=string_list_type,
 )
@@ -963,19 +963,19 @@ DAGS_COMMANDS = (
     ActionCommand(
         name='list',
         help="List all the DAGs",
-        func=lazy_load_command('airflow.cli.commands.dag_command.dag_list_dags'),
+        func=lazy_load_command('pythontool.conf.airflow.cli.commands.dag_command.dag_list_dags'),
         args=(ARG_SUBDIR, ARG_OUTPUT, ARG_VERBOSE),
     ),
     ActionCommand(
         name='list-import-errors',
         help="List all the DAGs that have import errors",
-        func=lazy_load_command('airflow.cli.commands.dag_command.dag_list_import_errors'),
+        func=lazy_load_command('pythontool.conf.airflow.cli.commands.dag_command.dag_list_import_errors'),
         args=(ARG_SUBDIR, ARG_OUTPUT, ARG_VERBOSE),
     ),
     ActionCommand(
         name='report',
         help='Show DagBag loading report',
-        func=lazy_load_command('airflow.cli.commands.dag_command.dag_report'),
+        func=lazy_load_command('pythontool.conf.airflow.cli.commands.dag_command.dag_report'),
         args=(ARG_SUBDIR, ARG_OUTPUT, ARG_VERBOSE),
     ),
     ActionCommand(
@@ -988,7 +988,7 @@ DAGS_COMMANDS = (
             "dagruns that were executed before this date. If end_date is given, it will filter out "
             "all the dagruns that were executed after this date. "
         ),
-        func=lazy_load_command('airflow.cli.commands.dag_command.dag_list_dag_runs'),
+        func=lazy_load_command('pythontool.conf.airflow.cli.commands.dag_command.dag_list_dag_runs'),
         args=(
             ARG_DAG_ID_OPT,
             ARG_NO_BACKFILL,
@@ -1002,13 +1002,13 @@ DAGS_COMMANDS = (
     ActionCommand(
         name='list-jobs',
         help="List the jobs",
-        func=lazy_load_command('airflow.cli.commands.dag_command.dag_list_jobs'),
+        func=lazy_load_command('pythontool.conf.airflow.cli.commands.dag_command.dag_list_jobs'),
         args=(ARG_DAG_ID_OPT, ARG_STATE, ARG_LIMIT, ARG_OUTPUT, ARG_VERBOSE),
     ),
     ActionCommand(
         name='state',
         help="Get the status of a dag run",
-        func=lazy_load_command('airflow.cli.commands.dag_command.dag_state'),
+        func=lazy_load_command('pythontool.conf.airflow.cli.commands.dag_command.dag_state'),
         args=(ARG_DAG_ID, ARG_EXECUTION_DATE, ARG_SUBDIR),
     ),
     ActionCommand(
@@ -1018,31 +1018,31 @@ DAGS_COMMANDS = (
             "Get the next execution datetimes of a DAG. It returns one execution unless the "
             "num-executions option is given"
         ),
-        func=lazy_load_command('airflow.cli.commands.dag_command.dag_next_execution'),
+        func=lazy_load_command('pythontool.conf.airflow.cli.commands.dag_command.dag_next_execution'),
         args=(ARG_DAG_ID, ARG_SUBDIR, ARG_NUM_EXECUTIONS),
     ),
     ActionCommand(
         name='pause',
         help='Pause a DAG',
-        func=lazy_load_command('airflow.cli.commands.dag_command.dag_pause'),
+        func=lazy_load_command('pythontool.conf.airflow.cli.commands.dag_command.dag_pause'),
         args=(ARG_DAG_ID, ARG_SUBDIR),
     ),
     ActionCommand(
         name='unpause',
         help='Resume a paused DAG',
-        func=lazy_load_command('airflow.cli.commands.dag_command.dag_unpause'),
+        func=lazy_load_command('pythontool.conf.airflow.cli.commands.dag_command.dag_unpause'),
         args=(ARG_DAG_ID, ARG_SUBDIR),
     ),
     ActionCommand(
         name='trigger',
         help='Trigger a DAG run',
-        func=lazy_load_command('airflow.cli.commands.dag_command.dag_trigger'),
+        func=lazy_load_command('pythontool.conf.airflow.cli.commands.dag_command.dag_trigger'),
         args=(ARG_DAG_ID, ARG_SUBDIR, ARG_RUN_ID, ARG_CONF, ARG_EXEC_DATE),
     ),
     ActionCommand(
         name='delete',
         help="Delete all DB records related to the specified DAG",
-        func=lazy_load_command('airflow.cli.commands.dag_command.dag_delete'),
+        func=lazy_load_command('pythontool.conf.airflow.cli.commands.dag_command.dag_delete'),
         args=(ARG_DAG_ID, ARG_YES),
     ),
     ActionCommand(
@@ -1065,7 +1065,7 @@ DAGS_COMMANDS = (
             "If you want to create a DOT file then you should execute the following command:\n"
             "airflow dags show <DAG_ID> --save output.dot\n"
         ),
-        func=lazy_load_command('airflow.cli.commands.dag_command.dag_show'),
+        func=lazy_load_command('pythontool.conf.airflow.cli.commands.dag_command.dag_show'),
         args=(
             ARG_DAG_ID,
             ARG_SUBDIR,
@@ -1093,7 +1093,7 @@ DAGS_COMMANDS = (
             "If you want to create a DOT file then you should execute the following command:\n"
             "airflow dags show-dependencies --save output.dot\n"
         ),
-        func=lazy_load_command('airflow.cli.commands.dag_command.dag_dependencies_show'),
+        func=lazy_load_command('pythontool.conf.airflow.cli.commands.dag_command.dag_dependencies_show'),
         args=(
             ARG_SUBDIR,
             ARG_SAVE,
@@ -1109,7 +1109,7 @@ DAGS_COMMANDS = (
             "task_instances within the backfill date range. If rerun_failed_tasks is used, backfill "
             "will auto re-run the previous failed task instances  within the backfill date range"
         ),
-        func=lazy_load_command('airflow.cli.commands.dag_command.dag_backfill'),
+        func=lazy_load_command('pythontool.conf.airflow.cli.commands.dag_command.dag_backfill'),
         args=(
             ARG_DAG_ID,
             ARG_TASK_REGEX,
@@ -1156,7 +1156,7 @@ DAGS_COMMANDS = (
             "If you want to create a DOT file then you should execute the following command:\n"
             "airflow dags test <DAG_ID> <EXECUTION_DATE> --save-dagrun output.dot\n"
         ),
-        func=lazy_load_command('airflow.cli.commands.dag_command.dag_test'),
+        func=lazy_load_command('pythontool.conf.airflow.cli.commands.dag_command.dag_test'),
         args=(
             ARG_DAG_ID,
             ARG_EXECUTION_DATE,
@@ -1174,7 +1174,7 @@ DAGS_COMMANDS = (
             "from the DagBag folder. This can be helpful if your serialized DAGs get out of sync with the "
             "version of Airflow that you are running."
         ),
-        func=lazy_load_command('airflow.cli.commands.dag_command.dag_reserialize'),
+        func=lazy_load_command('pythontool.conf.airflow.cli.commands.dag_command.dag_reserialize'),
         args=(ARG_CLEAR_ONLY,),
     ),
 )
@@ -1182,13 +1182,13 @@ TASKS_COMMANDS = (
     ActionCommand(
         name='list',
         help="List the tasks within a DAG",
-        func=lazy_load_command('airflow.cli.commands.task_command.task_list'),
+        func=lazy_load_command('pythontool.conf.airflow.cli.commands.task_command.task_list'),
         args=(ARG_DAG_ID, ARG_TREE, ARG_SUBDIR, ARG_VERBOSE),
     ),
     ActionCommand(
         name='clear',
         help="Clear a set of task instance, as if they never ran",
-        func=lazy_load_command('airflow.cli.commands.task_command.task_clear'),
+        func=lazy_load_command('pythontool.conf.airflow.cli.commands.task_command.task_clear'),
         args=(
             ARG_DAG_ID,
             ARG_TASK_REGEX,
@@ -1208,7 +1208,7 @@ TASKS_COMMANDS = (
     ActionCommand(
         name='state',
         help="Get the status of a task instance",
-        func=lazy_load_command('airflow.cli.commands.task_command.task_state'),
+        func=lazy_load_command('pythontool.conf.airflow.cli.commands.task_command.task_state'),
         args=(
             ARG_DAG_ID,
             ARG_TASK_ID,
@@ -1226,13 +1226,13 @@ TASKS_COMMANDS = (
             "In other words, why a task instance doesn't get scheduled and then queued by the scheduler, "
             "and then run by an executor."
         ),
-        func=lazy_load_command('airflow.cli.commands.task_command.task_failed_deps'),
+        func=lazy_load_command('pythontool.conf.airflow.cli.commands.task_command.task_failed_deps'),
         args=(ARG_DAG_ID, ARG_TASK_ID, ARG_EXECUTION_DATE_OR_RUN_ID, ARG_SUBDIR, ARG_MAP_INDEX),
     ),
     ActionCommand(
         name='render',
         help="Render a task instance's template(s)",
-        func=lazy_load_command('airflow.cli.commands.task_command.task_render'),
+        func=lazy_load_command('pythontool.conf.airflow.cli.commands.task_command.task_render'),
         args=(
             ARG_DAG_ID,
             ARG_TASK_ID,
@@ -1245,7 +1245,7 @@ TASKS_COMMANDS = (
     ActionCommand(
         name='run',
         help="Run a single task instance",
-        func=lazy_load_command('airflow.cli.commands.task_command.task_run'),
+        func=lazy_load_command('pythontool.conf.airflow.cli.commands.task_command.task_run'),
         args=(
             ARG_DAG_ID,
             ARG_TASK_ID,
@@ -1276,7 +1276,7 @@ TASKS_COMMANDS = (
             "Test a task instance. This will run a task without checking for dependencies or recording "
             "its state in the database"
         ),
-        func=lazy_load_command('airflow.cli.commands.task_command.task_test'),
+        func=lazy_load_command('pythontool.conf.airflow.cli.commands.task_command.task_test'),
         args=(
             ARG_DAG_ID,
             ARG_TASK_ID,
@@ -1292,7 +1292,7 @@ TASKS_COMMANDS = (
     ActionCommand(
         name='states-for-dag-run',
         help="Get the status of all task instances in a dag run",
-        func=lazy_load_command('airflow.cli.commands.task_command.task_states_for_dag_run'),
+        func=lazy_load_command('pythontool.conf.airflow.cli.commands.task_command.task_states_for_dag_run'),
         args=(ARG_DAG_ID, ARG_EXECUTION_DATE_OR_RUN_ID, ARG_OUTPUT, ARG_VERBOSE),
     ),
 )
@@ -1300,37 +1300,37 @@ POOLS_COMMANDS = (
     ActionCommand(
         name='list',
         help='List pools',
-        func=lazy_load_command('airflow.cli.commands.pool_command.pool_list'),
+        func=lazy_load_command('pythontool.conf.airflow.cli.commands.pool_command.pool_list'),
         args=(ARG_OUTPUT, ARG_VERBOSE),
     ),
     ActionCommand(
         name='get',
         help='Get pool size',
-        func=lazy_load_command('airflow.cli.commands.pool_command.pool_get'),
+        func=lazy_load_command('pythontool.conf.airflow.cli.commands.pool_command.pool_get'),
         args=(ARG_POOL_NAME, ARG_OUTPUT, ARG_VERBOSE),
     ),
     ActionCommand(
         name='set',
         help='Configure pool',
-        func=lazy_load_command('airflow.cli.commands.pool_command.pool_set'),
+        func=lazy_load_command('pythontool.conf.airflow.cli.commands.pool_command.pool_set'),
         args=(ARG_POOL_NAME, ARG_POOL_SLOTS, ARG_POOL_DESCRIPTION, ARG_OUTPUT, ARG_VERBOSE),
     ),
     ActionCommand(
         name='delete',
         help='Delete pool',
-        func=lazy_load_command('airflow.cli.commands.pool_command.pool_delete'),
+        func=lazy_load_command('pythontool.conf.airflow.cli.commands.pool_command.pool_delete'),
         args=(ARG_POOL_NAME, ARG_OUTPUT, ARG_VERBOSE),
     ),
     ActionCommand(
         name='import',
         help='Import pools',
-        func=lazy_load_command('airflow.cli.commands.pool_command.pool_import'),
+        func=lazy_load_command('pythontool.conf.airflow.cli.commands.pool_command.pool_import'),
         args=(ARG_POOL_IMPORT, ARG_VERBOSE),
     ),
     ActionCommand(
         name='export',
         help='Export all pools',
-        func=lazy_load_command('airflow.cli.commands.pool_command.pool_export'),
+        func=lazy_load_command('pythontool.conf.airflow.cli.commands.pool_command.pool_export'),
         args=(ARG_POOL_EXPORT,),
     ),
 )
@@ -1338,37 +1338,37 @@ VARIABLES_COMMANDS = (
     ActionCommand(
         name='list',
         help='List variables',
-        func=lazy_load_command('airflow.cli.commands.variable_command.variables_list'),
+        func=lazy_load_command('pythontool.conf.airflow.cli.commands.variable_command.variables_list'),
         args=(ARG_OUTPUT, ARG_VERBOSE),
     ),
     ActionCommand(
         name='get',
         help='Get variable',
-        func=lazy_load_command('airflow.cli.commands.variable_command.variables_get'),
+        func=lazy_load_command('pythontool.conf.airflow.cli.commands.variable_command.variables_get'),
         args=(ARG_VAR, ARG_JSON, ARG_DEFAULT, ARG_VERBOSE),
     ),
     ActionCommand(
         name='set',
         help='Set variable',
-        func=lazy_load_command('airflow.cli.commands.variable_command.variables_set'),
+        func=lazy_load_command('pythontool.conf.airflow.cli.commands.variable_command.variables_set'),
         args=(ARG_VAR, ARG_VAR_VALUE, ARG_JSON),
     ),
     ActionCommand(
         name='delete',
         help='Delete variable',
-        func=lazy_load_command('airflow.cli.commands.variable_command.variables_delete'),
+        func=lazy_load_command('pythontool.conf.airflow.cli.commands.variable_command.variables_delete'),
         args=(ARG_VAR,),
     ),
     ActionCommand(
         name='import',
         help='Import variables',
-        func=lazy_load_command('airflow.cli.commands.variable_command.variables_import'),
+        func=lazy_load_command('pythontool.conf.airflow.cli.commands.variable_command.variables_import'),
         args=(ARG_VAR_IMPORT,),
     ),
     ActionCommand(
         name='export',
         help='Export all variables',
-        func=lazy_load_command('airflow.cli.commands.variable_command.variables_export'),
+        func=lazy_load_command('pythontool.conf.airflow.cli.commands.variable_command.variables_export'),
         args=(ARG_VAR_EXPORT,),
     ),
 )
@@ -1376,20 +1376,20 @@ DB_COMMANDS = (
     ActionCommand(
         name='init',
         help="Initialize the metadata database",
-        func=lazy_load_command('airflow.cli.commands.db_command.initdb'),
+        func=lazy_load_command('pythontool.conf.airflow.cli.commands.db_command.initdb'),
         args=(),
     ),
     ActionCommand(
         name="check-migrations",
         help="Check if migration have finished",
         description="Check if migration have finished (or continually check until timeout)",
-        func=lazy_load_command('airflow.cli.commands.db_command.check_migrations'),
+        func=lazy_load_command('pythontool.conf.airflow.cli.commands.db_command.check_migrations'),
         args=(ARG_MIGRATION_TIMEOUT,),
     ),
     ActionCommand(
         name='reset',
         help="Burn down and rebuild the metadata database",
-        func=lazy_load_command('airflow.cli.commands.db_command.resetdb'),
+        func=lazy_load_command('pythontool.conf.airflow.cli.commands.db_command.resetdb'),
         args=(ARG_YES, ARG_DB_SKIP_INIT),
     ),
     ActionCommand(
@@ -1402,7 +1402,7 @@ DB_COMMANDS = (
             "``--show-sql-only``, because if actually *running* migrations, we should only "
             "migrate from the *current* Alembic revision."
         ),
-        func=lazy_load_command('airflow.cli.commands.db_command.upgradedb'),
+        func=lazy_load_command('pythontool.conf.airflow.cli.commands.db_command.upgradedb'),
         args=(
             ARG_DB_REVISION__UPGRADE,
             ARG_DB_VERSION__UPGRADE,
@@ -1422,7 +1422,7 @@ DB_COMMANDS = (
             "because if actually *running* migrations, we should only migrate from the *current* Alembic "
             "revision."
         ),
-        func=lazy_load_command('airflow.cli.commands.db_command.downgrade'),
+        func=lazy_load_command('pythontool.conf.airflow.cli.commands.db_command.downgrade'),
         args=(
             ARG_DB_REVISION__DOWNGRADE,
             ARG_DB_VERSION__DOWNGRADE,
@@ -1435,19 +1435,19 @@ DB_COMMANDS = (
     ActionCommand(
         name='shell',
         help="Runs a shell to access the database",
-        func=lazy_load_command('airflow.cli.commands.db_command.shell'),
+        func=lazy_load_command('pythontool.conf.airflow.cli.commands.db_command.shell'),
         args=(),
     ),
     ActionCommand(
         name='check',
         help="Check if the database can be reached",
-        func=lazy_load_command('airflow.cli.commands.db_command.check'),
+        func=lazy_load_command('pythontool.conf.airflow.cli.commands.db_command.check'),
         args=(),
     ),
     ActionCommand(
         name='clean',
         help="Purge old records in metastore tables",
-        func=lazy_load_command('airflow.cli.commands.db_command.cleanup_tables'),
+        func=lazy_load_command('pythontool.conf.airflow.cli.commands.db_command.cleanup_tables'),
         args=(
             ARG_DB_TABLES,
             ARG_DB_DRY_RUN,
@@ -1461,25 +1461,25 @@ CONNECTIONS_COMMANDS = (
     ActionCommand(
         name='get',
         help='Get a connection',
-        func=lazy_load_command('airflow.cli.commands.connection_command.connections_get'),
+        func=lazy_load_command('pythontool.conf.airflow.cli.commands.connection_command.connections_get'),
         args=(ARG_CONN_ID, ARG_COLOR, ARG_OUTPUT, ARG_VERBOSE),
     ),
     ActionCommand(
         name='list',
         help='List connections',
-        func=lazy_load_command('airflow.cli.commands.connection_command.connections_list'),
+        func=lazy_load_command('pythontool.conf.airflow.cli.commands.connection_command.connections_list'),
         args=(ARG_OUTPUT, ARG_VERBOSE, ARG_CONN_ID_FILTER),
     ),
     ActionCommand(
         name='add',
         help='Add a connection',
-        func=lazy_load_command('airflow.cli.commands.connection_command.connections_add'),
+        func=lazy_load_command('pythontool.conf.airflow.cli.commands.connection_command.connections_add'),
         args=(ARG_CONN_ID, ARG_CONN_URI, ARG_CONN_JSON, ARG_CONN_EXTRA) + tuple(ALTERNATIVE_CONN_SPECS_ARGS),
     ),
     ActionCommand(
         name='delete',
         help='Delete a connection',
-        func=lazy_load_command('airflow.cli.commands.connection_command.connections_delete'),
+        func=lazy_load_command('pythontool.conf.airflow.cli.commands.connection_command.connections_delete'),
         args=(ARG_CONN_ID, ARG_COLOR),
     ),
     ActionCommand(
@@ -1500,7 +1500,7 @@ CONNECTIONS_COMMANDS = (
             "is used to serialize the connection by passing `uri` or `json` with option "
             "`--serialization-format`.\n"
         ),
-        func=lazy_load_command('airflow.cli.commands.connection_command.connections_export'),
+        func=lazy_load_command('pythontool.conf.airflow.cli.commands.connection_command.connections_export'),
         args=(
             ARG_CONN_EXPORT,
             ARG_CONN_EXPORT_FORMAT,
@@ -1515,7 +1515,7 @@ CONNECTIONS_COMMANDS = (
             "Connections can be imported from the output of the export command.\n"
             "The filetype must by json, yaml or env and will be automatically inferred."
         ),
-        func=lazy_load_command('airflow.cli.commands.connection_command.connections_import'),
+        func=lazy_load_command('pythontool.conf.airflow.cli.commands.connection_command.connections_import'),
         args=(ARG_CONN_IMPORT,),
     ),
 )
@@ -1523,25 +1523,25 @@ PROVIDERS_COMMANDS = (
     ActionCommand(
         name='list',
         help='List installed providers',
-        func=lazy_load_command('airflow.cli.commands.provider_command.providers_list'),
+        func=lazy_load_command('pythontool.conf.airflow.cli.commands.provider_command.providers_list'),
         args=(ARG_OUTPUT, ARG_VERBOSE),
     ),
     ActionCommand(
         name='get',
         help='Get detailed information about a provider',
-        func=lazy_load_command('airflow.cli.commands.provider_command.provider_get'),
+        func=lazy_load_command('pythontool.conf.airflow.cli.commands.provider_command.provider_get'),
         args=(ARG_OUTPUT, ARG_VERBOSE, ARG_FULL, ARG_COLOR, ARG_PROVIDER_NAME),
     ),
     ActionCommand(
         name='links',
         help='List extra links registered by the providers',
-        func=lazy_load_command('airflow.cli.commands.provider_command.extra_links_list'),
+        func=lazy_load_command('pythontool.conf.airflow.cli.commands.provider_command.extra_links_list'),
         args=(ARG_OUTPUT, ARG_VERBOSE),
     ),
     ActionCommand(
         name='widgets',
         help='Get information about registered connection form widgets',
-        func=lazy_load_command('airflow.cli.commands.provider_command.connection_form_widget_list'),
+        func=lazy_load_command('pythontool.conf.airflow.cli.commands.provider_command.connection_form_widget_list'),
         args=(
             ARG_OUTPUT,
             ARG_VERBOSE,
@@ -1550,31 +1550,31 @@ PROVIDERS_COMMANDS = (
     ActionCommand(
         name='hooks',
         help='List registered provider hooks',
-        func=lazy_load_command('airflow.cli.commands.provider_command.hooks_list'),
+        func=lazy_load_command('pythontool.conf.airflow.cli.commands.provider_command.hooks_list'),
         args=(ARG_OUTPUT, ARG_VERBOSE),
     ),
     ActionCommand(
         name='behaviours',
         help='Get information about registered connection types with custom behaviours',
-        func=lazy_load_command('airflow.cli.commands.provider_command.connection_field_behaviours'),
+        func=lazy_load_command('pythontool.conf.airflow.cli.commands.provider_command.connection_field_behaviours'),
         args=(ARG_OUTPUT, ARG_VERBOSE),
     ),
     ActionCommand(
         name='logging',
         help='Get information about task logging handlers provided',
-        func=lazy_load_command('airflow.cli.commands.provider_command.logging_list'),
+        func=lazy_load_command('pythontool.conf.airflow.cli.commands.provider_command.logging_list'),
         args=(ARG_OUTPUT, ARG_VERBOSE),
     ),
     ActionCommand(
         name='secrets',
         help='Get information about secrets backends provided',
-        func=lazy_load_command('airflow.cli.commands.provider_command.secrets_backends_list'),
+        func=lazy_load_command('pythontool.conf.airflow.cli.commands.provider_command.secrets_backends_list'),
         args=(ARG_OUTPUT, ARG_VERBOSE),
     ),
     ActionCommand(
         name='auth',
         help='Get information about API auth backends provided',
-        func=lazy_load_command('airflow.cli.commands.provider_command.auth_backend_list'),
+        func=lazy_load_command('pythontool.conf.airflow.cli.commands.provider_command.auth_backend_list'),
         args=(ARG_OUTPUT, ARG_VERBOSE),
     ),
 )
@@ -1583,13 +1583,13 @@ USERS_COMMANDS = (
     ActionCommand(
         name='list',
         help='List users',
-        func=lazy_load_command('airflow.cli.commands.user_command.users_list'),
+        func=lazy_load_command('pythontool.conf.airflow.cli.commands.user_command.users_list'),
         args=(ARG_OUTPUT, ARG_VERBOSE),
     ),
     ActionCommand(
         name='create',
         help='Create a user',
-        func=lazy_load_command('airflow.cli.commands.user_command.users_create'),
+        func=lazy_load_command('pythontool.conf.airflow.cli.commands.user_command.users_create'),
         args=(
             ARG_ROLE,
             ARG_USERNAME,
@@ -1614,31 +1614,31 @@ USERS_COMMANDS = (
     ActionCommand(
         name='delete',
         help='Delete a user',
-        func=lazy_load_command('airflow.cli.commands.user_command.users_delete'),
+        func=lazy_load_command('pythontool.conf.airflow.cli.commands.user_command.users_delete'),
         args=(ARG_USERNAME_OPTIONAL, ARG_EMAIL_OPTIONAL),
     ),
     ActionCommand(
         name='add-role',
         help='Add role to a user',
-        func=lazy_load_command('airflow.cli.commands.user_command.add_role'),
+        func=lazy_load_command('pythontool.conf.airflow.cli.commands.user_command.add_role'),
         args=(ARG_USERNAME_OPTIONAL, ARG_EMAIL_OPTIONAL, ARG_ROLE),
     ),
     ActionCommand(
         name='remove-role',
         help='Remove role from a user',
-        func=lazy_load_command('airflow.cli.commands.user_command.remove_role'),
+        func=lazy_load_command('pythontool.conf.airflow.cli.commands.user_command.remove_role'),
         args=(ARG_USERNAME_OPTIONAL, ARG_EMAIL_OPTIONAL, ARG_ROLE),
     ),
     ActionCommand(
         name='import',
         help='Import users',
-        func=lazy_load_command('airflow.cli.commands.user_command.users_import'),
+        func=lazy_load_command('pythontool.conf.airflow.cli.commands.user_command.users_import'),
         args=(ARG_USER_IMPORT,),
     ),
     ActionCommand(
         name='export',
         help='Export all users',
-        func=lazy_load_command('airflow.cli.commands.user_command.users_export'),
+        func=lazy_load_command('pythontool.conf.airflow.cli.commands.user_command.users_export'),
         args=(ARG_USER_EXPORT,),
     ),
 )
@@ -1646,25 +1646,25 @@ ROLES_COMMANDS = (
     ActionCommand(
         name='list',
         help='List roles',
-        func=lazy_load_command('airflow.cli.commands.role_command.roles_list'),
+        func=lazy_load_command('pythontool.conf.airflow.cli.commands.role_command.roles_list'),
         args=(ARG_OUTPUT, ARG_VERBOSE),
     ),
     ActionCommand(
         name='create',
         help='Create role',
-        func=lazy_load_command('airflow.cli.commands.role_command.roles_create'),
+        func=lazy_load_command('pythontool.conf.airflow.cli.commands.role_command.roles_create'),
         args=(ARG_ROLES, ARG_VERBOSE),
     ),
     ActionCommand(
         name='export',
         help='Export roles (without permissions) from db to JSON file',
-        func=lazy_load_command('airflow.cli.commands.role_command.roles_export'),
+        func=lazy_load_command('pythontool.conf.airflow.cli.commands.role_command.roles_export'),
         args=(ARG_ROLE_EXPORT, ARG_ROLE_EXPORT_FMT, ARG_VERBOSE),
     ),
     ActionCommand(
         name='import',
         help='Import roles (without permissions) from JSON file to db',
-        func=lazy_load_command('airflow.cli.commands.role_command.roles_import'),
+        func=lazy_load_command('pythontool.conf.airflow.cli.commands.role_command.roles_import'),
         args=(ARG_ROLE_IMPORT, ARG_VERBOSE),
     ),
 )
@@ -1673,7 +1673,7 @@ CELERY_COMMANDS = (
     ActionCommand(
         name='worker',
         help="Start a Celery worker node",
-        func=lazy_load_command('airflow.cli.commands.celery_command.worker'),
+        func=lazy_load_command('pythontool.conf.airflow.cli.commands.celery_command.worker'),
         args=(
             ARG_QUEUES,
             ARG_CONCURRENCY,
@@ -1693,7 +1693,7 @@ CELERY_COMMANDS = (
     ActionCommand(
         name='flower',
         help="Start a Celery Flower",
-        func=lazy_load_command('airflow.cli.commands.celery_command.flower'),
+        func=lazy_load_command('pythontool.conf.airflow.cli.commands.celery_command.flower'),
         args=(
             ARG_FLOWER_HOSTNAME,
             ARG_FLOWER_PORT,
@@ -1711,7 +1711,7 @@ CELERY_COMMANDS = (
     ActionCommand(
         name='stop',
         help="Stop the Celery worker gracefully",
-        func=lazy_load_command('airflow.cli.commands.celery_command.stop_worker'),
+        func=lazy_load_command('pythontool.conf.airflow.cli.commands.celery_command.stop_worker'),
         args=(ARG_PID,),
     ),
 )
@@ -1720,7 +1720,7 @@ CONFIG_COMMANDS = (
     ActionCommand(
         name='get-value',
         help='Print the value of the configuration',
-        func=lazy_load_command('airflow.cli.commands.config_command.get_value'),
+        func=lazy_load_command('pythontool.conf.airflow.cli.commands.config_command.get_value'),
         args=(
             ARG_SECTION,
             ARG_OPTION,
@@ -1729,7 +1729,7 @@ CONFIG_COMMANDS = (
     ActionCommand(
         name='list',
         help='List options for the configuration',
-        func=lazy_load_command('airflow.cli.commands.config_command.show_config'),
+        func=lazy_load_command('pythontool.conf.airflow.cli.commands.config_command.show_config'),
         args=(ARG_COLOR,),
     ),
 )
@@ -1742,14 +1742,14 @@ KUBERNETES_COMMANDS = (
             "(created by KubernetesExecutor/KubernetesPodOperator) "
             "in evicted/failed/succeeded/pending states"
         ),
-        func=lazy_load_command('airflow.cli.commands.kubernetes_command.cleanup_pods'),
+        func=lazy_load_command('pythontool.conf.airflow.cli.commands.kubernetes_command.cleanup_pods'),
         args=(ARG_NAMESPACE, ARG_MIN_PENDING_MINUTES),
     ),
     ActionCommand(
         name='generate-dag-yaml',
         help="Generate YAML files for all tasks in DAG. Useful for debugging tasks without "
         "launching into a cluster",
-        func=lazy_load_command('airflow.cli.commands.kubernetes_command.generate_pod_yaml'),
+        func=lazy_load_command('pythontool.conf.airflow.cli.commands.kubernetes_command.generate_pod_yaml'),
         args=(ARG_DAG_ID, ARG_EXECUTION_DATE, ARG_SUBDIR, ARG_OUTPUT_PATH),
     ),
 )
@@ -1758,7 +1758,7 @@ JOBS_COMMANDS = (
     ActionCommand(
         name='check',
         help="Checks if job(s) are still alive",
-        func=lazy_load_command('airflow.cli.commands.jobs_command.check'),
+        func=lazy_load_command('pythontool.conf.airflow.cli.commands.jobs_command.check'),
         args=(ARG_JOB_TYPE_FILTER, ARG_JOB_HOSTNAME_FILTER, ARG_JOB_LIMIT, ARG_ALLOW_MULTIPLE),
         epilog=(
             'examples:\n'
@@ -1810,13 +1810,13 @@ airflow_commands: List[CLICommand] = [
     ActionCommand(
         name='kerberos',
         help="Start a kerberos ticket renewer",
-        func=lazy_load_command('airflow.cli.commands.kerberos_command.kerberos'),
+        func=lazy_load_command('pythontool.conf.airflow.cli.commands.kerberos_command.kerberos'),
         args=(ARG_PRINCIPAL, ARG_KEYTAB, ARG_PID, ARG_DAEMON, ARG_STDOUT, ARG_STDERR, ARG_LOG_FILE),
     ),
     ActionCommand(
         name='webserver',
         help="Start a Airflow webserver instance",
-        func=lazy_load_command('airflow.cli.commands.webserver_command.webserver'),
+        func=lazy_load_command('pythontool.conf.airflow.cli.commands.webserver_command.webserver'),
         args=(
             ARG_PORT,
             ARG_WORKERS,
@@ -1839,7 +1839,7 @@ airflow_commands: List[CLICommand] = [
     ActionCommand(
         name='scheduler',
         help="Start a scheduler instance",
-        func=lazy_load_command('airflow.cli.commands.scheduler_command.scheduler'),
+        func=lazy_load_command('pythontool.conf.pythontool.conf.airflow.cli.commands.scheduler_command.scheduler'),
         args=(
             ARG_SUBDIR,
             ARG_NUM_RUNS,
@@ -1863,7 +1863,7 @@ airflow_commands: List[CLICommand] = [
     ActionCommand(
         name='triggerer',
         help="Start a triggerer instance",
-        func=lazy_load_command('airflow.cli.commands.triggerer_command.triggerer'),
+        func=lazy_load_command('pythontool.conf.airflow.cli.commands.triggerer_command.triggerer'),
         args=(
             ARG_PID,
             ARG_DAEMON,
@@ -1876,7 +1876,7 @@ airflow_commands: List[CLICommand] = [
     ActionCommand(
         name='dag-processor',
         help="Start a standalone Dag Processor instance",
-        func=lazy_load_command('airflow.cli.commands.dag_processor_command.dag_processor'),
+        func=lazy_load_command('pythontool.conf.airflow.cli.commands.dag_processor_command.dag_processor'),
         args=(
             ARG_PID,
             ARG_DAEMON,
@@ -1891,13 +1891,13 @@ airflow_commands: List[CLICommand] = [
     ActionCommand(
         name='version',
         help="Show the version",
-        func=lazy_load_command('airflow.cli.commands.version_command.version'),
+        func=lazy_load_command('pythontool.conf.airflow.cli.commands.version_command.version'),
         args=(),
     ),
     ActionCommand(
         name='cheat-sheet',
         help="Display cheat sheet",
-        func=lazy_load_command('airflow.cli.commands.cheat_sheet_command.cheat_sheet'),
+        func=lazy_load_command('pythontool.conf.airflow.cli.commands.cheat_sheet_command.cheat_sheet'),
         args=(ARG_VERBOSE,),
     ),
     GroupCommand(
@@ -1923,12 +1923,12 @@ airflow_commands: List[CLICommand] = [
     ActionCommand(
         name='sync-perm',
         help="Update permissions for existing roles and optionally DAGs",
-        func=lazy_load_command('airflow.cli.commands.sync_perm_command.sync_perm'),
+        func=lazy_load_command('pythontool.conf.airflow.cli.commands.sync_perm_command.sync_perm'),
         args=(ARG_INCLUDE_DAGS,),
     ),
     ActionCommand(
         name='rotate-fernet-key',
-        func=lazy_load_command('airflow.cli.commands.rotate_fernet_key_command.rotate_fernet_key'),
+        func=lazy_load_command('pythontool.conf.airflow.cli.commands.rotate_fernet_key_command.rotate_fernet_key'),
         help='Rotate encrypted connection credentials and variables',
         description=(
             'Rotate all encrypted connection credentials and variables; see '
@@ -1941,7 +1941,7 @@ airflow_commands: List[CLICommand] = [
     ActionCommand(
         name='info',
         help='Show information about current Airflow and environment',
-        func=lazy_load_command('airflow.cli.commands.info_command.show_info'),
+        func=lazy_load_command('pythontool.conf.airflow.cli.commands.info_command.show_info'),
         args=(
             ARG_ANONYMIZE,
             ARG_FILE_IO,
@@ -1952,7 +1952,7 @@ airflow_commands: List[CLICommand] = [
     ActionCommand(
         name='plugins',
         help='Dump information about loaded plugins',
-        func=lazy_load_command('airflow.cli.commands.plugins_command.dump_plugins'),
+        func=lazy_load_command('pythontool.conf.airflow.cli.commands.plugins_command.dump_plugins'),
         args=(ARG_OUTPUT, ARG_VERBOSE),
     ),
     GroupCommand(
@@ -1967,7 +1967,7 @@ airflow_commands: List[CLICommand] = [
     ActionCommand(
         name='standalone',
         help='Run an all-in-one copy of Airflow',
-        func=lazy_load_command('airflow.cli.commands.standalone_command.standalone'),
+        func=lazy_load_command('pythontool.conf.airflow.cli.commands.standalone_command.standalone'),
         args=tuple(),
     ),
 ]

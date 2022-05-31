@@ -11,8 +11,8 @@ from typing import List
 from pathlib import Path
 import logging
 
-from qcos_addons.models import TighteningController
-from qcos_addons.models.result import ResultModel
+from pythontool.conf.qcos_addons.models import TighteningController
+from pythontool.conf.qcos_addons.models.result import ResultModel
 
 _logger = logging.getLogger(__name__)
 

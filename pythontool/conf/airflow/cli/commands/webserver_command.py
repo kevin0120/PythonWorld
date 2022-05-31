@@ -28,9 +28,9 @@ from contextlib import suppress
 from time import sleep
 from typing import Dict, List, NoReturn
 
-import daemon
+# import daemon
 import psutil
-from daemon.pidfile import TimeoutPIDLockFile
+# from daemon.pidfile import TimeoutPIDLockFile
 from lockfile.pidlockfile import read_pid_from_pidfile
 
 from pythontool.conf.airflow import settings

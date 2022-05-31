@@ -2,9 +2,42 @@
 ```bash
 中文文档：
 https://airflow.apachecn.org/#/zh/start
+
 官方文档：
 https://airflow.apache.org/docs/apache-airflow/stable/index.html
+
+Flask 文档：
+https://docs.pythontab.com/flask/flask0.10/#
 ```
+打包
+````bash
+setup.py setup.cfg
+https://zhuanlan.zhihu.com/p/261579357
+
+setup.cfg所有条目见 
+https://setuptools.readthedocs.io/en/latest/userguide/declarative_config.html
+````
+
+qcos_addons
+```bash
+access_log：
+    from qcos_addons.access_log.log import access_log
+    @access_log('LOGOUT', 'LOGOUT', '登出')
+    def logout(*args, **kwargs):
+        print("hello world")
+    if __name__ == '__main__':
+        print("rrr{}".format(sys.path))
+        logout("hello", "world", a="ni", b="hao")
+
+    [2022-05-31 16:25:42,753] {log.py:26} INFO - ('hello', 'world')
+    [2022-05-31 16:25:43,313] {log.py:27} INFO - {'a': 'ni', 'b': 'hao'}
+     hello world
+    [2022-05-31 16:26:24,839] {log.py:37} INFO - 2022-05-31 08:25:57@@@QCOS@@@DEFAULT_FACTORY_CODE@@@anonymous@@@anonymous@@@10003@@@50002@@@登出
+
+
+
+
+
 
 日志
 ```bash

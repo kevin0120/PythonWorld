@@ -96,5 +96,19 @@ def load_default_variables():
     return _do_import_json('data/default_variables.json')
 
 
+log = LoggingMixin().log
 if __name__ == '__main__':
-    load_default_variables()
+    controllers = load_default_controllers("")
+    tags = load_default_error_tags()
+    types = load_default_device_types()
+    users = load_default_users("")
+
+    templates = load_default_curve_templates()
+    variables = load_default_variables()
+
+    log.info(controllers)
+    log.info(tags)
+    log.info(types)
+    log.info(users)
+    log.info(templates)
+    log.info(variables)

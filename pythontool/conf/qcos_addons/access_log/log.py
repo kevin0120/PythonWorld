@@ -1,6 +1,6 @@
 import json
+import sys
 from typing import Callable, TypeVar, cast
-
 from pythontool.conf.qcos_addons.access_log.constants import CUSTOM_LOG_FORMAT, CUSTOM_EVENT_NAME_MAP, \
     CUSTOM_PAGE_NAME_MAP
 from datetime import datetime
@@ -27,6 +27,15 @@ def access_log(event, page, msg):
             _logger.info(repr(args))
             _logger.info(repr(kwargs))
 
+            _logger.info("co_name:{} ".format(func.__code__.co_name))  # 返回函数名
+            _logger.info("co_argcount:{} ".format(func.__code__.co_argcount))  # 返回函数的参数个数
+            _logger.info("co_varnames:{} ".format(func.__code__.co_varnames))  # 返回函数的参数
+            _logger.info("co_filename:{} ".format(func.__code__.co_filename))  # 返回文件绝对路径
+            _logger.info("co_consts:{} ".format(func.__code__.co_consts))
+            _logger.info("co_firstlineno:{} ".format(func.__code__.co_firstlineno))  # 返回函数行号
+            _logger.info("co_kwonlyargcount:{} ".format(func.__code__.co_kwonlyargcount))  # 关键字参数
+            _logger.info("co_nlocals:{} ".format(func.__code__.co_nlocals))  # 返回局部变量个数
+
             ret = func(*args, **kwargs)
             from flask_login import current_user  # noqa: F401
             full_msg = CUSTOM_LOG_FORMAT.format(
@@ -43,39 +52,11 @@ def access_log(event, page, msg):
     return decorator
 
 
-from flask import request
-from flask_appbuilder.security.views import expose
-from flask import g
-from flask_appbuilder.security.views import AuthDBView
-
-# from flask import Flask
-#
-# app = Flask(__name__)
-#
-#
-# @app.route('/')
-# def hello_world():
-#     return 'Hello World'
-#
-#
-# if __name__ == '__main__':
-#     app.run()
-
-
-class CustomAuthDBView(AuthDBView):
-    login_template = "login.html"
-
-    @expose("/login/", methods=["GET", "POST"])
-    @access_log('LOGIN', 'LOGIN', '登录')
-    def login(self):
-        return super(CustomAuthDBView, self).login()
-
-    @expose("/logout/")
-    @access_log('LOGOUT', 'LOGOUT', '登出')
-    def logout(self):
-        return super(CustomAuthDBView, self).logout()
+@access_log('LOGOUT', 'LOGOUT', '登出')
+def logout(*args, **kwargs):
+    print("hello world")
 
 
 if __name__ == '__main__':
-    a = CustomAuthDBView()
-    a.login()
+    print("rrr{}".format(sys.path))
+    logout("hello", "world", a="ni", b="hao")

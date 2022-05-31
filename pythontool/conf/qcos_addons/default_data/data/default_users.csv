@@ -1,0 +1,2 @@
+username,email,lastname,firstname,password,role
+admin,admin@localhost,admin,管理员,admin,Admin
