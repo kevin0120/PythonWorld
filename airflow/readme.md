@@ -38,7 +38,20 @@ access_log：
     [2022-05-31 16:26:24,839] {log.py:37} INFO - 2022-05-31 08:25:57@@@QCOS@@@DEFAULT_FACTORY_CODE@@@anonymous@@@anonymous@@@10003@@@50002@@@登出
 
 
+default_data：
+factory = os.environ.get('FACTORY_CODE', '')
 
+导入路径:'data/{factory}/default_users.csv' if factory else 'data/default_users.csv'
+导入全路径：qcos_addons/default_data/data/...
+
+controllers:只要有一条数据就放弃导入默认数据
+curve_templates:只要有一条数据就放弃导入默认数据
+users:每次plugin导入的时候，即重启后都加载  但有唯一约束，已有的user不更新 name喝email都要唯一
+variable  key保持默认值 val可以改
+device_types 只要name修改了 都会插入默认值
+error_tags ：比较器官 tags变了才会插入 但id有有唯一约束。
+connections 连接变量字符串不变
+```
 
 
 

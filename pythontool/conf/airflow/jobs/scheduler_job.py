@@ -71,7 +71,7 @@ DM = models.DagModel
 
 
 def _is_parent_process():
-    """
+    """run
     Returns True if the current process is the parent process. False if the current process is a child
     process started by multiprocessing.
     """
