@@ -16,7 +16,7 @@ IMPORTANT: Do NOT post this list to the issue-tracker. Use it as a basis for
 
 missing module named 'org.python' - imported by copy (optional), xml.sax (delayed, conditional)
 missing module named _posixsubprocess - imported by subprocess (conditional), multiprocessing.util (delayed)
-missing module named pwd - imported by posixpath (delayed, conditional), shutil (optional), tarfile (optional), http.server (delayed, optional), webbrowser (delayed), netrc (delayed, conditional), getpass (delayed), pathlib (delayed, conditional, optional)
+missing module named pwd - imported by posixpath (delayed, conditional), shutil (optional), tarfile (optional), http.server (delayed, optional), webbrowser (delayed), pathlib (delayed, conditional, optional), netrc (delayed, conditional), getpass (delayed)
 missing module named posix - imported by os (conditional, optional)
 missing module named resource - imported by posix (top-level)
 missing module named _scproxy - imported by urllib.request (conditional)

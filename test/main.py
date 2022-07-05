@@ -1,4 +1,7 @@
 import json
+from psycopg2 import errors
+from loguru import _logger
+from sqlalchemy.exc import IntegrityError
 
 ss = '''[{"M+": 2, 'M-': 1.600000023841858, 'MS': 0, 'MA': 1.7999999523162842, 'W+': 3700, 'W-': 0, 'WA': 0,
        'tool_sn': '21M05649', 'tightening_unit': 'OPde53c8a8775c300', 'measure_result': 'OK',
@@ -16,3 +19,13 @@ if __name__ == "__main__":
 
     b = json.loads(json.dumps(eval(s)))
     print(b)
+
+    try:
+        a = 1 / 0
+    except ZeroDivisionError as e:
+        # 已经存在的结果不再执行后续流程，避免异常处理陷入循环
+        print(f'结果已存在')
+    except Exception as e:
+        raise Exception("保存结果异常: {}".format(repr(e)))
+        #print("aaaaa")
+    print("hhhh")
