@@ -107,3 +107,6 @@ if __name__ == "__main__":
     plt.hist(a, bins=[0, 20, 40, 60, 80, 100])
     plt.title("histogram")
     plt.show()
+
+    aa=np.random.random((1000, 20))
+    print(aa)

@@ -13,7 +13,6 @@ if __name__ == "__main__":
     # 产生随机数:
     x = da.random.normal(0, 1, size=(100, 100), chunks=(88, 10))
     print(x.mean().compute())
-
     # 3.
 
     import dask.bag as db
