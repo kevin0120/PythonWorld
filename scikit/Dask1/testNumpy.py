@@ -108,5 +108,5 @@ if __name__ == "__main__":
     plt.title("histogram")
     plt.show()
 
-    aa=np.random.random((1000, 20))
-    print(aa)
+    aa = np.random.random((1000, 20))
+    print(aa*100)

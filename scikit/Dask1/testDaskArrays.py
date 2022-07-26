@@ -7,11 +7,16 @@ if __name__ == "__main__":
 
     import dask.array as da
 
+    # 产生随机数:0--1
     x = da.random.random((10000, 10000), chunks=(1000, 1000))
     y = x + x.T
     z = y[::2, 5000:].mean(axis=1)
     z1 = z.compute()
     print(z.compute())
+
+    # 产生随机数:正态分布
+    x = da.random.normal(0, 1, size=(100, 100), chunks=(88, 10))
+    print(x.mean(axis=1).compute())
 
     import numpy as np;
 
@@ -23,5 +28,5 @@ if __name__ == "__main__":
 
     x = np.arange(16).reshape((4, 4))
     d = da.from_array(x, chunks=(2, 2))
-    e = d.map_overlap(lambda x: x+ x.size, depth=1, boundary='reflect').compute()
+    e = d.map_overlap(lambda x: x + x.size, depth=1, boundary='reflect').compute()
     print(e)
