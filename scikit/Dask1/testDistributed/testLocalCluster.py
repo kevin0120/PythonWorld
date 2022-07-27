@@ -1,8 +1,8 @@
-from dask.distributed import Client
+import time
 # http://www.devdoc.net/python/dask-2.23.0-doc/scheduling.html#
-# https://blog.csdn.net/kittyzc/article/details/120262999
-# futures
-# delayed
+# http://www.devdoc.net/python/dask-2.23.0-doc/setup/single-distributed.html#
+# http://127.0.0.1:8787/
+
 if __name__ == "__main__":
     import dask.array as da
     import numpy as np
@@ -10,8 +10,9 @@ if __name__ == "__main__":
 
     from dask.distributed import Client, LocalCluster
 
-    client = Client(LocalCluster(n_workers=3, threads_per_worker=7, processes=True))
-
+    # client = Client(LocalCluster(n_workers=3, threads_per_worker=7, processes=True))
+    cluster = LocalCluster()
+    client = Client(cluster)
     x = np.arange(1000)
     print(x)
     y = da.from_array(x, chunks=205)
@@ -29,3 +30,5 @@ if __name__ == "__main__":
     # print(b)
     # c = db.from_sequence([1, 2, 3, 4, 5, 6], npartitions=2)
     # print(c)
+    while True:
+        time.sleep(0.1)

@@ -28,5 +28,5 @@ if __name__ == "__main__":
 
     x = np.arange(16).reshape((4, 4))
     d = da.from_array(x, chunks=(2, 2))
-    e = d.map_overlap(lambda x: x + x.size, depth=1, boundary='reflect').compute()
+    e = d.map_overlap(lambda x1: x1 + x1.size, depth=1, boundary='reflect').compute()
     print(e)

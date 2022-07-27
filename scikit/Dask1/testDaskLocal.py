@@ -1,26 +1,28 @@
+# http://www.devdoc.net/python/dask-2.23.0-doc/setup/single-distributed.html
+import time
+
+import dask
+
 if __name__ == "__main__":
     import dask.array as da
     import numpy as np
-    import dask
 
-    from dask.distributed import Client, progress
-
-    client = Client(processes=False, threads_per_worker=4,
-                    n_workers=1, memory_limit='2GB')
     # dask.config.set(scheduler='synchronous')
+    # dask.config.set(scheduler='processes')This is the default scheduler for dask.bag
+    # dask.config.set(scheduler='threads') This is the default scheduler for dask.array, dask.dataframe, and dask.delayed
+
     # dask.config.set(scheduler='processes')
-    # dask.config.set(scheduler='threads')
     # 1.example----- HelloWorld
     x = np.arange(1000)
     print(x)
     y = da.from_array(x, chunks=205)
     # print(y)
     # print(y.mean())
-    print(y.mean().compute())
+    print(y.mean().compute(scheduler='processes'))
 
     # 产生随机数:
     x = da.random.normal(0, 1, size=(100, 100), chunks=(88, 10))
-    print(x.mean().compute())
+    print(x.mean().compute(scheduler='threads'))
     # 3.
 
     # import dask.bag as db
@@ -28,3 +30,5 @@ if __name__ == "__main__":
     # print(b)
     # c = db.from_sequence([1, 2, 3, 4, 5, 6], npartitions=2)
     # print(c)
+    while True:
+        time.sleep(0.1)
