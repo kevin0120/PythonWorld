@@ -18,7 +18,7 @@ if __name__ == "__main__":
 
     model = GaussianNB()
     model.fit(X, y)
-
+    # print("参数w={},b={}".format(model.coef_, model.intercept_))
     # 生成测试数据，并预测：
     rng = np.random.RandomState(0)
     Xnew = [-6, -14] + [14, 18] * rng.rand(2000, 2)
