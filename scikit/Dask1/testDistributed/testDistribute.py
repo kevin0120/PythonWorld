@@ -4,6 +4,8 @@ from dask.distributed import Client
 # http://www.devdoc.net/python/dask-2.23.0-doc/scheduling.html#
 # https://blog.csdn.net/kittyzc/article/details/120262999
 # http://www.devdoc.net/python/dask-2.23.0-doc/setup/single-distributed.html#
+
+# https://docs.dask.org/en/latest/deploying.html
 # http://127.0.0.1:8787/
 # futures
 # delayed
