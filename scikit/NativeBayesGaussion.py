@@ -33,3 +33,10 @@ if __name__ == "__main__":
     plt.show()
     yprob = model.predict_proba(Xnew)
     print(yprob[-8:].round(2))
+
+    print(model.theta_)
+    print(model.var_)
+# [[-1.64939095 -9.36891451]
+#  [ 1.29327924 -1.24101221]]
+# [[2.06097005 2.47716872]
+#  [3.33164807 2.22401384]]

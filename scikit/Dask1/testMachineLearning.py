@@ -7,9 +7,9 @@ import joblib
 from sklearn.datasets import load_digits, load_wine
 
 if __name__ == '__main__':
-    client = Client(processes=False)  # create local cluster
-    # cluster = LocalCluster()
-    # client = Client(cluster)
+    # client = Client(processes=False)  # create local cluster
+    cluster = LocalCluster()
+    client = Client(cluster)
     # 加载数据
     X, y = load_wine(return_X_y=True)
     #
@@ -37,13 +37,27 @@ if __name__ == '__main__':
     aa = y_train.copy()
     aa[aa == 0] = 100
     model = lr.fit(X_train, y_train, sample_weight=aa)
+
+    import dask.array as da
+    d = da.from_array(X_test, chunks=(1, 13))
+    # while True:
+    #     for i in range(1, 36):
+    #         time.sleep(5)
+    #         # L = client.submit(model.predict, X_test[:i, ...])
+    #         L = client.submit(model.predict, d[:i, ...])
+    #         # print(client.gather(L))
+    #         # total = client.submit(sum, L)
+    #         print(L.result())
     while True:
-        with joblib.parallel_backend('dask'):
-            # 根据练习集预测
-            predictions = model.predict(X_test)
-            # 模型评估 根据联系集预测
-            from sklearn.metrics import classification_report
+        for i in range(1, 36):
+            with joblib.parallel_backend('dask'):
+                # 根据练习集预测
+                predictions = model.predict(d[:i, ...])
+                print(predictions)
 
-            print(classification_report(y_test, predictions))
-
-        time.sleep(30)
+                # # 模型评估 根据联系集预测
+                # from sklearn.metrics import classification_report
+                #
+                # print(classification_report(y_test[:i], predictions))
+            time.sleep(3)
+        time.sleep(3)
