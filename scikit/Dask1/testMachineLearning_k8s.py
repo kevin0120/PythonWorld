@@ -76,7 +76,7 @@ if __name__ == '__main__':
     # dask.config.set(scheduler='threads')
     # # # 1.分布式
     cluster = get_dask_gateway_cluster()
-    cluster.scale(4)
+    cluster.scale(10)
     client = cluster.get_client()
 
     from sklearn.datasets import make_blobs
@@ -145,22 +145,27 @@ if __name__ == '__main__':
     #     time.sleep(3)
 
     while True:
-        for i in range(1000000, 2000000, 5):
+        for i in range(100000, 200000, 5):
             # with joblib.parallel_backend('dask'):
             # 根据练习集预测
-
             data = np.arange(i).reshape(int(i / 5), 5)
             from datetime import datetime
 
             b = datetime.now()
 
             bB1 = data.max(axis=1)[::-1]
+            bB2 = data.max(axis=0)[::-1]
+            bB3 = data.min(axis=1)[::-1]
+            bB4 = data.min(axis=0)[::-1]
+
             print("{}个数据本地用时{}ms".format(i + 1, (datetime.now() - b).microseconds / 1000))
             a = datetime.now()
 
-            f = da.from_array(data, chunks=(50000, 5))
-            bB = f.max(axis=1)[::-1]
-            aa = bB.compute()
+            f = da.from_array(data, chunks=(2500, 5))
+            bB11 = f.max(axis=1)[::-1].compute()
+            bB12 = f.max(axis=0)[::-1].compute()
+            bB13 = f.min(axis=1)[::-1].compute()
+            bB14 = f.min(axis=0)[::-1].compute()
 
             print("{}个数据dask用时{}ms".format(i + 1, (datetime.now() - a).microseconds / 1000))
             # time.sleep(5)
