@@ -125,8 +125,5 @@ if __name__ == '__main__':
             a = datetime.now()
             predictions = model.predict(d[:i + 1, ...])
             print("{}个数据dask用时{}ms".format(i + 1, (datetime.now() - a).microseconds / 1000))
-            # print(predictions)
-            # yprob = model.predict_proba(d[:i + 1, ...])
-            # print(yprob)
             time.sleep(5)
         time.sleep(3)
