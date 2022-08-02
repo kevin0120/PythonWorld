@@ -76,7 +76,7 @@ if __name__ == '__main__':
     # dask.config.set(scheduler='threads')
     # # # 1.分布式
     cluster = get_dask_gateway_cluster()
-    cluster.scale(10)
+    cluster.scale(4)
     client = cluster.get_client()
 
     from sklearn.datasets import make_blobs
@@ -114,19 +114,20 @@ if __name__ == '__main__':
     #         # print(client.gather(L))
     #         # total = client.submit(sum, L)
     #         # print(L.result())
-    while True:
-        for i in range(100000, 200000):
-            # with joblib.parallel_backend('dask'):
-            # 根据练习集预测
-            from datetime import datetime
-            b = datetime.now()
-            predictions1 = model.predict(Xnew[:i + 1, ...])
-            print("{}个数据本地用时{}ms".format(i + 1, (datetime.now() - b).microseconds / 1000))
-            a = datetime.now()
-            predictions = model.predict(d[:i + 1, ...])
-            print("{}个数据dask用时{}ms".format(i + 1, (datetime.now() - a).microseconds / 1000))
-            time.sleep(5)
-        time.sleep(3)
+
+    # while True:
+    #     for i in range(100000, 200000):
+    #         # with joblib.parallel_backend('dask'):
+    #         # 根据练习集预测
+    #         from datetime import datetime
+    #         b = datetime.now()
+    #         predictions1 = model.predict(Xnew[:i + 1, ...])
+    #         print("{}个数据本地用时{}ms".format(i + 1, (datetime.now() - b).microseconds / 1000))
+    #         a = datetime.now()
+    #         predictions = model.predict(d[:i + 1, ...])
+    #         print("{}个数据dask用时{}ms".format(i + 1, (datetime.now() - a).microseconds / 1000))
+    #         time.sleep(5)
+    #     time.sleep(3)
 
     # while True:
     #     for i in range(10000, 20000):
@@ -142,3 +143,25 @@ if __name__ == '__main__':
     #         print("{}个数据dask用时{}ms".format(i + 1, (datetime.now() - a).microseconds / 1000))
     #         time.sleep(5)
     #     time.sleep(3)
+
+    while True:
+        for i in range(1000000, 2000000, 5):
+            # with joblib.parallel_backend('dask'):
+            # 根据练习集预测
+
+            data = np.arange(i).reshape(int(i / 5), 5)
+            from datetime import datetime
+
+            b = datetime.now()
+
+            bB1 = data.max(axis=1)[::-1]
+            print("{}个数据本地用时{}ms".format(i + 1, (datetime.now() - b).microseconds / 1000))
+            a = datetime.now()
+
+            f = da.from_array(data, chunks=(50000, 5))
+            bB = f.max(axis=1)[::-1]
+            aa = bB.compute()
+
+            print("{}个数据dask用时{}ms".format(i + 1, (datetime.now() - a).microseconds / 1000))
+            # time.sleep(5)
+        time.sleep(3)

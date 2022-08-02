@@ -8,12 +8,16 @@ from dask.distributed import Client, LocalCluster
 import joblib
 from sklearn.datasets import load_digits, load_wine
 
+from scikit.Dask1.testMachineLearning_k8s import get_dask_gateway_cluster
+
 if __name__ == '__main__':
     # client = Client(processes=False)  # create local cluster
     # client = Client(LocalCluster(n_workers=4, threads_per_worker=5, processes=True))
     # dask.config.set(scheduler='threads')
     # # 1.分布式
-    client = Client('http://42.192.175.212/services/dask-gateway')
+    cluster = get_dask_gateway_cluster()
+    cluster.scale(1)
+    client = cluster.get_client()
     from sklearn.datasets import make_blobs
 
     X, y = make_blobs(100, 2, centers=2, random_state=2, cluster_std=1.5)

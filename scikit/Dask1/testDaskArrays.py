@@ -31,3 +31,12 @@ if __name__ == "__main__":
     print(d)
     e = d.map_overlap(lambda x1: x1 + x1.size, depth=1, boundary='reflect').compute()
     print(e)
+
+    data = np.arange(100).reshape(20, 5)
+    f = da.from_array(data, chunks=(5, 1))
+    bB = f.max(axis=1)[::-1]
+
+    print(bB.compute())
+
+    print(bB.dask)
+    bB.visualize()
