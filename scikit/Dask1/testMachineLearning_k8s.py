@@ -71,7 +71,7 @@ def check_local_dask_cluster_enable():
 
 
 if __name__ == '__main__':
-    # # client = Client(processes=False)  # create local cluster
+    # client = Client(processes=False)  # create local cluster
     # client = Client(LocalCluster(n_workers=4, threads_per_worker=5, processes=True))
     # dask.config.set(scheduler='threads')
     # # # 1.分布式
@@ -127,3 +127,18 @@ if __name__ == '__main__':
             print("{}个数据dask用时{}ms".format(i + 1, (datetime.now() - a).microseconds / 1000))
             time.sleep(5)
         time.sleep(3)
+
+    # while True:
+    #     for i in range(10000, 20000):
+    #         # with joblib.parallel_backend('dask'):
+    #         # 根据练习集预测
+    #         from datetime import datetime
+    #
+    #         b = datetime.now()
+    #         predictions1 = Xnew[:i + 1, ...].mean(axis=1)
+    #         print("{}个数据本地用时{}ms".format(i + 1, (datetime.now() - b).microseconds / 1000))
+    #         a = datetime.now()
+    #         predictions = d[:i + 1, ...].mean(axis=1).compute()
+    #         print("{}个数据dask用时{}ms".format(i + 1, (datetime.now() - a).microseconds / 1000))
+    #         time.sleep(5)
+    #     time.sleep(3)
