@@ -72,7 +72,7 @@ def check_local_dask_cluster_enable():
 
 if __name__ == '__main__':
     # client = Client(processes=False)  # create local cluster
-    # client = Client(LocalCluster(n_workers=4, threads_per_worker=5, processes=True))
+    # client = Client(LocalCluster(n_workers=4, threads_per_worker=1, processes=True))
     # dask.config.set(scheduler='threads')
     # # # 1.分布式
     cluster = get_dask_gateway_cluster()
@@ -95,7 +95,7 @@ if __name__ == '__main__':
 
     import dask.array as da
 
-    d = da.from_array(Xnew, chunks=(5000, 2))
+    d = da.from_array(Xnew, chunks=(50000, 2))
     # while True:
     #     for i in range(1000, 2000):
     #         b = datetime.now()
@@ -115,20 +115,19 @@ if __name__ == '__main__':
     #         # total = client.submit(sum, L)
     #         # print(L.result())
 
-    # while True:
-    #     for i in range(100000, 200000):
-    #         # with joblib.parallel_backend('dask'):
-    #         # 根据练习集预测
-    #         from datetime import datetime
-    #         b = datetime.now()
-    #         predictions1 = model.predict(Xnew[:i + 1, ...])
-    #         print("{}个数据本地用时{}ms".format(i + 1, (datetime.now() - b).microseconds / 1000))
-    #         a = datetime.now()
-    #         predictions = model.predict(d[:i + 1, ...])
-    #         print("{}个数据dask用时{}ms".format(i + 1, (datetime.now() - a).microseconds / 1000))
-    #         time.sleep(5)
-    #     time.sleep(3)
-
+    while True:
+        for i in range(100000, 200000):
+            # with joblib.parallel_backend('dask'):
+            # 根据练习集预测
+            from datetime import datetime
+            b = datetime.now()
+            predictions1 = model.predict(Xnew[:i + 1, ...])
+            print("{}个数据本地用时{}ms".format(i + 1, (datetime.now() - b).microseconds / 1000))
+            a = datetime.now()
+            predictions = model.predict(d[:i + 1, ...])
+            print("{}个数据dask用时{}ms".format(i + 1, (datetime.now() - a).microseconds / 1000))
+            time.sleep(5)
+        time.sleep(3)
     # while True:
     #     for i in range(10000, 20000):
     #         # with joblib.parallel_backend('dask'):
@@ -144,29 +143,29 @@ if __name__ == '__main__':
     #         time.sleep(5)
     #     time.sleep(3)
 
-    while True:
-        for i in range(100000, 200000, 5):
-            # with joblib.parallel_backend('dask'):
-            # 根据练习集预测
-            data = np.arange(i).reshape(int(i / 5), 5)
-            from datetime import datetime
-
-            b = datetime.now()
-
-            bB1 = data.max(axis=1)[::-1]
-            bB2 = data.max(axis=0)[::-1]
-            bB3 = data.min(axis=1)[::-1]
-            bB4 = data.min(axis=0)[::-1]
-
-            print("{}个数据本地用时{}ms".format(i + 1, (datetime.now() - b).microseconds / 1000))
-            a = datetime.now()
-
-            f = da.from_array(data, chunks=(2500, 5))
-            bB11 = f.max(axis=1)[::-1].compute()
-            bB12 = f.max(axis=0)[::-1].compute()
-            bB13 = f.min(axis=1)[::-1].compute()
-            bB14 = f.min(axis=0)[::-1].compute()
-
-            print("{}个数据dask用时{}ms".format(i + 1, (datetime.now() - a).microseconds / 1000))
-            # time.sleep(5)
-        time.sleep(3)
+    # while True:
+    #     for i in range(100000, 200000, 5):
+    #         # with joblib.parallel_backend('dask'):
+    #         # 根据练习集预测
+    #         data = np.arange(i).reshape(int(i / 5), 5)
+    #         from datetime import datetime
+    #
+    #         b = datetime.now()
+    #
+    #         bB1 = data.max(axis=1)[::-1]
+    #         bB2 = data.max(axis=0)[::-1]
+    #         bB3 = data.min(axis=1)[::-1]
+    #         bB4 = data.min(axis=0)[::-1]
+    #
+    #         print("{}个数据本地用时{}ms".format(i + 1, (datetime.now() - b).microseconds / 1000))
+    #         a = datetime.now()
+    #
+    #         f = da.from_array(data, chunks=(2500, 5))
+    #         bB11 = f.max(axis=1)[::-1].compute()
+    #         bB12 = f.max(axis=0)[::-1].compute()
+    #         bB13 = f.min(axis=1)[::-1].compute()
+    #         bB14 = f.min(axis=0)[::-1].compute()
+    #
+    #         print("{}个数据dask用时{}ms".format(i + 1, (datetime.now() - a).microseconds / 1000))
+    #         # time.sleep(5)
+    #     time.sleep(3)
