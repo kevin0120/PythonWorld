@@ -35,3 +35,10 @@ https://blog.csdn.net/weixin_48759773/article/details/119745599
 
 购买地址：https://www.duyaoss.com/archives/3/
 ```
+
+##### dooo
+```bash
+button icon：https://www.slideshare.net/TaiebKristou/odoo-icon-smart-buttons
+
+python docker: https://docker-py.readthedocs.io/en/stable/containers.html
+```

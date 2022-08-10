@@ -1,4 +1,6 @@
 import json
+import platform
+
 from psycopg2 import errors
 from loguru import _logger
 from sqlalchemy.exc import IntegrityError
@@ -27,5 +29,7 @@ if __name__ == "__main__":
         print(f'结果已存在')
     except Exception as e:
         raise Exception("保存结果异常: {}".format(repr(e)))
-        #print("aaaaa")
+        # print("aaaaa")
+
+    q = platform.system()
     print("hhhh")
