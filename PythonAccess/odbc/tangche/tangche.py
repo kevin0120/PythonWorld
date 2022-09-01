@@ -4,7 +4,7 @@ import time
 from PythonAccess.odbc.tangche.utils import util
 from loguru import logger
 
-#logger.add("logs/tangche_press.log", rotation="1 days", level="INFO", encoding='utf-8')  # 文件日誌
+# logger.add("logs/tangche_press.log", rotation="1 days", level="INFO", encoding='utf-8')  # 文件日誌
 # logger.add(sys.stderr, format="{time} {level} {message}", level="INFO")
 
 logger.info('系统启动！！！')
