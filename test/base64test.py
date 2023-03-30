@@ -31,23 +31,20 @@ def is_base64_code(s):
     return True
 
 
-def isBase64(str):
-    base64Pattern = "^([A-Za-z0-9+/]{4})*([A-Za-z0-9+/]{4}|[A-Za-z0-9+/]{3}=|[A-Za-z0-9+/]{2}==)$";
-    a = re.match(base64Pattern, str)
-    return True if re.match(base64Pattern, str) else False
+def isBase64(s):
+    base64Pattern = "^([A-Za-z0-9+/]{4})*([A-Za-z0-9+/]{4}|[A-Za-z0-9+/]{3}=|[A-Za-z0-9+/]{2}==)$"
+    return True if re.match(base64Pattern, s) else False
 
 
 if __name__ == "__main__":
-    a = "hello world!!!!!!"
+    a = "hhh="
     b = str(base64.b64encode(bytes(a, encoding="utf8")), 'utf-8')
     c = str(base64.b64encode(bytes(b, encoding="utf8")), 'utf-8')
     e = str(base64.b64encode(bytes(c, encoding="utf8")), 'utf-8')
 
-    print(is_base64_code(b))
-    print(isBase64(b))
+    print(is_base64_code(a))
+    print(isBase64(a))
 
-
-
-    # d1 = base64.b64decode(a)
+    d1 = base64.b64decode(a)
     d2 = str(base64.b64decode(b), 'utf-8')
     d3 = str(base64.b64decode(c), 'utf-8')
