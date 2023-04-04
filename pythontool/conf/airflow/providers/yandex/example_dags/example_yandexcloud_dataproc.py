@@ -120,7 +120,7 @@ with DAG(
 
     create_pyspark_job = DataprocCreatePysparkJobOperator(
         task_id='create_pyspark_job',
-        main_python_file_uri='s3a://data-proc-public/jobs/sources/pyspark-001/main.py',
+        main_python_file_uri='s3a://data-proc-public/jobs/sources/pyspark-001/send.py',
         python_file_uris=[
             's3a://data-proc-public/jobs/sources/pyspark-001/geonames.py',
         ],
