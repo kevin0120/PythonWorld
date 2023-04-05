@@ -1,26 +1,6 @@
 import time
 import asyncio
 
- 
-# def callback(a, loop):
-#     print("我的参数为 {0}，执行的时间为{1}".format(a,loop.time()))
- 
- 
-# #call_later, call_at
-# if __name__ == "__main__":
-#     try:
-#         loop = asyncio.get_event_loop()
-#         now = loop.time()
-#         loop.call_later(5, callback, 5, loop) #第一个参数设置的时间5.5秒后执行，
-#         loop.call_at(now+2, callback, 2, loop)    #在指定的时间，运行，当前时间+2秒
-#         loop.call_at(now+1, callback, 1, loop)
-#         loop.call_at(now+3, callback, 3, loop)
-#         loop.call_soon(callback, 4, loop)
-#         loop.run_forever()  #要用这个run_forever运行，因为没有传入协程，这个函数在3.7中已经被取消
-#     except KeyboardInterrupt:
-#         print("Goodbye!")
- 
-
 async def func1():
     await asyncio.sleep(30)
     await func2()
@@ -28,10 +8,12 @@ async def func1():
 
 
 
-async def func2():
-    await asyncio.sleep(1)
+async def func2(i=1):
+    await asyncio.sleep(0.5)
+
     print('协程2')
-    return 123
+    await asyncio.sleep(0.5)
+    return i
 
 if __name__ == "__main__":
     # https://blog.csdn.net/qq_37674086/article/details/113884099
@@ -48,14 +30,17 @@ if __name__ == "__main__":
      # # 创建事件循环
     loop = asyncio.get_event_loop()
     t1 = loop.time()
+
+    bb= loop.run_until_complete(func2(1999))
     # 添加任务，直至所有任务执行完成1
     # 将协程转为task，并组成list
-    tasks = [
-        asyncio.ensure_future(func2()),
-        asyncio.ensure_future(func2()),
-        asyncio.ensure_future(func2())
-    ]
-    aa= loop.run_until_complete(asyncio.gather(tasks))
+    tasks = [asyncio.ensure_future(func2(i)) for i in range(100)]
+    aa= loop.run_until_complete(asyncio.gather(*tasks))
+    for done_task in aa:
+        print((f"得到执行有序结果 {done_task}"))
+    done, pending = loop.run_until_complete(asyncio.wait(tasks))
+    for done_task in done:
+        print((f"得到执行无序结果 {done_task.result()}"))
     t2 = loop.time()
     print(t2-t1)
     loop.run_forever()
