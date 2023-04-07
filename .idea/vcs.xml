@@ -3,5 +3,9 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/scikit/handson-ml2" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/submodule/Odoo-Python-ERP-" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/submodule/airflow" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/submodule/spc" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/submodule/stock-logistics-workflow" vcs="Git" />
   </component>
 </project>
