@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="Encoding">
-    <file url="file://$PROJECT_DIR$/PythonAccess/accessparser/access.py" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/scikit/Dask1/data/2015-01-02.json.gz" charset="ISO-8859-1" />
-  </component>
-</project>
