@@ -11,3 +11,6 @@
 [submodule "submodule/airflow"]
 	path = submodule/airflow
 	url = git@github.com:apache/airflow.git
+[submodule "scikit/handson-ml2"]
+	path = scikit/handson-ml2
+	url = https://github.com/ageron/handson-ml2
